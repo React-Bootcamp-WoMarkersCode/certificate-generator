@@ -57,7 +57,7 @@ Certificates will be sent by email to all confirmed participants.
 :octocat: Beatriz
 :octocat: Rosemeire
 :octocat: [Sabrina](https://github.com/sabrinabuco)
-:octocat: Diana Regina
+:octocat: [Diana Regina](https://github.com/Diana-ops)
 
 ## Languages and resources 
 
