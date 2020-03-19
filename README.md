@@ -8,9 +8,9 @@ Certificates will be sent by email to all confirmed participants.
 
 ## Pages 
 
-- [ ] Home: Show the user a step by step on how to use the application, generate the certificate and send it to participants
+- [ ] **Home:** Show the user a step by step on how to use the application, generate the certificate and send it to participants
 
-- [ ] SingUp: Page for the registration of users representing an institution (example: WoMakersCode). A form will be presented asking for information regarding the event:
+- [ ] **SingUp:** Page for the registration of users representing an institution (example: WoMakersCode). A form will be presented asking for information regarding the event:
 
   - name
   - email
@@ -18,23 +18,23 @@ Certificates will be sent by email to all confirmed participants.
   - name of the institution
   - company logo
 
-- [ ] SingIn: User login
+- [ ] **SingIn:** User login
 
-- [ ] Profile: list of user information, on this page he will have access:
+- [ ] **Profile:** list of user information, on this page he will have access:
 
   - edit and delete profile
   - return to your events
 
-- [ ] Edit profile: the user can edit his information
+- [ ] **Edit profile:** the user can edit his information
 
-- [ ] List of Events: the list of events will be presented, on this page he will have access:
+- [ ] **List of Events:** the list of events will be presented, on this page he will have access:
 
   - the event CRUD (list, create, edit and delete)
   - go to your profile
   - send certificates
   - update the list of participants
 
-- [ ] Create event: a form will be presented asking for information regarding the event:
+- [ ] **Create event:** a form will be presented asking for information regarding the event:
 
   - name
   - workload
@@ -42,14 +42,25 @@ Certificates will be sent by email to all confirmed participants.
   - uploading the list of participants
   - digital signature
 
-- [ ] Edit event: the user can edit information about some event 
+- [ ] **Edit event:** the user can edit information about some event 
 
-- [ ] Confirm certificate to send: The certificate template and a button will be shown so that it can confirm that it can be sent to participants
+- [ ] **Confirm certificate to send:** The certificate template and a button will be shown so that it can confirm that it can be sent to participants
 
-- [ ] Page of confirmation: A confirmation message will be shown to the user to let them know that their action has been successfully performed for all participants
+- [ ] **Page of confirmation:** A confirmation message will be shown to the user to let them know that their action has been successfully performed for all participants
 
-- [ ] Page not found: if he tries to access a different page through the url, we could show an alert message
+- [ ] **Page not found:** if he tries to access a different page through the url, we could show an alert message
 
 ## List of developers work in it
 
+:octocat: [Chaiana](https://github.com/chaihermes)
+:octocat: Grasielle 
+:octocat: Beatriz
+:octocat: Rosemeire
+:octocat: [Sabrina](https://github.com/sabrinabuco)
+:octocat: Diana Regina
+
 ## Languages and resources 
+
+- React
+- React PDF
+- Redux 
