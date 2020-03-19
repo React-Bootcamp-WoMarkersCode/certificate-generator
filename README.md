@@ -16,6 +16,8 @@ Certificates will be sent by email to all confirmed participants.
 
 ### Thinking in Components 
 
+![componentsHome](https://user-images.githubusercontent.com/46378210/77124294-38f0ed80-6a21-11ea-9a90-95dd0fe5590f.png)
+
 - [ ] **SingUp:** Page for the registration of users representing an institution (example: WoMakersCode). A form will be presented asking for information regarding the event:
 
   - email
@@ -23,12 +25,10 @@ Certificates will be sent by email to all confirmed participants.
   - name of the institution
   - company logo
  
- ### Layout 
+ ### Layout and Thinking in Components 
  
+ ![singUp](https://user-images.githubusercontent.com/46378210/77124311-47d7a000-6a21-11ea-9c43-789e40d135f1.png)
  
- ### Thinking in Components 
- 
-
 - [ ] **SingIn:** User login
 
 - [ ] **Profile:** list of user information, on this page he will have access:
