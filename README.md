@@ -50,6 +50,11 @@ Certificates will be sent by email to all confirmed participants.
 
 - [ ] **Page not found:** if he tries to access a different page through the url, we could show an alert message
 
+### List of models of certificate: 
+
+- [RockectSeat](https://skylab.rocketseat.com.br/api/files/certificates/d9bb2df6-c24b-4500-b3cd-410ff05cb0dc.pdf)
+- [Alura](https://cursos.alura.com.br/user/bea-ali/course/consultas-sql-server-2017/certificate)
+
 ## List of developers work in it
 
 :octocat: [Chaiana](https://github.com/chaihermes)
@@ -66,3 +71,4 @@ Certificates will be sent by email to all confirmed participants.
 - Redux 
 
 ## How to Run Application
+
