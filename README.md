@@ -64,3 +64,5 @@ Certificates will be sent by email to all confirmed participants.
 - React
 - React PDF
 - Redux 
+
+## How to Run Application
