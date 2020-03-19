@@ -10,13 +10,24 @@ Certificates will be sent by email to all confirmed participants.
 
 - [ ] **Home:** Show the user a step by step on how to use the application, generate the certificate and send it to participants
 
+### Layout 
+
+ ![layoutHome](https://user-images.githubusercontent.com/46378210/77123261-66886780-6a1e-11ea-91a5-2e1d699a76a8.png)
+
+### Thinking in Components 
+
 - [ ] **SingUp:** Page for the registration of users representing an institution (example: WoMakersCode). A form will be presented asking for information regarding the event:
 
-  - name
   - email
   - password
   - name of the institution
   - company logo
+ 
+ ### Layout 
+ 
+ 
+ ### Thinking in Components 
+ 
 
 - [ ] **SingIn:** User login
 
