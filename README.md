@@ -28,7 +28,40 @@ Certificates will be sent by email to all confirmed participants.
 
 - React
 - React PDF
+- React Router
 - Redux 
 
 ## How to Run Application
 
+## What I install in this project
+
+I create a react project
+
+```
+$ 
+```
+
+React Router
+
+```
+$ npm install react-router-dom
+```
+AntDesgin 
+
+```
+$ yarn add antd
+```
+
+React PDF
+```
+$ 
+```
+
+Authentication with Google and React 
+```
+$ 
+```
+Redux 
+```
+$ 
+```
