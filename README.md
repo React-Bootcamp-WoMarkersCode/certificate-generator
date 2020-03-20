@@ -84,7 +84,6 @@ Certificates will be sent by email to all confirmed participants.
  ### Layout and Thinking in Components 
  
  ![layoutMsg1](https://user-images.githubusercontent.com/46378210/77126076-a2272f80-6a26-11ea-896e-eb6ef38b59b9.png)
- ![layoutMsg2](https://user-images.githubusercontent.com/46378210/77126108-bc610d80-6a26-11ea-9142-fb23d216da3b.png)
 
 - [ ] **Page not found:** if he tries to access a different page through the url, we could show an alert message
 
