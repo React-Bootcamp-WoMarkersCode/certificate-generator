@@ -78,6 +78,8 @@ Certificates will be sent by email to all confirmed participants.
 - [ ] **Confirm certificate to send:** The certificate template and a button will be shown so that it can confirm that it can be sent to participants
 
  ### Layout and Thinking in Components 
+ 
+ ![layoutModelCertificate](https://user-images.githubusercontent.com/46378210/77126510-11515380-6a28-11ea-925c-d123740ef839.png)
 
 - [ ] **Page of confirmation:** A confirmation message will be shown to the user to let them know that their action has been successfully performed for all participants
 
