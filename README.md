@@ -8,7 +8,7 @@ Certificates will be sent by email to all confirmed participants.
 
 ## Pages 
 
-[Here]() you can see the layout of pages and what your componets 
+[Here](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/README_PAGES.md) you can see the layout of pages and what your componets 
 
 ### List of models of certificate: 
 
