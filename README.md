@@ -31,12 +31,24 @@ Certificates will be sent by email to all confirmed participants.
  
 - [ ] **SingIn:** User login
 
+ ### Layout and Thinking in Components 
+ 
+ ![layoutSingIn](https://user-images.githubusercontent.com/46378210/77126143-db5f9f80-6a26-11ea-89b0-614ac6d3ec38.png)
+
 - [ ] **Profile:** list of user information, on this page he will have access:
 
   - edit and delete profile
   - return to your events
+  
+ ### Layout and Thinking in Components 
+ 
+ ![layoutProfile](https://user-images.githubusercontent.com/46378210/77126137-d6025500-6a26-11ea-9bbb-9b265a9331e6.png)
 
 - [ ] **Edit profile:** the user can edit his information
+
+ ### Layout and Thinking in Components 
+ 
+![layoutProfileEdit](https://user-images.githubusercontent.com/46378210/77126141-d7cc1880-6a26-11ea-9d97-48ba244157da.png)
 
 - [ ] **List of Events:** the list of events will be presented, on this page he will have access:
 
@@ -44,6 +56,10 @@ Certificates will be sent by email to all confirmed participants.
   - go to your profile
   - send certificates
   - update the list of participants
+  
+  ### Layout and Thinking in Components 
+  
+  ![layoutListEvents](https://user-images.githubusercontent.com/46378210/77126066-9cc9e500-6a26-11ea-871d-339c5f7bb2f5.png)
 
 - [ ] **Create event:** a form will be presented asking for information regarding the event:
 
@@ -52,14 +68,29 @@ Certificates will be sent by email to all confirmed participants.
   - start and end date
   - uploading the list of participants
   - digital signature
+ 
+  ### Layout and Thinking in Components 
+  
+  ![layoutFormEvent](https://user-images.githubusercontent.com/46378210/77126059-989dc780-6a26-11ea-8531-d8e795e4cb7f.png)
 
 - [ ] **Edit event:** the user can edit information about some event 
 
 - [ ] **Confirm certificate to send:** The certificate template and a button will be shown so that it can confirm that it can be sent to participants
 
+ ### Layout and Thinking in Components 
+
 - [ ] **Page of confirmation:** A confirmation message will be shown to the user to let them know that their action has been successfully performed for all participants
 
+ ### Layout and Thinking in Components 
+ 
+ ![layoutMsg1](https://user-images.githubusercontent.com/46378210/77126076-a2272f80-6a26-11ea-896e-eb6ef38b59b9.png)
+ ![layoutMsg2](https://user-images.githubusercontent.com/46378210/77126108-bc610d80-6a26-11ea-9142-fb23d216da3b.png)
+
 - [ ] **Page not found:** if he tries to access a different page through the url, we could show an alert message
+
+![layoutMsg3](https://user-images.githubusercontent.com/46378210/77126128-cb47c000-6a26-11ea-90c6-27c2f334127f.png)
+
+ ### Layout and Thinking in Components 
 
 ### List of models of certificate: 
 
