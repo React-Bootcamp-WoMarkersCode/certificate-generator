@@ -10,6 +10,29 @@ Certificates will be sent by email to all confirmed participants.
 
 [Here](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/README_PAGES.md) you can see the layout of pages and what your componets 
 
+## Architeture 
+
+How we can do for organize our paths of project:
+
+```
+src/
+  assets/ #Images 
+  
+  pages/ #Each page will can to be in other directory with index.js and style.css (example: home/index.js and home/style.css)
+  
+  components/ #Each component will can to be in other directory with index.js and style.css (example: menu/index.js and menu/style.css)
+  
+  services/ #We can put the csv file
+  
+  style/ #Gloabal style
+  
+  App.js 
+  
+  index.js #Start of application
+  
+  routes.js #Routes of our application
+```
+
 ### List of models of certificate: 
 
 - [RockectSeat](https://skylab.rocketseat.com.br/api/files/certificates/d9bb2df6-c24b-4500-b3cd-410ff05cb0dc.pdf)
