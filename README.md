@@ -75,6 +75,10 @@ Certificates will be sent by email to all confirmed participants.
 
 - [ ] **Edit event:** the user can edit information about some event 
 
+ ### Layout and Thinking in Components 
+ 
+![layoutEditForm](https://user-images.githubusercontent.com/46378210/77126941-85d8c200-6a29-11ea-9268-9a01ac7af683.png)
+
 - [ ] **Confirm certificate to send:** The certificate template and a button will be shown so that it can confirm that it can be sent to participants
 
  ### Layout and Thinking in Components 
