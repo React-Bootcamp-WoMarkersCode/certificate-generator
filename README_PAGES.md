@@ -1,3 +1,5 @@
+### Reference and Inspiration: [Site WoMakersCode](https://womakerscode.org/) and [Generate Certificate](https://geradordecertificados.com/)
+
 ## Pages 
 
 - [ ] **Home:** Show the user a step by step on how to use the application, generate the certificate and send it to participants
