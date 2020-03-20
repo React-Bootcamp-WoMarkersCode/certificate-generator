@@ -38,7 +38,7 @@ Certificates will be sent by email to all confirmed participants.
 I create a react project
 
 ```
-$ 
+$ yarn create react-app certificate
 ```
 
 React Router
@@ -54,14 +54,14 @@ $ yarn add antd
 
 React PDF
 ```
-$ 
+$ yarn add @react-pdf/renderer
 ```
 
 Authentication with Google and React 
 ```
-$ 
+$ npm install react-google-login
 ```
 Redux 
 ```
-$ 
+$ yarn add --dev redux react-redux
 ```
