@@ -10,6 +10,20 @@ Certificates will be sent by email to all confirmed participants.
 
 [Here](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/README_PAGES.md) you can see the layout of pages and what your componets 
 
+### List of Pages:
+
+- Home
+- SingUp
+- SingIn
+- Profile
+- Edit profile
+- List of Events
+- Create event
+- Edit event
+- Confirm certificate to send
+- Page of confirmation
+- Page not found
+
 ## Architeture 
 
 How we can do for organize our paths of project:
