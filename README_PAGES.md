@@ -16,14 +16,15 @@
 
   - email
   - password
-  - name of the institution
-  - company logo
  
  ### Layout and Thinking in Components 
  
  ![singUp](https://user-images.githubusercontent.com/46378210/77124311-47d7a000-6a21-11ea-9c43-789e40d135f1.png)
  
 - [ ] **SingIn:** User login
+
+  - email
+  - password
 
  ### Layout and Thinking in Components 
  
@@ -57,7 +58,8 @@
 
 - [ ] **Create event:** a form will be presented asking for information regarding the event:
 
-  - name
+  - name of the institution
+  - company logo
   - workload
   - start and end date
   - uploading the list of participants
