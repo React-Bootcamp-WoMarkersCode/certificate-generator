@@ -20,6 +20,7 @@ Certificates will be sent by email to all confirmed participants.
 - List of Events
 - Create event
 - Edit event
+- List Presents
 - Confirm certificate to send
 - Page of confirmation
 - Page not found
