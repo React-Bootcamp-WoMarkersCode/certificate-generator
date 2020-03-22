@@ -56,9 +56,9 @@ src/
 ## List of developers work in it
 
 :octocat: [Chaiana](https://github.com/chaihermes)
-:octocat: Grasielle 
+:octocat: [Bee](https://github.com/beebones) 
 :octocat: Beatriz
-:octocat: Rosemeire
+:octocat: [Rose](https://github.com/ahakawa)
 :octocat: [Sabrina](https://github.com/sabrinabuco)
 :octocat: [Diana Regina](https://github.com/Diana-ops)
 
