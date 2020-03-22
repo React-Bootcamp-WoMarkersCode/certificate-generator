@@ -75,6 +75,12 @@
  
 ![layoutEditForm](https://user-images.githubusercontent.com/46378210/77126941-85d8c200-6a29-11ea-9268-9a01ac7af683.png)
 
+- [ ] **List Presents**: To show the list of participants of each event, with an option to check your present in event by user
+
+### Layout and Thinking in Components 
+
+![listPresents](https://user-images.githubusercontent.com/46378210/77265884-ae0c2f00-6c7c-11ea-8a22-0a18e6cf040a.png)
+
 - [ ] **Confirm certificate to send:** The certificate template and a button will be shown so that it can confirm that it can be sent to participants
 
  ### Layout and Thinking in Components 
