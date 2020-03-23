@@ -1,9 +1,14 @@
-import React from 'react';
+import React from 'react'
+import {Link}  from 'react-router-dom'
+import Error404 from '../../assets/img/erro404.gif'
 
-function PageNotFound(props) {
-
+function PageNotFound() {
 	return (
-		<h1>Esta é a função que trabalha com a pagina para mostrar uma mensagem indicando que a rota nao foi encontrada</h1>
+		<div>
+			<img src={Error404} alt="imagem de página não encontrada"/>
+
+			<Link to="/">Voltar para a Home</Link>
+		</div>
 	);
 }
 
