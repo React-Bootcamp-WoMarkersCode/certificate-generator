@@ -1,0 +1,36 @@
+
+/*Div do titulo, lista de participantes e botão*/
+.list-participants {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 3%;
+	width: 100%;
+}
+
+.title-2 {
+	text-align: center;
+	color: #c6255a;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 800;
+}
+
+/*Para cada nome dos participantes*/
+.name-participant {
+	display: inline-block;
+	font-size: 15px;
+	width: 40%;
+	margin-left: 30%;
+
+	padding: 1%;
+}
+
+/*Botão para confirmar participantes da lista*/
+.submit-participants {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+	margin-top: 5%;
+}
+
