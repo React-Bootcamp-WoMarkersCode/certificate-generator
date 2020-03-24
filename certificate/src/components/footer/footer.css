@@ -1,0 +1,34 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer{
+    background-color: rgb(17, 17, 17);;
+    height: 50vh;
+}
+
+.container{
+    display: flex;
+    list-style: none;
+}
+
+h3{
+    font-weight: bold;
+    color: white;
+}
+
+ol, li{
+    list-style: none;
+}
+
+.footer-link{
+    color: white;
+    line-height: 2;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.col{
+    display: flex;
+    width: 30%;
+}
