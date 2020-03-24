@@ -20,6 +20,7 @@ Certificates will be sent by email to all confirmed participants.
 - List of Events
 - Create event
 - Edit event
+- List Presents
 - Confirm certificate to send
 - Page of confirmation
 - Page not found
@@ -55,9 +56,9 @@ src/
 ## List of developers work in it
 
 :octocat: [Chaiana](https://github.com/chaihermes)
-:octocat: Grasielle 
+:octocat: [Bee](https://github.com/beebones) 
 :octocat: Beatriz
-:octocat: Rosemeire
+:octocat: [Rose](https://github.com/ahakawa)
 :octocat: [Sabrina](https://github.com/sabrinabuco)
 :octocat: [Diana Regina](https://github.com/Diana-ops)
 
@@ -67,6 +68,7 @@ src/
 - React PDF
 - React Router
 - Redux 
+- AntDesign 
 
 ## How to Run Application
 
