@@ -11,14 +11,9 @@ import  ListOfEvents  from './pages/list-of-events/index'
 import  PageConfirmation  from './pages/page-confirmation/index'
 import  PageNotFound  from './pages/page-not-found/index'
 import  Profile  from './pages/profile/index'
-<<<<<<< HEAD
-import  SignIn  from './pages/signIn/index'
-import  SignUp  from './pages/signUp/index'
-=======
-import  SingIn  from './pages/singIn/index'
-import  SingUp  from './pages/singUp/index'
-import ListPresentsfrom from'./pages/list-presents/index'
->>>>>>> DianaRegina
+import  SignIn  from './pages/sign-in/index'
+import  SignUp  from './pages/sign-up/index'
+import  ListPresentsfrom from'./pages/list-presents/index'
 
 const Routes = () => (
   <BrowserRouter>
@@ -35,14 +30,9 @@ const Routes = () => (
       <Route exact path="/list-of-events" component={ListOfEvents} />
       <Route exact path="/page-confirmation" component={PageConfirmation} />
       <Route exact path="/profile" component={Profile} />
-<<<<<<< HEAD
-      <Route exact path="/signIn" component={SignIn} />
-      <Route exact path="/signUp" component={SignUp} />
-=======
-      <Route exact path="/singIn" component={SingIn} />
-      <Route exact path="/singUp" component={SingUp} />
+      <Route exact path="/sign-in" component={SignIn} />
+      <Route exact path="/sign-up" component={SignUp} />
       <Route exact path="/" component={ListPresentsfrom} />
->>>>>>> DianaRegina
 
       <Route path="*" component={PageNotFound} />
     </Switch>
