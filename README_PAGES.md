@@ -16,14 +16,15 @@
 
   - email
   - password
-  - name of the institution
-  - company logo
  
  ### Layout and Thinking in Components 
  
  ![singUp](https://user-images.githubusercontent.com/46378210/77124311-47d7a000-6a21-11ea-9c43-789e40d135f1.png)
  
 - [ ] **SingIn:** User login
+
+  - email
+  - password
 
  ### Layout and Thinking in Components 
  
@@ -57,7 +58,8 @@
 
 - [ ] **Create event:** a form will be presented asking for information regarding the event:
 
-  - name
+  - name of the institution
+  - company logo
   - workload
   - start and end date
   - uploading the list of participants
@@ -72,6 +74,12 @@
  ### Layout and Thinking in Components 
  
 ![layoutEditForm](https://user-images.githubusercontent.com/46378210/77126941-85d8c200-6a29-11ea-9268-9a01ac7af683.png)
+
+- [ ] **List Presents**: To show the list of participants of each event, with an option to check your present in event by user
+
+### Layout and Thinking in Components 
+
+![listPresents](https://user-images.githubusercontent.com/46378210/77265884-ae0c2f00-6c7c-11ea-8a22-0a18e6cf040a.png)
 
 - [ ] **Confirm certificate to send:** The certificate template and a button will be shown so that it can confirm that it can be sent to participants
 
