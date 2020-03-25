@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { Row, Col } from 'antd';
 import 'antd/dist/antd.css';
 import './footer.css';
-import '../../App.css';
-import '../../pages/signIn/index';
-import '../../pages/signUp/index';
+import '../../pages/sign-in/index';
+import '../../pages/sign-up/index';
+import '../../style/App.css';
 
 
 

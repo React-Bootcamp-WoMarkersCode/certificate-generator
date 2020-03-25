@@ -5,7 +5,8 @@
 
 .footer{
     background-color: rgb(17, 17, 17);;
-    height: 70vh;
+    height: 55vh;
+    margin-top: 20px;
 }
 
 .container{
@@ -17,6 +18,7 @@ h3{
     font-weight: bold;
     color: white;
     font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
 ol, li{
@@ -27,7 +29,7 @@ ol, li{
     color: white;
     line-height: 2;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .col{
