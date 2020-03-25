@@ -1,10 +1,11 @@
 *{
     font-family: 'Raleway', sans-serif;
+    font-weight: "200", "400", ou "800" (light, regular, bold)
 }
 
 .footer{
     background-color: rgb(17, 17, 17);;
-    height: 50vh;
+    height: 70vh;
 }
 
 .container{
@@ -15,6 +16,7 @@
 h3{
     font-weight: bold;
     color: white;
+    font-size: 1.2rem;
 }
 
 ol, li{
@@ -25,10 +27,10 @@ ol, li{
     color: white;
     line-height: 2;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .col{
     display: flex;
-    width: 30%;
+    margin-top: 2%;
 }

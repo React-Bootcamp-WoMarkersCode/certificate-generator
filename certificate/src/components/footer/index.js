@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import { Row, Col } from 'antd';
 import 'antd/dist/antd.css';
 import './footer.css';
-import '../';
+import '../../App.css';
+import '../../pages/signIn/index';
+import '../../pages/signUp/index';
 
 
 
@@ -14,11 +16,11 @@ function Footer(props) {
 	<footer className="footer">
 		<section>
 			<Row className="container">
-				<Col className="col">
+				<Col xs={2} sm={4} md={5} lg={5} xl={5} className="col">
 					<Row>
 						
 						<ol>
-							<h3>Nossas desenvolvedoras</h3>
+							<h3>Nossas Desenvolvedoras</h3>
 							<li>
 								<Link to="https://www.linkedin.com/in/beatriz-ali-508940153/" className="footer-link"> Beatriz</Link>
 							</li>
@@ -40,12 +42,16 @@ function Footer(props) {
 						</ol>		
 	 			</Row>
 			</Col>
-	 			<Col  xs={2} sm={4} md={6} lg={6} xl={10} className="col">
+	 			<Col  xs={2} sm={4} md={5} lg={5} xl={5} className="col">
 					 <Row>
 	 				<ol className="footer-list">
 	 				<h3>Gerador de Certificados</h3>
-	 					<li ><Link to="#" className="footer-link">Sign In</Link> </li>
-	 					<li ><Link to="#" className="footer-link">Sign Up</Link> </li>
+	 					<li >
+							 <Link to='../../pages/signIn/index'  className="footer-link">Sign In</Link> 
+						</li>
+	 					<li >
+							 <Link to='../../pages/signUp/index' className="footer-link">Sign Up</Link> 
+						</li>
 	 					<li ><Link to="#" className="footer-link">Começar</Link> </li>
 	 				</ol>	
 					</Row>
