@@ -1,0 +1,65 @@
+/*Titulos e textos*/
+.title-1 {
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+}
+
+/*Descubra .. (h1)*/
+/*Linha rosa em cima da palavra*/
+.sub-title-1 {
+	border-color:  #c6255a;
+	border-top-style: solid;
+	border-top-width: 7px;
+	color: black;
+}
+
+/*Gerador de certificados (h1)*/
+.sub2-title-1{
+	color: #c6255a;
+	font-weight: 800;
+}
+
+
+/*Estilização dos cards e do componente Card*/
+
+/*Para cada card*/
+.card {
+	margin: 3%;
+}
+
+.card:hover {
+	box-shadow: 4px 4px 8px gray;
+	transition: 0.5s;
+}
+
+/*Div que agrupa todos os cards*/
+.site-card-wrapper {
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	padding: 30px;
+	margin-bottom: 3%;
+
+	text-align: center;
+	justify-content: center;
+}
+
+/*Div do componente inteiro*/
+.div-cards {
+	background-color: rgb(242, 242, 242);
+	padding: 3%;
+}
+
+/*Quando a tela diminuir em lagura, as colunas dos cards vão se ajustando*/
+@media screen and (max-width: 600px) {
+	.site-card-wrapper { 
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px){
+	.site-card-wrapper { 
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
