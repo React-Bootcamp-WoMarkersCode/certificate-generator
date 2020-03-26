@@ -1,0 +1,33 @@
+.div-steps {
+	margin-left: 3%;
+	margin-top: 3%;
+	font-family: 'Raleway', sans-serif;
+}
+
+.h2-steps {
+	font-size: 30px;
+}
+
+.h3-steps {
+	color: #c6255a;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.h4-steps {
+	font-size: 20px;
+}
+
+.span-1-steps {
+	border-color: #c6255a;
+	border-top-style: solid;
+	border-top-width: 7px; 
+}
+
+.span-2-steps {
+	color: #c6255a;
+}
+
+.span-3-steps {
+	color: black;
+}
