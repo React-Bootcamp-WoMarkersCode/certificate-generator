@@ -1,0 +1,63 @@
+.div-section {
+	background-image: url('../../assets/wallpaper-section.jpg');
+	padding: 5%;
+}
+
+.h1-section{
+	font-family: 'Releway', sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.h2-section{
+	font-family: 'Releway', sans-serif;
+	font-size: 40px;
+}
+
+.span-1 {
+	color: #c6255a;
+}
+
+.span-2 {
+	color: #006400;
+}
+
+.span-3 {
+	border-color: #c6255a;
+	border-top-style: solid;
+	border-top-width: 7px;
+}
+
+.button-section {
+	width: 20%;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: transparent;
+	border-color: #c6255a;
+	border-width: 2px;
+	color: #c6255a;
+}
+
+.button-section:hover {
+	background-color: #c6255a;
+	color: white;
+	transition: 1s;
+}
+
+@media screen and (max-width: 800px) {
+	.h2-section, .h1-section  { 
+		text-align: center;
+	}
+
+	.button-section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		margin-left: auto;
+		margin-right: auto;
+
+		width: 70%;
+	}
+}
