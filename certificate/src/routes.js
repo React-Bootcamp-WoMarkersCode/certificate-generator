@@ -22,7 +22,7 @@ const Routes = () => (
       /*Em path foi definida a rota de acesso que colocaremos 
       na URL para acessar a page em component*/
       
-      <Route exact path="/list-presents" component={Home} />
+      <Route exact path="/" component={Home} />
       <Route exact path="/confirm-certificate-to-send" component={ConfirmCertificateToSend} />
       <Route exact path="/create-event" component={CreateEevent} />
       <Route exact path="/edit-event" component={EditEvent} />
@@ -32,7 +32,7 @@ const Routes = () => (
       <Route exact path="/profile" component={Profile} />
       <Route exact path="/sign-in" component={SignIn} />
       <Route exact path="/sign-up" component={SignUp} />
-      <Route exact path="/" component={ListPresentsfrom} />
+      <Route exact path="/list-presents" component={ListPresentsfrom} />
 
       <Route path="*" component={PageNotFound} />
     </Switch>
