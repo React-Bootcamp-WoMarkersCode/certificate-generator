@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 /*Estilos*/
 import './style.css'
 import 'antd/dist/antd.css';
-import { Checkbox, Button } from 'antd';
+import { Checkbox, Button, Input } from 'antd';
 
 /*Importando lista de participantes*/
 import participantesData from '../../services/participantes'
@@ -18,7 +18,12 @@ class ListOfPresents extends Component {
 		this.state = {
 
 			/*Define o estado do JSON*/
-			participantes: participantesData
+			participantes: participantesData,
+
+			name: '',
+			email: '',
+			msgError: '',
+			participanteCriado: false
 		}
 	}
 		
@@ -50,11 +55,64 @@ class ListOfPresents extends Component {
 		})
 	}
 
+	/*Esta função faz o (C)reate no JSON de participantes*/
+	adicionarParticipante() {
+
+		const { name, email, participanteCriado } = this.state;
+
+			this.setState({ participantes: [...this.state.participantes, {
+				"name": name,
+				"email": email,
+				"present": true,
+				"receiveCertificate": false,
+				"course": 'react'
+			}]})
+
+			this.setState({ participanteCriado: true })
+		
+	}
+
+	/*Esta função varre o JSON e procura o participante a partir dos dados digitados no input*/
+	verificaParticipante = (email) => this.state.participantes.map((itemJson, i)=> {
+		if (itemJson.email == email) {
+			this.setState({ msgError: 'Este participante já está na sua lista'}) 
+		} else if (!this.state.participanteCriado) {
+			this.adicionarParticipante()
+		} 
+	})
+
+	
+	/*Esta função será executada ao clicar no botão*/
+	/*Verificaremos se o usuário digitou os campos*/
+	/*Se sim, chamaremos outra função para  
+	verificar se o participante já existe*/
+	/*Se não, uma mensagem de erro será mostrada*/
+	verificarCampos = event => {
+
+		event.preventDefault();
+
+		const { name, email } = this.state;
+
+		if(!name || !email) {
+			this.setState({ msgError: 'Por favor, preencha os dados'} ) 
+		} else {
+			this.setState({ msgError: ''})
+			this.verificaParticipante(email)
+		}
+	}
+
 	render(){
+
+
 		return (
 			<div className="list-participants">
 				<h1 className="title-2">Lista de Participantes</h1>
-
+				<h2>Adicione mais participantes a sua lista:</h2>
+				<p>{this.state.msgError}</p>
+				<Input placeholder="Name of Participant" value={this.state.name} onChange={e => this.setState({ name: e.target.value})}/>
+				<Input placeholder="Email of Participant" onChange={e => this.setState({ email: e.target.value})}/>
+				<Button type="primary" danger onClick={this.verificarCampos}>Incluir novo participante</Button>
+				<br/>
 				{
 					this.state.participantes.map(itemJson => {
 						return (
