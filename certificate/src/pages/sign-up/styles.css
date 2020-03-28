@@ -1,7 +1,7 @@
 .loginBtn {
     box-sizing: border-box;
     position: relative;
-    left: 550px;
+    left: 40%;
     margin: 0.2em;
     padding: 0 15px 0 46px;
     border: none;
@@ -34,4 +34,20 @@
 
 .ou{
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px){
+    .loginBtn{
+        left: 30%;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px){
+    .loginBtn{
+        left: 35%;
+    }
 }

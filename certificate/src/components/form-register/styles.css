@@ -1,0 +1,79 @@
+.form{
+    border: groove;
+    border-radius: 5%;
+    width: 40vw;
+    height: 50vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
+
+.form-label{
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;;
+}
+
+.form-field{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    
+}
+
+.form-upload{
+    display: block;
+    margin-left: 28%;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-color: rgb(255, 102, 0);
+    color: rgb(255, 102, 0);
+    font-weight: bold;
+}
+
+.button{
+    background-color: rgb(255, 102, 0);
+    border-color: rgb(255, 102, 0);
+    color: #ffffff;
+    font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 4vh;
+}
+
+@media screen and (max-width: 600px){
+    .form{
+        width: 40vw;
+        height: 60vh;
+    }
+
+    .form-upload{
+        margin-left: 15px;
+    }
+
+    .button{
+        height: 6vh;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px){
+    .form{
+        width: 40vw;
+        height: 60vh;
+    }
+
+    .form-upload{
+        margin-left: 22%;
+    }
+
+    .button{
+        width: 80%;
+    }
+}

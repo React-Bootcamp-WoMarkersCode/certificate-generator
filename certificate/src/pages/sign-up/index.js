@@ -28,7 +28,7 @@ function SignUp(props) {
 		
 		<p className="ou">OU</p>
 		
-
+		{/* Formulário: */}
 		<FormRegister />
 		{/* Rodapé: */}
 		<Footer />
