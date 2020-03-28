@@ -9,7 +9,7 @@
 	{
 		"name": "Alicia Luca",
 		"email": "alicia@outlook.com.br",
-		"present": false,
+		"present": true,
 		"receiveCertificate": false,
 		"course": "react"
 	}
