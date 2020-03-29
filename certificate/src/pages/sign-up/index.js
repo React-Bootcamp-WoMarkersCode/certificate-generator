@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import GoogleLogin from 'react-google-login';
 import Footer from '../../components/footer/index';
+import FormRegister from '../../components/form-register/index';
 import './styles.css';
 import '../../style/App.css';
 
@@ -25,10 +25,11 @@ function SignUp(props) {
 			onSuccess={responseGoogle}
 			onFailure={responseGoogle}
 			/>
-
-		<p>OU</p>
-
-
+		
+		<p className="ou">OU</p>
+		
+		{/* Formulário: */}
+		<FormRegister />
 		{/* Rodapé: */}
 		<Footer />
 		</>
