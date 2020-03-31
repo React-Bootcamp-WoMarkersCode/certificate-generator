@@ -69,6 +69,7 @@ src/
 - React Router
 - Redux 
 - AntDesign 
+- Login com Google
 
 ## How to Run Application
 
