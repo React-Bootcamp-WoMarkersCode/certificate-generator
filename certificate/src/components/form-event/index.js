@@ -2,7 +2,6 @@ import React, { useState, useEffect }  from 'react'
 import { Form, DatePicker, Button, Input, InputNumber } from 'antd';
 import UploadImg from '../upload-img/index'
 
-import CreateEvent from '../create-event/index'
 import data from '../../services/events.json'
 
 const { RangePicker } = DatePicker;
