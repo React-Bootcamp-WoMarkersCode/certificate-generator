@@ -6,9 +6,10 @@ import Footer from '../../components/footer/index'
 function CreateEvent(props) {
 
 	return (
-		<FormEvent />
-		<UploadImg />
-		<Footer />
+		<>
+			<FormEvent />
+			<Footer />
+		</>
 	);
 }
 

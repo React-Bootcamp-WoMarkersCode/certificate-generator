@@ -1,9 +1,47 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
+import GoogleLogin from 'react-google-login';
+
+/*Importando JSON de usuários*/
+import data from '../../services/users.json'
 
 function FormRegister(props) {
+	/*Estado do JSON de usuarios*/
+  	const [ usersData, setUsers ] = useState(data)
+
+	const responseGoogle = response => {
+		/*Adicionando novo usuário*/
+
+		/*Coloquei a senha como true pois o usuário 
+		já fez o login com o google*/
+		setUsers([
+	      ...usersData, {
+	        eventOwner: response.profileObj.name,
+	        email: response.profileObj.email,
+	        password: true, 
+	        token: false,
+	        avatar: response.profileObj.imageUrl
+	      }
+	    ])
+	    console.log(usersData)
+
+	}
 
 	return (
-		<h1>Esta é a função que trabalha com um componente</h1>
+		<>
+		<GoogleLogin
+		// O clientId foi obitdo através do Google API Console. Existe um passo a passo a ser feito e obter o número.
+			clientId="78039332386-46h93ebkr1bb708hqv47h410pdd89mj9.apps.googleusercontent.com"
+			render={renderProps => (
+				<button onClick={renderProps.onClick} disabled={renderProps.disabled} className="loginBtn loginBtn-google"> 
+					Cadastrar com o Google </button>
+			)}
+			buttonText="Cadastrar com o Google"
+			onSuccess={responseGoogle}
+			onFailure={responseGoogle}
+			/>
+
+		<p>OU</p>
+		</>
 	);
 }
 
