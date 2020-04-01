@@ -14,9 +14,9 @@ function GoogleAccount(props) {
 
 	const responseGoogle = response => {
 		/*Verificando existencia de usuário*/
-		usersData.map(emailCdastrado => {
+		usersData.map(emailCadastrado => {
 
-			if(emailCdastrado.email === response.profileObj.email) {
+			if(emailCadastrado.email === response.profileObj.email) {
 				alert('Esta conta já está cadastrada')
 
 			} else if (!createUser) {
