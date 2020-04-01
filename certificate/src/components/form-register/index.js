@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useFormik, FormikProvider } from 'formik';
 import { Field, Form, ErrorMessage } from 'formik';
 import { Upload, message, Button } from 'antd';
@@ -25,9 +25,9 @@ const FormRegister = () => {
 	})
 
 	const { handleSubmit, values } = formik
-
+  
 	return (
-		<>
+    
 			<div className="form">	
 			<FormikProvider value={formik}>
 				<Form onSubmit={handleSubmit}>
@@ -48,8 +48,7 @@ const FormRegister = () => {
 			</FormikProvider>
 
 		</div>
-		</>
 	);
-}
+};
 
 export default FormRegister;
