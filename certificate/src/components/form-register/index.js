@@ -34,7 +34,7 @@ const FormRegister = (props) => {
 			password: Yup.string().min(4).required('Digite uma senha')
 		}),
 		onSubmit: values => {
-			//alert(JSON.stringify(values, null, 2));
+			alert(JSON.stringify(values, null, 2));
 		}
 	})
 
@@ -80,15 +80,21 @@ const FormRegister = (props) => {
 				<Form onSubmit={handleSubmit}>
 					<label htmlFor="name" className="form-label">Nome</label>
 					<Field name="name" type="text" className="form-field"/>
-					<ErrorMessage name="name" />
+					<ErrorMessage 
+						render={msg => <p className="msg-error" >{msg}</p>}
+						name="name" />
 					
 					<label htmlFor="email" className="form-label">E-mail</label>
 					<Field name="email" type="text" className="form-field"/>
-					<ErrorMessage name="email" />
+					<ErrorMessage 
+						render={msg => <p className="msg-error" >{msg}</p>} 
+						name="email" />
 					
 					<label htmlFor="password" className="form-label">Senha</label>
 					<Field name="password" type="password" className="form-field"/>
-					<ErrorMessage name="password" />
+					<ErrorMessage 
+						render={msg => <p className="msg-error" >{msg}</p>} 
+						name="password" />
 
 					<button type="submit" onClick={actionButton} className="button">{action}</button>
 				</Form>
