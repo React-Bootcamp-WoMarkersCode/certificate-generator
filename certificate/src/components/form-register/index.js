@@ -34,7 +34,6 @@ const FormRegister = (props) => {
 			password: Yup.string().min(4).required('Digite uma senha')
 		}),
 		onSubmit: values => {
-			alert('Seus dados foram registrados')
 			//alert(JSON.stringify(values, null, 2));
 		}
 	})
@@ -68,7 +67,6 @@ const FormRegister = (props) => {
 			/*Criando nova conta*/
 		} else if (action == 'Cadastrar nova conta') {
 			setCreateUser(true)
-			
 		}
 
 		console.log(user)

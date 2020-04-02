@@ -36,3 +36,30 @@ ol, li{
     display: flex;
     margin-top: 2%;
 }
+
+@media screen and (max-width: 600px){
+    .footer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-link{
+        font-size: 0.7rem;
+    }
+
+    h3{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px){
+    .footer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .footer-link{
+        font-size: 0.7rem;
+    }
+
+    h3{
+        font-size: 0.8rem;
+    }
+}

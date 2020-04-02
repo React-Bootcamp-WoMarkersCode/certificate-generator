@@ -16,7 +16,7 @@ function Footer(props) {
 	<footer className="footer">
 		<section>
 			<Row className="container">
-				<Col xs={2} sm={4} md={5} lg={5} xl={5} className="col">
+				<Col xs={10} sm={10} md={5} lg={5} xl={5} className="col">
 					<Row>
 						
 						<ol>
@@ -42,17 +42,19 @@ function Footer(props) {
 						</ol>		
 	 			</Row>
 			</Col>
-	 			<Col  xs={2} sm={4} md={5} lg={5} xl={5} className="col">
+	 			<Col  xs={10} sm={10} md={5} lg={5} xl={5} className="col">
 					 <Row>
 	 				<ol className="footer-list">
 	 				<h3>Gerador de Certificados</h3>
-	 					<li >
-							 <Link to='/sign-in'  className="footer-link">Sign In</Link> 
+	 					<li>
+							<Link to='/sign-in'  className="footer-link">Sign In</Link> 
 						</li>
-	 					<li >
-							 <Link to='/sign-up' className="footer-link">Sign Up</Link> 
+	 					<li>
+							<Link to='/sign-up' className="footer-link">Sign Up</Link> 
 						</li>
-	 					<li ><Link to="#" className="footer-link">Começar</Link> </li>
+	 					<li>
+	 						<Link to="#" className="footer-link">Começar</Link> 
+	 					</li>
 	 				</ol>	
 					</Row>
 				</Col>
