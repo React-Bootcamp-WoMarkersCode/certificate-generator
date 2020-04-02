@@ -22,22 +22,22 @@ function Footer(props) {
 						<ol>
 							<h3>Nossas Desenvolvedoras</h3>
 							<li>
-								<Link to="https://www.linkedin.com/in/beatriz-ali-508940153/" className="footer-link"> Beatriz</Link>
+								<a href="https://www.linkedin.com/in/beatriz-ali-508940153/" className="footer-link"> Beatriz</a>
 							</li>
 							<li>
-								<Link to="https://www.linkedin.com/in/chaiana-hermes-8ab6a921/" className="footer-link">Chaiana</Link>
+								<a href="https://www.linkedin.com/in/chaiana-hermes-8ab6a921/" className="footer-link">Chaiana</a>
 							</li> 
 							<li>
-								<Link to="https://www.linkedin.com/in/diana-regina-a96840173/" className="footer-link">Diana</Link>
+								<a href="https://www.linkedin.com/in/diana-regina-a96840173/" className="footer-link">Diana</a>
 							</li> 
 							<li>
-								<Link to="https://www.linkedin.com/in/grasiele-kroger/" className="footer-link">Grasiele</Link>
+								<a href="https://www.linkedin.com/in/grasiele-kroger/" className="footer-link">Grasiele</a>
 							</li> 
 							<li>
-								<Link to="https://www.linkedin.com/in/rosemeire-oyakawa-25099838/" className="footer-link">Rosemeire</Link>
+								<a href="https://www.linkedin.com/in/rosemeire-oyakawa-25099838/" className="footer-link">Rosemeire</a>
 							</li> 
 							<li>
-								<Link to="https://www.linkedin.com/in/sabrina-nabuco-de-oliveira-41008a38/" className="footer-link">Sabrina</Link>
+								<a href="https://www.linkedin.com/in/sabrina-nabuco-de-oliveira-41008a38/" className="footer-link">Sabrina</a>
 							</li> 
 						</ol>		
 	 			</Row>
@@ -47,10 +47,10 @@ function Footer(props) {
 	 				<ol className="footer-list">
 	 				<h3>Gerador de Certificados</h3>
 	 					<li >
-							 <Link to='../../pages/signIn/index'  className="footer-link">Sign In</Link> 
+							 <Link to='/sign-in'  className="footer-link">Sign In</Link> 
 						</li>
 	 					<li >
-							 <Link to='../../pages/signUp/index' className="footer-link">Sign Up</Link> 
+							 <Link to='/sign-up' className="footer-link">Sign Up</Link> 
 						</li>
 	 					<li ><Link to="#" className="footer-link">Começar</Link> </li>
 	 				</ol>	

@@ -1,9 +1,16 @@
 [
 	{
-		"eventOwner": "Diana Regina",
+		"name": "Diana Regina",
 		"email": "dianaregina22@yahoo.com",
 		"password": "minhasenha",
 		"token": true,
+		"avatar": ""
+	},
+	{
+		"name": "Lucas",
+		"email": "lucas@gmail.com",
+		"password": "minhasenha",
+		"token": false,
 		"avatar": ""
 	}
 

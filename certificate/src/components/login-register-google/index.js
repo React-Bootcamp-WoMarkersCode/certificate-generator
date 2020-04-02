@@ -4,40 +4,16 @@ import GoogleLogin from 'react-google-login';
 /*Importando JSON de usuários*/
 import data from '../../services/users.json'
 
+/*Componentes*/
+import CreateUser from '../create-user/index'
+
 /*Componente para fazer login e registro de conta com google*/
 function GoogleAccount(props) {
-	/*Estado do JSON de usuarios*/
-  	const [ usersData, setUsers ] = useState(data)
 
-  	/*Verifica se a conta já existe*/
-  	const [ createUser, setCreateUser ] = useState(false)
+	const [ dataGoogle, setDataGoogle ] = useState(false)
 
 	const responseGoogle = response => {
-		/*Verificando existencia de usuário*/
-		usersData.map(emailCadastrado => {
-
-			if(emailCadastrado.email === response.profileObj.email) {
-				alert('Esta conta já está cadastrada')
-
-			} else if (!createUser) {
-				/*Adicionando novo usuário*/
-				setCreateUser(true)
-
-				/*Coloquei a senha como true pois o usuário 
-				já fez o login com o google*/
-				setUsers([
-			      ...usersData, {
-			        eventOwner: response.profileObj.name,
-			        email: response.profileObj.email,
-			        password: true, 
-			        token: false,
-			        avatar: response.profileObj.imageUrl
-			      }
-			    ])
-			    console.log(usersData)
-			}
-		})
-
+		setDataGoogle(response)
 	}
 
 	return (
@@ -55,6 +31,11 @@ function GoogleAccount(props) {
 			/>
 
 		<p>OU</p>
+		{dataGoogle && <CreateUser  name={dataGoogle.profileObj.name} 
+									email={dataGoogle.profileObj.email} 
+									password={true} 
+									avatar={dataGoogle.profileObj.imageUrl}
+		/>}
 		</>
 	);
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import GoogleLogin from 'react-google-login';
 
 /*Componentes*/
 import FormRegister from '../../components/form-register/index';
@@ -19,7 +20,7 @@ function SignUp(props) {
 		{/* Login com o Google: */}
 		<GoogleAccount />
 		{/* Login formal: */}
-		<FormRegister />
+		<FormRegister name={""} email={""} password={""} action={"Cadastrar nova conta"}/>
 		{/* Rodapé: */}
 		<Footer />
 		</>

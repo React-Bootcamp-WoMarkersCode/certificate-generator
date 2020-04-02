@@ -29,7 +29,7 @@ const FormLogin = () => {
   });
 
   
-  // console.log(formik);
+  console.log(formik);
   //O article está sendo utilizado do tachyons para colocar na formatação dos campos e a centralização na tela e a sombra
   return (
     <article className="mw5 center bg-white shadow-5 br3 pa3 pa4-ns mv3 ba b--black-10">
