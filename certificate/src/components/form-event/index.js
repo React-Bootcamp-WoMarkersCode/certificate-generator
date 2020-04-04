@@ -1,8 +1,6 @@
 import React, { useState, useEffect }  from 'react'
-import { Form, DatePicker, Button, Input, InputNumber } from 'antd';
+import { Form, DatePicker, Button, Input } from 'antd';
 import UploadImg from '../upload-img/index'
-
-import data from '../../services/events.json'
 
 const { RangePicker } = DatePicker;
 
@@ -42,7 +40,7 @@ const rangeConfig = {
     {
       type: 'array',
       required: true,
-      message: 'Este campo é obrigatório!',
+      message: 'Please select time!',
     },
   ],
 };
@@ -52,37 +50,31 @@ const rangeInputs = {
 	rules: [
     	{
         	required: true,
-            message: 'Por favor, preencha esse campo',
+            message: 'Please input your name',
         },
 	],
 };
 
 const FormEvent = () => {
-
-  /*Estado do JSON de eventos*/
-  const [ eventosData, setEventos ] = useState(data)
-
   const onFinish = fieldsValue => {
-
-    /*Dados do calendário*/
+    // Should format date value before submit.
     const rangeValue = fieldsValue['range-picker'];
+    const rangeTimeValue = fieldsValue['range-time-picker'];
 
-    /*Adicionando novo evento*/
-    setEventos([
-      ...eventosData, {
-        email: "dianaregina22@outlook.com.br",
-        company: fieldsValue.company, 
-        course: fieldsValue.course,
-        startDate: rangeValue[0].format('YYYY-MM-DD'), 
-        finishDate: rangeValue[1].format('YYYY-MM-DD'),
-        workload: fieldsValue.workload,
-        logo: "",
-        digitalSignature: "",
-        participants: []
-      }
-    ])
-    console.log(eventosData)
-
+    /*Constroi o formato dos calendarios*/
+    const values = {
+      ...fieldsValue,
+      'date-picker': fieldsValue['date-picker'].format('YYYY-MM-DD'),
+      'date-time-picker': fieldsValue['date-time-picker'].format('YYYY-MM-DD HH:mm:ss'),
+      'month-picker': fieldsValue['month-picker'].format('YYYY-MM'),
+      'range-picker': [rangeValue[0].format('YYYY-MM-DD'), rangeValue[1].format('YYYY-MM-DD')],
+      'range-time-picker': [
+        rangeTimeValue[0].format('YYYY-MM-DD HH:mm:ss'),
+        rangeTimeValue[1].format('YYYY-MM-DD HH:mm:ss'),
+      ],
+      'time-picker': fieldsValue['time-picker'].format('HH:mm:ss'),
+    };
+    console.log('Received values of form: ', values);
   };
 
   return (
@@ -91,40 +83,32 @@ const FormEvent = () => {
         <Form.Item
 	        {...formInputLayout}
 	        {...rangeInputs}
-	        name="company"
-	        label="Empresa/Startup/Organização" >
-          <Input placeholder="Digite a empresa responsável pelo evento" />
-        </Form.Item>
+	        name="course"
+	        label="Course/Event"
+	      >
+        <Input placeholder="Digite o nome do evento" />
+      </Form.Item>
 
-        <Form.Item
-          {...formInputLayout}
-          {...rangeInputs}
-          name="course"
-          label="Curso/Evento">
-          <Input placeholder="Digite o nome do evento"  />
-        </Form.Item>
+            <Form.Item
+        {...formInputLayout}
+        
+        name="cargaHoraria"
+        label="Carga Horária"
+      >
+        <Input placeholder="Digite a carga horária do curso" />
+      </Form.Item>
 
-        <Form.Item 
-          label="Carga Horária" 
-          name="workload" >
-          <InputNumber /> 
-        </Form.Item>
+      <Form.Item name="range-picker" label="Data de inicio/fim do evento" {...rangeConfig}>
+        <RangePicker />
+      </Form.Item>
 
-        <Form.Item 
-          name="range-picker" 
-          label="Data de inicio/fim do evento" 
-          {...rangeConfig}>
-          <RangePicker />
-        </Form.Item>
+      <UploadImg/>
 
-        <UploadImg/>
-
-        <Form.Item>
-          <Button type="primary" htmlType="submit">
-            Cadastrar Novo Evento
-          </Button>
-        </Form.Item>
-
+      <Form.Item>
+        <Button type="primary" htmlType="submit">
+          Cadastrar Novo Evento
+        </Button>
+      </Form.Item>
     </Form>
   );
 };

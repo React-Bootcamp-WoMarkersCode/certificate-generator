@@ -1,18 +1,9 @@
 import React from 'react'
 
-/*Componentes*/
-import Menu1 from '../../components/menu-1/index'
-import ProfileCard from '../../components/profile-card/index'
-import Footer from '../../components/footer/index'
-
 function Profile(props) {
 
 	return (
-		<>
-			<Menu1 />
-			<ProfileCard />
-			<Footer />
-		</>
+		<h1>Esta é a função que trabalha com a pagina para mostrar o perfil do usuario</h1>
 	);
 }
 

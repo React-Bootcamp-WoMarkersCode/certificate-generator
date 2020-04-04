@@ -22,22 +22,22 @@ function Footer(props) {
 						<ol>
 							<h3>Nossas Desenvolvedoras</h3>
 							<li>
-								<a href="https://www.linkedin.com/in/beatriz-ali-508940153/" className="footer-link"> Beatriz</a>
+								<Link to="https://www.linkedin.com/in/beatriz-ali-508940153/" className="footer-link"> Beatriz</Link>
 							</li>
 							<li>
-								<a href="https://www.linkedin.com/in/chaiana-hermes-8ab6a921/" className="footer-link">Chaiana</a>
+								<Link to="https://www.linkedin.com/in/chaiana-hermes-8ab6a921/" className="footer-link">Chaiana</Link>
 							</li> 
 							<li>
-								<a href="https://www.linkedin.com/in/diana-regina-a96840173/" className="footer-link">Diana</a>
+								<Link to="https://www.linkedin.com/in/diana-regina-a96840173/" className="footer-link">Diana</Link>
 							</li> 
 							<li>
-								<a href="https://www.linkedin.com/in/grasiele-kroger/" className="footer-link">Grasiele</a>
+								<Link to="https://www.linkedin.com/in/grasiele-kroger/" className="footer-link">Grasiele</Link>
 							</li> 
 							<li>
-								<a href="https://www.linkedin.com/in/rosemeire-oyakawa-25099838/" className="footer-link">Rosemeire</a>
+								<Link to="https://www.linkedin.com/in/rosemeire-oyakawa-25099838/" className="footer-link">Rosemeire</Link>
 							</li> 
 							<li>
-								<a href="https://www.linkedin.com/in/sabrina-nabuco-de-oliveira-41008a38/" className="footer-link">Sabrina</a>
+								<Link to="https://www.linkedin.com/in/sabrina-nabuco-de-oliveira-41008a38/" className="footer-link">Sabrina</Link>
 							</li> 
 						</ol>		
 	 			</Row>
@@ -46,15 +46,13 @@ function Footer(props) {
 					 <Row>
 	 				<ol className="footer-list">
 	 				<h3>Gerador de Certificados</h3>
-	 					<li>
-							<Link to='/sign-in'  className="footer-link">Sign In</Link> 
+	 					<li >
+							 <Link to='./pages/sign-in/index'  className="footer-link">Sign In</Link> 
 						</li>
-	 					<li>
-							<Link to='/sign-up' className="footer-link">Sign Up</Link> 
+	 					<li >
+							 <Link to='./pages/sign-up/index' className="footer-link">Sign Up</Link> 
 						</li>
-	 					<li>
-	 						<Link to="#" className="footer-link">Começar</Link> 
-	 					</li>
+	 					<li ><Link to="#" className="footer-link">Começar</Link> </li>
 	 				</ol>	
 					</Row>
 				</Col>

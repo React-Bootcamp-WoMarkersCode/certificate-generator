@@ -29,12 +29,12 @@ function Cards(props) {
 			          	resolver isso!
 			        </Card>
 				
-			        <Card className="card" title="Importe sua assinatura e logo" bordered={false}>
-			          	Faça upload de sua assinatura digital e o logo de sua empresa para contruir os certificados.
+			        <Card className="card" title="Dados CSV" bordered={false}>
+			          	Os dados dos participantes como nome, e-mail e nome do curso devem ser mandados em um arquivo de texo separado por virgulas
 			        </Card>
 				
 			        <Card className="card" title="Uso empresarial" bordered={false}>
-			          	Crie uma conta para a sua você ou empresa e gere certificados para seus eventos e cursos
+			          	Crie uma conta para a sua empresa e gere certificados para seus eventos e cursos
 			        </Card>
 				
 					<Card className="card" title="Praticidade" bordered={false}>
