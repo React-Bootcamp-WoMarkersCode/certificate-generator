@@ -7,7 +7,7 @@ import Cards from '../../components/cards/index'
 import ModelCertificateHome from '../../components/model-certificate-home/index'
 import Steps from '../../components/steps/index'
 import Footer from '../../components/footer/index'
-
+ 
 function Home(props) {
 
 	return (
@@ -18,7 +18,8 @@ function Home(props) {
 			<Cards />
 			<Steps />
 			<ModelCertificateHome />
-			<Footer />
+			<Footer />	
+					
 		</>
 	);
 }

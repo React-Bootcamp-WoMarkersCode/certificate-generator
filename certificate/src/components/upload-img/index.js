@@ -51,7 +51,7 @@ class UploadImg extends React.Component {
     const { imageUrl } = this.state;
     return (
       <>
-      <h3 className="h3-upload-img" style={{color:'black'}}>Assinatura Digital:</h3>
+      
       <Upload
         name="avatar"
         listType="picture-card"
