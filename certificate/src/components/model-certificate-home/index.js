@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import './style.css';
 
 function ModelCertificateHome(props) {
 
 	return (
-		<h1>Esta é a função que trabalha com o o componente ModelCertificateHome</h1>
+		<div className="model">
+			<h1 className="h1-model "> <span className="sub-title-1">Nosso </span> <span className="sub-title-1 model-color">modelo</span></h1>
+		</div>
 	);
 }
 

@@ -1,0 +1,31 @@
+.model{
+    background-image: url('../../assets/wallpaper-section.jpg'); 
+    height: 100vh;   
+}
+
+.sub-title-1 {
+	border-color:  #c6255a;
+	border-top-style: solid;
+	border-top-width: 7px;
+	color: black;
+}
+
+.h1-model{
+    margin-left: 3%;
+	margin-top: 3%;
+    font-family: 'Raleway', sans-serif;
+    padding-top: 3%;
+}
+
+.model-color{
+    color: #c6255a;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 600px){
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px){
+
+}

@@ -8,6 +8,7 @@ function CreateEvent(props) {
 	return (
 		<>
 			<FormEvent />
+			<UploadImg />
 			<Footer />
 		</>
 	);
