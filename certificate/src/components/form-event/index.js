@@ -3,6 +3,7 @@ import { Form, DatePicker, Button, Input, InputNumber } from 'antd';
 import UploadImg from '../upload-img/index'
 
 import data from '../../services/events.json'
+import './style.css'
 
 const { RangePicker } = DatePicker;
 
@@ -62,25 +63,44 @@ const FormEvent = () => {
   /*Estado do JSON de eventos*/
   const [ eventosData, setEventos ] = useState(data)
 
+  /*Estado do JSON de eventos*/
+  const [ eventExisting, setEventExisting ] = useState(false)
+
   const onFinish = fieldsValue => {
 
     /*Dados do calendário*/
     const rangeValue = fieldsValue['range-picker'];
+    alert('ooi')
+    console.log(eventosData)
+    console.log(fieldsValue)
+    /*Verificando se o evento já existe antes de cria-lo*/
+    eventosData.map(events => {
 
-    /*Adicionando novo evento*/
-    setEventos([
-      ...eventosData, {
-        email: "dianaregina22@outlook.com.br",
-        company: fieldsValue.company, 
-        course: fieldsValue.course,
-        startDate: rangeValue[0].format('YYYY-MM-DD'), 
-        finishDate: rangeValue[1].format('YYYY-MM-DD'),
-        workload: fieldsValue.workload,
-        logo: "",
-        digitalSignature: "",
-        participants: []
+      if((events.company == fieldsValue.company) && (events.course == fieldsValue.course)) {
+        alert('Este evento já foi cadastrado')
+
+      } else if(!eventExisting) {
+
+        /*Marcando evento como existente*/
+        setEventExisting(true)
+
+        /*Adicionando novo evento*/
+        setEventos([
+          ...eventosData, {
+            email: "dianaregina22@outlook.com.br",
+            company: fieldsValue.company, 
+            course: fieldsValue.course,
+            startDate: rangeValue[0].format('YYYY-MM-DD'), 
+            finishDate: rangeValue[1].format('YYYY-MM-DD'),
+            workload: fieldsValue.workload,
+            logo: "",
+            digitalSignature: "",
+            participants: []
+          }
+        ])
       }
-    ])
+    })
+
     console.log(eventosData)
 
   };
@@ -117,6 +137,9 @@ const FormEvent = () => {
           <RangePicker />
         </Form.Item>
 
+        <h3 className="h3-form-event">Assinatura Digital</h3>
+        <UploadImg/>
+        <h3 className="h3-form-event">Logo do Evento/Empresa</h3>
         <UploadImg/>
 
         <Form.Item>
