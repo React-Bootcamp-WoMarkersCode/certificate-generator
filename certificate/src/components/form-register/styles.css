@@ -1,27 +1,42 @@
-.form{
-    border: groove;
-    border-radius: 5%;
-    width: 40vw;
-    height: 50vh;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1em;
+*{
+    font-family: 'Raleway', sans-serif;
+    font-weight: "200", "400", ou "800" (light, regular, bold)
 }
 
+.form{
+    width: 60%;
+    height: 50vh;
+    display: block;
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Inputs - Label*/
 .form-label{
+    font-family: 'Raleway', sans-serif;
+    font-weight: light;
     font-size: 1.2em;
     font-weight: bold;
     display: flex;
     justify-content: center;
     padding: 0.5em;;
+
 }
 
+/*Inputs - Field*/
 .form-field{
     display: block;
     margin-left: auto;
     margin-right: auto;
     font-size: 15px;
+    width: 60%;
+
+    border-color: transparent;
+    border-bottom-color: black;
+    border-bottom-width: 1px;
+
+    margin-bottom: 2%;
     
 }
 
@@ -38,19 +53,34 @@
 
 .button{
     background-color: rgb(255, 102, 0);
-    border-color: rgb(255, 102, 0);
+    border-color: transparent;
     color: #ffffff;
     font-weight: bold;
     display: block;
+    margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
     width: 60%;
-    height: 4vh;
+    height: 6vh;
+}
+
+.button:hover {
+    border-color: rgb(255, 102, 0);
+    color: rgb(255, 102, 0);
+    background-color: white;
+    transition: 1s;
+}
+
+/*Mensagem de erro: preencha os campos*/
+.msg-error {
+    color: red;
+    display: flex;
+    justify-content: center;
 }
 
 @media screen and (max-width: 600px){
     .form{
-        width: 40vw;
+        width: 90%;
         height: 60vh;
     }
 
@@ -60,12 +90,17 @@
 
     .button{
         height: 6vh;
+        width: 100%;
+    }
+
+    .form-field {
+        width: 100%;
     }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1000px){
     .form{
-        width: 40vw;
+        width: 60%;
         height: 60vh;
     }
 
@@ -74,6 +109,10 @@
     }
 
     .button{
-        width: 80%;
+        width: 100%;
+    }
+
+    .form-field {
+        width: 100%;
     }
 }

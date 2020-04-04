@@ -29,11 +29,11 @@ const FormLogin = () => {
   });
 
   
-  // console.log(formik);
+  console.log(formik);
   //O article está sendo utilizado do tachyons para colocar na formatação dos campos e a centralização na tela e a sombra
   return (
-    <article className="mw5 center bg-white shadow-5 br3 pa3 pa4-ns mv3 ba b--black-10">
-      <Form className="login-form" onFinish={onFinish}>
+    <div className="article" style={{ 'width': "40%", 'marginRight':'auto', 'marginLeft': 'auto'}}>
+      <Form className="login-form" onFinish={onFinish} >
         <Form.Item>
           <Input
             name="email"
@@ -57,11 +57,6 @@ const FormLogin = () => {
               <div style={{color: "#f00"}}>{formik.errors.password}</div>
             ) : null}
         </Form.Item>
-        <Form.Item>
-          <a className="login-form-forgot" href="">
-            Esqueci a senha
-          </a>
-        </Form.Item>
 
         <Form.Item>
           <Button
@@ -69,17 +64,18 @@ const FormLogin = () => {
             style={{
               background: "#C6255A",
               "borderColor": "#C6255A",
-              "marginRight": "15%"
+              "marginRight": "15%",
+              "width": "100%"
             }}
             htmlType="submit"
             className="login-form-button"
           >
             Entrar
           </Button>
-          <a href="">Registrar-se!</a>
+          
         </Form.Item>
       </Form>
-    </article>
+    </div>
   );
 };
 

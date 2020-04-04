@@ -1,5 +1,5 @@
 .div-section {
-	background-image: url('../../assets/wallpaper-section.jpg');
+	background-image: url('../../assets/wallpaper-section.jpg.png');
 	padding: 5%;
 }
 
@@ -16,10 +16,12 @@
 
 .span-1 {
 	color: #c6255a;
+	font-weight: bold;
 }
 
 .span-2 {
 	color: #006400;
+	font-weight: bold;
 }
 
 .span-3 {

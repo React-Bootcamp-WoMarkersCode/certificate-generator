@@ -7,9 +7,8 @@ function CreateEvent(props) {
 
 	return (
 		<>
-		<FormEvent />
-		<UploadImg />
-		<Footer />
+			<FormEvent />
+			<Footer />
 		</>
 	);
 }
