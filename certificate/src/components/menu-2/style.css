@@ -1,0 +1,55 @@
+/* posicionamento do menu do lado do logo */
+.ant-layout {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Alterando a cor e opacidade do background do menu, posicionamento do menu na horizontal  */
+.menu-2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  align-items: center;
+  font-weight: bold;
+  opacity: 0.8;
+  background-color: #fff;
+}
+
+/* Aumentando a fonte dos itens do menu */
+li > a {
+  font-size: 1.2rem;
+}
+
+img {
+  width: 13vw;
+  height: 14.9vh;
+  background: #fff;
+  z-index: 1;
+}
+
+.logoWomakers {
+  width: -100vw;
+  height: -10vh;
+  margin-left: -10%;
+}
+
+@media screen and (max-width: 800px) {
+  .logoWomakers {
+    width: -78vw;
+    height: -10vh;
+    margin-left: 1%;
+  }
+
+  img {
+    width: 20vw;
+    height: 14.9vh;
+    background: #fff;
+    z-index: 1;
+  }
+
+  li > a {
+    font-size: 1rem;
+  }
+}

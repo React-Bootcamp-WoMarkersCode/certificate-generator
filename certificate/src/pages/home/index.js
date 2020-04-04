@@ -12,7 +12,7 @@ function Home(props) {
 
 	return (
 		<>
-			<h1>Esta é a função que trabalha com a pagina Home</h1>
+			
 			<Header />
 			<Section />
 			<Cards />
