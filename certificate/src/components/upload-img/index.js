@@ -43,6 +43,7 @@ class UploadImg extends React.Component {
 
   render() {
     const uploadButton = (
+      
       <div>
         {this.state.loading ? <LoadingOutlined /> : <PlusOutlined />}
         <div className="ant-upload-text">Upload</div>
@@ -51,7 +52,7 @@ class UploadImg extends React.Component {
     const { imageUrl } = this.state;
     return (
       <>
-      <h3 className="h3-upload-img" style={{color:'black'}}>Assinatura Digital:</h3>
+      
       <Upload
         name="avatar"
         listType="picture-card"

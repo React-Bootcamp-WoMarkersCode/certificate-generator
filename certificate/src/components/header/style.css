@@ -1,0 +1,62 @@
+/* Inserido a foto como imagem de fundo */
+.div-header {
+
+  margin-top: 0;
+  padding-bottom: 15%;
+  background-image: url("../../assets/img/womakerscode-oficina.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+/* Espaçamento do começo do texto em relação ao topo, tamanho e espaçamento das letras  */
+.h2-header {
+  margin-top: 10%;
+  padding-top: 20%;
+  padding-left: 10%;
+  font-size: 3rem;
+  font-family: "Releway", sans-serif;
+  font-weight: bold;
+  word-spacing: 1rem;
+  letter-spacing: 0.2rem;
+}
+
+.h1-header {
+  margin-bottom: 3.5%;
+  padding-bottom: 5%;
+  padding-left: 10%;
+  font-size: 5rem;
+  line-height: 0rem;
+  font-family: "Releway", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+span.span-2 {
+  color: #fff;
+}
+
+span.span-1 {
+  color: #ffa900;
+
+}
+
+@media screen and (max-width: 800px) {
+  .h2-header {
+    font-size: 1.5rem;
+    margin-top: 25%;
+    padding-top: 15%;
+  }
+
+  .h1-header {
+    font-size: 2.5rem;
+
+  }
+
+  .div-header {
+    padding-bottom: 15%;
+    background-size: contain;
+    margin-bottom: -13%;
+
+  }
+}
