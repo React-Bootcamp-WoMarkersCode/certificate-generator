@@ -11,6 +11,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "formik": "^2.1.4",
+    "jest-enzyme": "^7.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-google-login": "^5.1.2",
