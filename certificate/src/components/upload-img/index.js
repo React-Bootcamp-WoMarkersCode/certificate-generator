@@ -43,6 +43,7 @@ class UploadImg extends React.Component {
 
   render() {
     const uploadButton = (
+      
       <div>
         {this.state.loading ? <LoadingOutlined /> : <PlusOutlined />}
         <div className="ant-upload-text">Upload</div>
