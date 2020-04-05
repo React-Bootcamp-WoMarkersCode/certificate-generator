@@ -18,8 +18,7 @@ function Home(props) {
 			<Cards />
 			<Steps />
 			<ModelCertificateHome />
-			<Footer />	
-					
+			<Footer />			
 		</>
 	);
 }
