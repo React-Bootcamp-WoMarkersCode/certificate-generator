@@ -1,9 +1,19 @@
 import React from 'react'
+import MyDocument from '../../components/my-document/index'
+import { PDFDownloadLink, Document, Page } from '@react-pdf/renderer'
+import './style.css'
 
 function ConfirmCertificateToSend(props) {
-
 	return (
-		<h1>Esta é a função que trabalha com a pagina para apresentar o modelo do certificado antes de mandar para os participantes</h1>
+		<div className="page">
+			<h1 className="h1-confirm-send">
+				<span className="span-confirm">
+					Seus certificados</span>
+					&nbsp;
+					em PDF será enviado para todos os participantes confirmados
+			</h1>
+			<MyDocument/>
+		</div>
 	);
 }
 

@@ -1,0 +1,19 @@
+.page {
+	margin-top: -1%;
+	padding: 5%;
+	background-image: url('../../assets/wallpaper-section.jpg');
+}
+
+.h1-confirm-send {
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	font-weight: 400;
+}
+
+/*Seus certificados*/
+.span-confirm {
+	border-color: #c6255a;
+	border-top-style: solid;
+	border-top-width: 7px;
+	color: black;
+}
