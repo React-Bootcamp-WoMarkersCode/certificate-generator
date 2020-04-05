@@ -22,9 +22,6 @@ function Footer(props) {
 						<ol>
 							<h3>Nossas Desenvolvedoras</h3>
 							<li>
-								<a href="https://www.linkedin.com/in/beatriz-ali-508940153/" className="footer-link"> Beatriz</a>
-							</li>
-							<li>
 								<a href="https://www.linkedin.com/in/chaiana-hermes-8ab6a921/" className="footer-link">Chaiana</a>
 							</li> 
 							<li>
@@ -53,7 +50,7 @@ function Footer(props) {
 							<Link to='/sign-up' className="footer-link">Sign Up</Link> 
 						</li>
 	 					<li>
-	 						<Link to="#" className="footer-link">Começar</Link> 
+	 						<Link to="/sign-up" className="footer-link">Começar</Link> 
 	 					</li>
 	 				</ol>	
 					</Row>

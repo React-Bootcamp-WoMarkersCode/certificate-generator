@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import GoogleLogin from 'react-google-login';
 
 /*Componentes*/
+import Menu1 from '../../components/menu-1/index'
 import FormRegister from '../../components/form-register/index';
 import GoogleAccount from '../../components/login-register-google/index';
 import Footer from '../../components/footer/index';
@@ -16,13 +17,10 @@ function SignUp(props) {
 
 	return (
 		<>
-
-		{/* Login com o Google: */}
-		<GoogleAccount />
-		{/* Login formal: */}
-		<FormRegister name={""} email={""} password={""} action={"Cadastrar nova conta"}/>
-		{/* Rodapé: */}
-		<Footer />
+			<Menu1/>
+			<GoogleAccount />
+			<FormRegister name={""} email={""} password={""} action={"Cadastrar nova conta"}/>
+			<Footer />
 		</>
 	);
 }

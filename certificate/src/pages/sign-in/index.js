@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom';
 
 /*Componentes*/
+import Menu1 from '../../components/menu-1/index'
 import FormLogin from '../../components/form-login/index';
 import GoogleAccount from '../../components/login-register-google/index';
 import Footer from '../../components/footer/index';
@@ -12,11 +13,10 @@ import '../../style/App.css';
 function SignIn(props) {
 	return (
 		<>
-
-		{/* Login com o Google: */}
-		<GoogleAccount />
-		<FormLogin />
-		<Footer />
+			<Menu1 />
+			<GoogleAccount />
+			<FormLogin />
+			<Footer />
 		</>
 	);
 }

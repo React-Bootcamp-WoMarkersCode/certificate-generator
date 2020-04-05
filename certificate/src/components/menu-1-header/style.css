@@ -5,13 +5,15 @@
 }
 
 /* Alterando a cor e opacidade do background do menu, posicionamento do menu na horizontal  */
-.menu-1 {
+.menu-1-header {
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  font-weight: bold;
+  position: fixed;
+  z-index: 1;
   align-items: center;
-  opacity: 0.8;
+  font-weight: bold;
+  opacity: 0.95;
   background-color: #fff;
 }
 

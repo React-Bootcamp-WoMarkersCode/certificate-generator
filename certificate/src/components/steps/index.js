@@ -7,7 +7,7 @@ function Steps(props) {
 		<div className="div-steps">
 			<h2 className="h2-steps" >
 				<span className="span-1-steps">Veja como </span>
-					é simples e fácil de usar o nosso 
+					é simples e fácil de usar o nosso &nbsp;
 				<span className="span-2-steps">
 					passo a passo
 				</span>

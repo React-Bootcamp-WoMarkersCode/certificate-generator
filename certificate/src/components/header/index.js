@@ -1,11 +1,11 @@
 import React from "react";
-import Menu1 from "../menu-1/index";
+import Menu1Header from "../menu-1-header/index";
 import "./style.css";
 
 function Header() {
   return (
     <div className="div-header">
-      <Menu1 />
+      <Menu1Header />
 
       <h2 className="h2-header">
         <span className="span-2">Gerador de</span>

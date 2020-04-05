@@ -4,10 +4,11 @@ import { Link } from "react-router-dom";
 import logoWomakers from "../../assets/img/logo_texto_cinza.png";
 import "./style.css";
 
-function Menu2() {
+/*Menu criado para estar somente na pagina Home por conta das propriedades z-index:1 e position: fixed*/
+function Menu1Header() {
   return (
     <Layout>
-      <Menu className="menu-2" theme="light">
+      <Menu className="menu-1-header" >
         <div className="logoWomakers">
           <Link to="/"><img src={logoWomakers} alt="logo" /></Link>
         </div>
@@ -16,14 +17,14 @@ function Menu2() {
           <Link to="/">Home</Link>
         </Menu.Item>
         <Menu.Item key="2">
-          <Link to="/profile">Meu Perfil</Link>
+          <Link to="/sign-up">Cadastro</Link>
         </Menu.Item>
         <Menu.Item key="3">
-          <Link to="/list-of-events">Meus Eventos</Link>
+          <Link to="/sign-in">Login</Link>
         </Menu.Item>
       </Menu>
     </Layout>
   );
 }
 
-export default Menu2;
+export default Menu1Header;
