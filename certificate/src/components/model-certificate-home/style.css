@@ -1,35 +1,31 @@
-.div-model {
-	background-image: url('../../assets/wallpaper-section.jpg.png');
-	padding: 5%;
-	margin-bottom: -15%;
-}
-.h1-model-certificate {
-	font-family: 'Raleway', sans-serif;	
-	font-weight: 800;
-	color: #c6255a;
+.model{
+    background-image: url('../../assets/wallpaper-section.jpg'); 
+    height: 100vh;   
 }
 
-.span-model-certificate {
-	border-color: #c6255a;
+.sub-title-1 {
+	border-color:  #c6255a;
 	border-top-style: solid;
 	border-top-width: 7px;
 	color: black;
-	font-weight: 200;
 }
 
-.img-model-certificate {
-	width: 60%;
-	height: 60%;
-	margin-left: 20%;
+.h1-model{
+    margin-left: 3%;
+	margin-top: 3%;
+    font-family: 'Raleway', sans-serif;
+    padding-top: 3%;
 }
 
-.img-model-certificate:hover {
-	box-shadow: 4px 4px 8px gray;
-	transition: 1s;
+.model-color{
+    color: #c6255a;
+	font-weight: bold;
 }
 
-@media screen and (max-width: 800px) {
-	.h1-model-certificate { 
-		font-size: 20px;
-	}
+@media screen and (max-width: 600px){
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px){
+
 }

@@ -1,20 +1,11 @@
-import React from 'react'
-import modelCertificate from '../../assets/model_certificate.png'
-import './style.css'
+import React from 'react';
+import './style.css';
 
 function ModelCertificateHome(props) {
 
 	return (
-		<div className="div-model">
-			<h1 className="h1-model-certificate"> 
-				<span className="span-model-certificate">
-					Nosso
-				</span>
-					&nbsp;
-					Modelo
-			</h1>
-
-			<img className="img-model-certificate" src={modelCertificate} alt="Modelo de Certificado"/>
+		<div className="model">
+			<h1 className="h1-model "> <span className="sub-title-1">Nosso </span> <span className="sub-title-1 model-color">modelo</span></h1>
 		</div>
 	);
 }
