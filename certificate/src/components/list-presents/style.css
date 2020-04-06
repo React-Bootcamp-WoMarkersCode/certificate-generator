@@ -1,15 +1,39 @@
 
 /*Div do titulo, lista de participantes e botão*/
 .list-participants {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 	padding: 3%;
 	width: 100%;
 }
 
+/*Div de formulário*/
+.input-participantes {
+	text-align: center;
+}
+
+/*---------------------------------*/
+
+/*Mensagem de alerta/erro*/
+.msg-error-participant {
+	color: red;
+}
+
+/*Inputs*/
+.input-1, .input-2 {
+	width: 60%;
+	margin-top: 1%;
+}
+
+.button-parcipants {
+	margin-top: 3%;
+}
+
+/*-------------------------------------*/
+
 .title-2 {
 	text-align: center;
+	margin-top: 0;
 	color: #c6255a;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 800;
@@ -21,16 +45,15 @@
 	font-size: 15px;
 	width: 40%;
 	margin-left: 30%;
-
 	padding: 1%;
 }
 
-/*Botão para confirmar participantes da lista*/
-.submit-participants {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-
-	margin-top: 5%;
+@media screen and (max-width: 800px) {
+	.list-participants { 
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.title-2 {
+		margin-top: 5%;
+	}
 }
 

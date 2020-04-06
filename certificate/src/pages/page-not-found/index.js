@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link}  from 'react-router-dom'
+import { Link }  from 'react-router-dom'
 import Error404 from '../../assets/img/erro404.gif'
 import './style.css'
 
@@ -12,7 +12,7 @@ function PageNotFound() {
 		<div>
 			<Menu1 />
 			<img src={Error404} className="gif-erro" alt="imagem de página não encontrada"/>
-			<div style={{textAlign:'center'}}>
+			<div style={{textAlign:'center', color:'orange'}}>
 				<Link to="/">Voltar para a Home</Link>
 			</div>
 			<Footer />

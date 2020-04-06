@@ -7,8 +7,6 @@ import '../../pages/sign-in/index';
 import '../../pages/sign-up/index';
 import '../../style/App.css';
 
-
-
 function Footer(props) {
 	
 	return (

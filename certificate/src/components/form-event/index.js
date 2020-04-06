@@ -70,7 +70,6 @@ const FormEvent = () => {
 
     /*Dados do calendário*/
     const rangeValue = fieldsValue['range-picker'];
-    alert('ooi')
     console.log(eventosData)
     console.log(fieldsValue)
     /*Verificando se o evento já existe antes de cria-lo*/
@@ -106,25 +105,30 @@ const FormEvent = () => {
   };
 
   return (
-    <Form name="time_related_controls" {...formItemLayout} onFinish={onFinish}>     
+    <Form name="time_related_controls" {...formItemLayout} onFinish={onFinish}>  
 
+      <div className="inputs-event">
+        <h1 className="h1-form-event">Criando um novo evento</h1>
         <Form.Item
 	        {...formInputLayout}
 	        {...rangeInputs}
+          className="input-1-event"
 	        name="company"
-	        label="Empresa/Startup/Organização" >
+	        label="Empresa" >
           <Input placeholder="Digite a empresa responsável pelo evento" />
         </Form.Item>
 
         <Form.Item
           {...formInputLayout}
           {...rangeInputs}
+          className="input-2-event"
           name="course"
           label="Curso/Evento">
           <Input placeholder="Digite o nome do evento"  />
         </Form.Item>
 
         <Form.Item 
+          className="input-3-event"
           label="Carga Horária" 
           name="workload" >
           <InputNumber /> 
@@ -132,22 +136,24 @@ const FormEvent = () => {
 
         <Form.Item 
           name="range-picker" 
+          className="input-4-event"
           label="Data de inicio/fim do evento" 
           {...rangeConfig}>
           <RangePicker />
         </Form.Item>
 
-        <h3 className="h3-form-event">Assinatura Digital</h3>
-        <UploadImg/>
-        <h3 className="h3-form-event">Logo do Evento/Empresa</h3>
-        <UploadImg/>
+        <div className="upload-button">
+          <h3 className="h3-form-event">Logo do Evento/Empresa:</h3>
+          <UploadImg/>
+        </div>
 
-        <Form.Item>
-          <Button type="primary" htmlType="submit">
-            Cadastrar Novo Evento
-          </Button>
-        </Form.Item>
 
+          <Form.Item>
+            <Button type="primary" htmlType="submit" className="button-events">
+              Cadastrar Novo Evento
+            </Button>
+          </Form.Item>
+      </div>
     </Form>
   );
 };
