@@ -68,12 +68,11 @@ const FormEvent = () => {
 
   const onFinish = fieldsValue => {
 
-    /*Dados do calendário*/
-    const rangeValue = fieldsValue['range-picker'];
-    console.log(eventosData)
-    console.log(fieldsValue)
-    /*Verificando se o evento já existe antes de cria-lo*/
-    eventosData.map(events => {
+  /*Dados do calendário*/
+  const rangeValue = fieldsValue['range-picker'];
+    
+  /*Verificando se o evento já existe antes de cria-lo*/
+  eventosData.map(events => {
 
       if((events.company == fieldsValue.company) && (events.course == fieldsValue.course)) {
         alert('Este evento já foi cadastrado')
