@@ -41,12 +41,15 @@
 
 /*Para cada nome dos participantes*/
 .name-participant {
-	display: inline-block;
+	display: inline-flex;
 	font-size: 15px;
-	width: 40%;
+	width: 60%;
 	margin-left: 30%;
 	padding: 1%;
 }
+
+/*Certificado do usuário*/
+
 
 @media screen and (max-width: 800px) {
 	.list-participants { 
