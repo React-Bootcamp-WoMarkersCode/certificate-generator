@@ -9,8 +9,6 @@
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  position: fixed;
-  z-index: 1;
   align-items: center;
   font-weight: bold;
   opacity: 0.8;

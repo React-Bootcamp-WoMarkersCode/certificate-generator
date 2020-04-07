@@ -66,20 +66,8 @@ class ListOfPresents extends Component {
 				"present": true,
 				"receiveCertificate": false,
 				"course": 'react'
-			}]})
-
-			this.setState({ participanteCriado: true })
-		
+			}]})		
 	}
-
-	/*Esta função varre o JSON e procura o participante a partir dos dados digitados no input*/
-	verificaParticipante = (email) => this.state.participantes.map((itemJson, i)=> {
-		if (itemJson.email == email) {
-			this.setState({ msgError: 'Este participante já está na sua lista'}) 
-		} else if (!this.state.participanteCriado) {
-			this.adicionarParticipante()
-		} 
-	})
 
 	
 	/*Esta função será executada ao clicar no botão*/
@@ -91,13 +79,25 @@ class ListOfPresents extends Component {
 
 		event.preventDefault();
 
-		const { name, email } = this.state;
+		const { name, email, participanteCriado } = this.state;
 
 		if(!name || !email) {
 			this.setState({ msgError: 'Por favor, preencha os dados'} ) 
 		} else {
 			this.setState({ msgError: ''})
-			this.verificaParticipante(email)
+			
+			/*Verificando se já existe um participante cadastrado*/
+			let listEmails = []
+
+			this.state.participantes.map(itemJson => {
+				listEmails.push(itemJson.email)
+			})
+
+			if(!listEmails.includes(email)) {
+				this.adicionarParticipante()
+			} else {
+				this.setState({ msgError: 'Este participante já está na sua lista'} )
+			}
 		}
 	}
 
@@ -106,29 +106,38 @@ class ListOfPresents extends Component {
 
 		return (
 			<div className="list-participants">
-				<h1 className="title-2">Lista de Participantes</h1>
-				<h2>Adicione mais participantes a sua lista:</h2>
-				<p>{this.state.msgError}</p>
-				<Input placeholder="Name of Participant" value={this.state.name} onChange={e => this.setState({ name: e.target.value})}/>
-				<Input placeholder="Email of Participant" onChange={e => this.setState({ email: e.target.value})}/>
-				<Button type="primary" danger onClick={this.verificarCampos}>Incluir novo participante</Button>
-				<br/>
-				{
-					this.state.participantes.map(itemJson => {
-						return (
-							<>
-								<div className="name-participant" >
-									<Checkbox 
-											checked={itemJson.present} 
-											onChange={() => this.onChange(itemJson.name)}>
-											{itemJson.name}
-									</Checkbox>
-								</div>
-								<br/>
-							</>
-						);
-					})
-				}
+
+				<div className="input-participantes">
+					<h2>Adicione mais participantes a sua lista:</h2>
+					<p className="msg-error-participant">{this.state.msgError}</p>
+					<Input className="input-1" placeholder="Nome do participante" value={this.state.name} onChange={e => this.setState({ name: e.target.value})}/>
+					<br/>
+					<Input className="input-2" placeholder="E-mail of participante" onChange={e => this.setState({ email: e.target.value})}/>
+					<br/>
+					<Button className="button-parcipants" type="primary" danger onClick={this.verificarCampos}>Incluir novo participante</Button>
+				</div>
+				
+
+				<div className="participantes">
+					<h1 className="title-2">Lista de Participantes</h1>
+				
+					{
+						this.state.participantes.map(itemJson => {
+							return (
+								<>
+									<div className="name-participant" >
+										<Checkbox 
+												checked={itemJson.present} 
+												onChange={() => this.onChange(itemJson.name)}>
+												{itemJson.name}
+										</Checkbox>
+									</div>
+									<br/>
+								</>
+							);
+						})
+					}
+					</div>
 			</div>
 		);
 	}
