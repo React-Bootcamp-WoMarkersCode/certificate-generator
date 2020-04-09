@@ -11,6 +11,8 @@ import participantesData from '../../services/participantes.json'
 
 /*Importando lista de eventos*/
 import eventosData from '../../services/events.json'
+import { PDFDownloadLink } from '@react-pdf/renderer'
+import MyDocument from '../../components/my-document/index'
 
 import stars from '../../assets/stars.png'
 import logo from '../../assets/img/logo_texto_preto.png'
@@ -161,7 +163,34 @@ class ListOfPresents extends Component {
 				<div className="div-buttons">
 					<Button className="button-voltar" onClick={ () => this.setState({ visible: true })}>Voltar para a lista</Button>
 					<Button className="button-email" >Mandar por e-mail</Button>
-					<Button className="button-pdf" >Baixar PDF</Button>
+
+					<PDFDownloadLink
+				        document={<MyDocument 
+
+				        	name={nameParticipant} 
+				        	course={course}
+				        	company={company} 
+				        	startDate={startDate} 
+				        	finishDate={finishDate} 
+				        	workload={workload}
+				        	user={user}
+				        
+				        />}
+				        fileName="certificado.pdf"
+				        style={{
+					          textDecoration: "none",
+					          padding: "10px",
+					          height: '10px',
+					          textAlign: 'center',
+					          color: "#ff4000",
+					  
+					        }}
+					      >
+				        {({ blob, url, loading, error }) =>
+				          loading ? "Loading document..." : "Download Pdf"
+				        }
+				      </PDFDownloadLink>
+
 				</div>
 			</>
 		);

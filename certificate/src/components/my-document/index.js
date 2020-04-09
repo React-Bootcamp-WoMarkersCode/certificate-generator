@@ -2,8 +2,6 @@ import React from 'react';
 import { Page, Text, View, Document, StyleSheet, Image, Font } from '@react-pdf/renderer';
 import  ReactPDF from '@react-pdf/renderer'
 import { PDFViewer } from '@react-pdf/renderer'
-import wallpaperCertificate from '../../assets/wallpaper-certificate.png'
-
 
 /*Cria estilo com style componente*/
 const styles = StyleSheet.create({
@@ -11,40 +9,44 @@ const styles = StyleSheet.create({
 		marginLeft: '10%'
 	},
 	page: {
+		display: 'flex',
 		flexDirection: 'row'
 	}, section: {
-		marginTop: '30%',
+		marginTop: '10%',
 		marginLeft: '3%',
 		padding: 10,
 		flexGrow: 1,
-		textAlign: 'center',
+		textAlign: 'center'
 	}, image: {
-		width: '60%',
-		padding: 10,
-		backgroundColor: 'gray'
+		width: '10%',
+		marginLeft: '35%'
+	}, user: {
+		marginTop: '3%'
 	}
 });
 
 
-const MyDocument = () => {
+const MyDocument = (props) => {
+
+	const { name, course, company, startDate, finishDate, workload, user } = props
+
 	return(
-		<PDFViewer width='100%' height='800'>
-			<Document title="Certificado" >
+		
+			<Document title="Certificado de participação" >
 				<Page 
 					size="A4" 
 					orientation="landscape"
 					style={styles.page}>
 					<View style={styles.section} >
-						<Text lineHeight="50px">A comunidade empresa confere ao participante o presente certificado.</Text>
-						<Text>referente a sua participação no evento curso realizado do</Text>
-						<Text>dia data inicial aodata final, com carga horaria de carga horaria.</Text>
-					</View>
-					<View >
-						<Image source="https://image.shutterstock.com/image-photo/colorful-flower-on-dark-tropical-260nw-721703848.jpg"/>
+						<Image style={styles.image} src="logo_texto_cinza.png"/>
+						<Text lineHeight="50px">A comunidade {company} confere ao participante {name} o presente certificado</Text>
+						<Text>referente a sua participação no evento {course} realizado do</Text>
+						<Text>dia {startDate} ao {finishDate}, totalizando {workload} horas de atividades.</Text>
+						<Text style={styles.user}>{user}</Text>
 					</View>
 				</Page>
-			</Document>		
-		</PDFViewer>
+			</Document>	
+		
 	);
 }
 
