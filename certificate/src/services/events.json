@@ -2,7 +2,18 @@
 	{	
 		"email": "dianaregina22@yahoo.com",
 		"company": "WomakersCode", 
-		"course": "react",
+		"course": "Qualquer curso interessante",
+		"startDate": "03032020", 
+		"finishDate": "03042020",
+		"workload": "30", 
+		"logo": "", 
+		"digitalSignature": "", 
+		"participants": [] 
+	},
+	{	
+		"email": "chai@yahoo.com",
+		"company": "Outra org", 
+		"course": "Qualquer curso ainda mais interessante",
 		"startDate": "03032020", 
 		"finishDate": "03042020",
 		"workload": "30", 

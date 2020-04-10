@@ -17,9 +17,13 @@ export class Event extends Component {
 		}
 	}
 
-	//Recebe o nome do evento
+	//Recebe o nome do evento 
 	onChange(evento){
 		this.setState({
+			//Faz o update, conforme os eventos são adicionados.
+			//////////////////////////////////////
+			//PRECISA FILTRAR POR ORGANIZAÇÃO
+			//////////////////////////////////////
 			eventos: this.state.eventos.map(itemJSON => {
 				if(itemJSON.course === evento){
 					return itemJSON;
@@ -29,7 +33,7 @@ export class Event extends Component {
 		})
 	}
 
-
+	//Cria o evento:
 	adicionarEvent(){
 		const { email, company, course, startDate, finishDate, workload, logo, digitalSignature, eventoCriado } = this.state;
 
