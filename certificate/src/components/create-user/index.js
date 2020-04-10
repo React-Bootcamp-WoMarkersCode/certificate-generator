@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { message } from 'antd';
 
 /*Importando JSON de usuários*/
 import data from '../../services/users.json'
@@ -12,24 +13,17 @@ function CreateUser(props) {
 		/*Estado do JSON de usuarios*/
 	  	const [ usersData, setUsers ] = useState(data)
 
-	  	/*Verifica se a conta já existe*/
-	  	const [ createUser, setCreateUser ] = useState(false)
+		/*Verificando se já existe um usuário cadastrado*/
+		let listEmails = []
 
+		usersData.map(itemJson => {
+			listEmails.push(itemJson.email)
+		})
 
-		/*Verificando existencia de usuário*/
-		usersData.map(emailCadastrado => {
-
-			if(emailCadastrado.email === email) {
-				alert('Esta conta já está cadastrada')
-
-			} else if (!createUser) {
-				/*Adicionando novo usuário*/
-				alert('Criando o usuário', name)
-				setCreateUser(true)
-
-				/*Coloquei a senha como true pois o usuário 
-				já fez o login com o google*/
-				setUsers([
+		/*Se o e-mail digitado pelo usuário pelo usuário ainda não está no JSON de usuários*/
+		if(!listEmails.includes(email)) {
+			message.success('Conta criada com sucesso')
+			setUsers([
 			      ...usersData, {
 			        name: name,
 			        email: email,
@@ -37,10 +31,11 @@ function CreateUser(props) {
 			        token: false,
 			        avatar: avatar
 			      }
-			    ])
-			    
-			}
-		})
+			])
+
+		} else {
+			message.warning('Este usuário já está cadastrado')
+		}
 
 		console.log(usersData)
 

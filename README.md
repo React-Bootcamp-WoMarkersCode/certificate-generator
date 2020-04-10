@@ -57,7 +57,6 @@ src/
 
 :octocat: [Chaiana](https://github.com/chaihermes)
 :octocat: [Bee](https://github.com/beebones) 
-:octocat: Beatriz
 :octocat: [Rose](https://github.com/ahakawa)
 :octocat: [Sabrina](https://github.com/sabrinabuco)
 :octocat: [Diana Regina](https://github.com/Diana-ops)

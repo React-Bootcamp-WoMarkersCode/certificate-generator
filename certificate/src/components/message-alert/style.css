@@ -2,10 +2,11 @@
     text-align: center;
     font-family: 'Releway', sans-serif;
     font-size: 30px;
-    font-weight: 200;
+    font-weight: 300;
     color: black;
     display: block;
     margin: 20px auto;
+    margin-top: 15%;
     position: relative;
 }
 

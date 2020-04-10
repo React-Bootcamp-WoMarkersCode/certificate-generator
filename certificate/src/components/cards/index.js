@@ -24,9 +24,7 @@ function Cards(props) {
 			        </Card>
 				
 			        <Card className="card" title="Controle de participantes" bordered={false}>
-			          	Mandou os dados CSV dos participantes mas algum não pode participar? 
-			          	Não se preocupe, você pode user o check list de participantes para 
-			          	resolver isso!
+			          	Cadastre seus participantes para cada evento e selecione quem irá receber os certificados em nosso <em>check-list</em>.
 			        </Card>
 				
 			        <Card className="card" title="Importe sua assinatura e logo" bordered={false}>

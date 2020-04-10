@@ -3,16 +3,16 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 /*Importando todas as paginas*/
 import  Home from './pages/home/index'
-import  ConfirmCertificateToSend  from './pages/confirm-certificate-to-send/index'
-import  CreateEevent  from './pages/create-event/index'
-import  EditEvent  from './pages/edit-event/index'
-import  EditProfile  from './pages/edit-profile/index'
-import  ListOfEvents  from './pages/list-of-events/index'
-import  PageConfirmation  from './pages/page-confirmation/index'
-import  PageNotFound  from './pages/page-not-found/index'
-import  Profile  from './pages/profile/index'
-import  SignIn  from './pages/sign-in/index'
-import  SignUp  from './pages/sign-up/index'
+import  ConfirmCertificateToSend from './pages/confirm-certificate-to-send/index'
+import  CreateEevent from './pages/create-event/index'
+import  EditEvent from './pages/edit-event/index'
+import  EditProfile from './pages/edit-profile/index'
+import  ListOfEvents from './pages/list-of-events/index'
+import  PageConfirmation from './pages/page-confirmation/index'
+import  PageNotFound from './pages/page-not-found/index'
+import  Profile from './pages/profile/index'
+import  SignIn from './pages/sign-in/index'
+import  SignUp from './pages/sign-up/index'
 import  ListPresentsfrom from'./pages/list-presents/index'
 
 const Routes = () => (

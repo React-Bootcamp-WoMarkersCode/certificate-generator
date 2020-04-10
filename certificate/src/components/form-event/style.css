@@ -1,3 +1,56 @@
+.h1-form-event {
+	margin-left: 18%;
+	color: orange;
+}
 .h3-form-event {
 	color: black;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+}
+
+/*Inputs*/
+.inputs-event {
+	margin-left: 20%;
+	margin-right: auto;
+	padding: 2%;
+}
+
+/*Carga horária e Datas*/
+.input-3-event, .input-4-event {
+	margin-left: -25%;
+}
+
+.input-2-event {
+	width: 100%;
+}
+
+.upload-button {
+	display: inline-flex;
+	width: 100%;
+}
+
+.button-events {
+	margin-left: 25%;
+	margin-top: 3%;
+	background-color: orange;
+	border-color: orange;
+}
+
+.button-events:hover {
+	background-color: white;
+	border-color: orange;
+	color: orange;
+	transition: 1s;
+}
+
+@media screen and (max-width: 500px){
+	/*Carga horária e Datas*/
+	.input-3-event, .input-4-event {
+		margin-left: 0%;
+	}
+	.h1-form-event, .inputs-event {
+		margin-left: 0;
+	}
+
 }

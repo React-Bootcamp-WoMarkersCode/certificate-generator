@@ -6,6 +6,7 @@
 .footer{
     background-color: rgb(17, 17, 17);;
     height: 55vh;
+    margin-top: 15%;
 }
 
 .container{
@@ -43,6 +44,7 @@ ol, li{
 
     .footer-link{
         font-size: 0.7rem;
+         
     }
 
     h3{
