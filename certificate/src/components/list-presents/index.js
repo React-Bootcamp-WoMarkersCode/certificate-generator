@@ -34,9 +34,6 @@ class ListOfPresents extends Component {
 			email: '',
 			msgError: '',
 
-			/*Verifica que o participante já foi criado*/
-			participanteCriado: false,
-
 			/*Permite a troca de tela entre a lista de participante e o seu certificado*/
 			visible: true,
 
@@ -83,7 +80,7 @@ class ListOfPresents extends Component {
 	/*Esta função faz o (C)reate no JSON de participantes*/
 	adicionarParticipante() {
 
-		const { name, email, participanteCriado } = this.state;
+		const { name, email } = this.state;
 
 			this.setState({ participantes: [...this.state.participantes, {
 				"name": name,
@@ -104,7 +101,7 @@ class ListOfPresents extends Component {
 
 		event.preventDefault();
 
-		const { name, email, participanteCriado } = this.state;
+		const { name, email } = this.state;
 
 		if(!name || !email) {
 			this.setState({ msgError: 'Por favor, preencha os dados'} ) 

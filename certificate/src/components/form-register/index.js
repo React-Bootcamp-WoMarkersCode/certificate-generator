@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { useFormik, FormikProvider } from 'formik';
-import { Field, Form, ErrorMessage } from 'formik';
+import { useFormik, FormikProvider, Field, Form, ErrorMessage } from 'formik';
 import { Upload, message, Button } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 import * as Yup from 'yup';
@@ -32,10 +31,7 @@ const FormRegister = (props) => {
 			name: Yup.string().required('Digite seu nome'),
 			email: Yup.string().email('E-mail inválido').required('Digite seu e-mail'),
 			password: Yup.string().min(4).required('Digite uma senha')
-		}),
-		onSubmit: values => {
-			alert(JSON.stringify(values, null, 2));
-		}
+		})
 	})
 
 	const { handleSubmit, values } = formik
@@ -66,11 +62,41 @@ const FormRegister = (props) => {
 
 			/*Criando nova conta*/
 		} else if (action == 'Cadastrar nova conta') {
-			setCreateUser(true)
-		}
+			
+			if(!values.name || !values.email || !values.password) {
+				message.warning('Por favor, preencha todos os campos') 
 
-		console.log(user)
-	}
+			} else {
+
+				/*Verificando se já existe um usuário cadastrado*/
+				let listEmails = []
+
+				user.map(itemJson => {
+					listEmails.push(itemJson.email)
+				})
+
+				/*Se o e-mail digitado pelo usuário pelo usuário ainda não está no JSON de usuários*/
+				if(!listEmails.includes(values.email)) {
+					message.success('Conta criada com sucesso')
+					setUser([
+					      ...user, {
+					        name: values.name,
+					        email: values.email,
+					        password: values.password, 
+					        token: false,
+					        avatar: ""
+					      }
+					])
+
+				} else {
+					message.warning('Este usuário já está cadastrado')
+				}
+
+					console.log(user)
+						
+					}
+				}
+			}
 	
 
 	return (
@@ -101,11 +127,7 @@ const FormRegister = (props) => {
 			</FormikProvider>
 
 		</div>
-		{/*Se createUser for true este componente será renderizado*/}
-		{createUser && <CreateUser  name={values.name} 
-									email={values.email} 
-									password={values.password} 
-									avatar={""} />}
+
 		</>
 	);
 }
