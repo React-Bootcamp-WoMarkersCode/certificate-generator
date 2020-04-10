@@ -2,11 +2,20 @@ import React, { Component } from 'react'
 
 /*Estilos*/
 import './style.css'
+import './style-certificate.css'
 import 'antd/dist/antd.css';
 import { Checkbox, Button, Input } from 'antd';
 
 /*Importando lista de participantes*/
-import participantesData from '../../services/participantes'
+import participantesData from '../../services/participantes.json'
+
+/*Importando lista de eventos*/
+import eventosData from '../../services/events.json'
+import { PDFDownloadLink } from '@react-pdf/renderer'
+import MyDocument from '../../components/my-document/index'
+
+import stars from '../../assets/stars.png'
+import logo from '../../assets/img/logo_texto_preto.png'
 
 class ListOfPresents extends Component {
 
@@ -19,13 +28,26 @@ class ListOfPresents extends Component {
 
 			/*Define o estado do JSON*/
 			participantes: participantesData,
+			eventos: eventosData,
 
 			name: '',
 			email: '',
 			msgError: '',
-			participanteCriado: false
+
+			/*Permite a troca de tela entre a lista de participante e o seu certificado*/
+			visible: true,
+
+			/*Informações que serão mostradas no certificado*/
+			nameParticipant: '',
+			course: '',
 		}
 	}
+
+	showModal = (nameParticipant, course) => {
+    	this.setState({	visible: false });
+    	this.setState({ nameParticipant: nameParticipant})
+    	this.setState({ course: course})
+  	};
 		
 	/*Esta função recebe o nome do participante como parametro*/
 	onChange(participante) {
@@ -58,14 +80,14 @@ class ListOfPresents extends Component {
 	/*Esta função faz o (C)reate no JSON de participantes*/
 	adicionarParticipante() {
 
-		const { name, email, participanteCriado } = this.state;
+		const { name, email } = this.state;
 
 			this.setState({ participantes: [...this.state.participantes, {
 				"name": name,
 				"email": email,
 				"present": true,
 				"receiveCertificate": false,
-				"course": 'react'
+				"course": 'Java Poo'
 			}]})		
 	}
 
@@ -79,7 +101,7 @@ class ListOfPresents extends Component {
 
 		event.preventDefault();
 
-		const { name, email, participanteCriado } = this.state;
+		const { name, email } = this.state;
 
 		if(!name || !email) {
 			this.setState({ msgError: 'Por favor, preencha os dados'} ) 
@@ -101,44 +123,128 @@ class ListOfPresents extends Component {
 		}
 	}
 
+	/*Esta função mostra o certificado do participante*/
+	verCertificado() {
+
+		const { nameParticipant, course, eventos } = this.state 
+
+		let company = ''
+		let user = ''
+		let startDate = ''
+		let finishDate = ''
+		let workload = ''
+
+		eventos.map(itemJson => {
+			if(itemJson.course === course) {
+				startDate = itemJson.startDate
+				finishDate = itemJson.finishDate
+				workload = itemJson.workload
+				company = itemJson.company
+				user = itemJson.user
+			}
+		})
+
+		return(
+			<>   
+			    <div className="certificate-background">
+					<img src={logo} className="img-logo-certificate"/>
+					<img src={stars} className="img-stars"/>   
+					<p className="p-certificate">A comunidade empresa confere ao participante <span className="info-certificate">{nameParticipant}</span> o presente certificado 
+						<br/>referente a sua participação no evento <span className="info-certificate">{course}</span> oferecido pela <span className="info-certificate">{company}</span> realizado do 
+						<br/>dia <span className="info-certificate">{startDate}</span> ao <span className="info-certificate">{finishDate}</span>, com carga horaria de <span className="info-certificate">{workload} horas.</span>
+						<br/>
+					</p>
+					<hr/>
+					<p className="p-2-certificate">{user}</p>
+				</div>
+				<div className="div-buttons">
+					<Button className="button-voltar" onClick={ () => this.setState({ visible: true })}>Voltar para a lista</Button>
+					<Button className="button-email" >Mandar por e-mail</Button>
+
+					<PDFDownloadLink
+				        document={<MyDocument 
+
+				        	name={nameParticipant} 
+				        	course={course}
+				        	company={company} 
+				        	startDate={startDate} 
+				        	finishDate={finishDate} 
+				        	workload={workload}
+				        	user={user}
+				        
+				        />}
+				        fileName="certificado.pdf"
+				        style={{
+					          textDecoration: "none",
+					          padding: "10px",
+					          height: '10px',
+					          textAlign: 'center',
+					          color: "#ff4000",
+					  
+					        }}
+					      >
+				        {({ blob, url, loading, error }) =>
+				          loading ? "Loading document..." : "Download Pdf"
+				        }
+				      </PDFDownloadLink>
+
+				</div>
+			</>
+		);
+	}
+
 	render(){
 
-
+		const { visible, msgError, participantes, name , course} = this.state
 		return (
-			<div className="list-participants">
+			<>
 
-				<div className="input-participantes">
-					<h2>Adicione mais participantes a sua lista:</h2>
-					<p className="msg-error-participant">{this.state.msgError}</p>
-					<Input className="input-1" placeholder="Nome do participante" value={this.state.name} onChange={e => this.setState({ name: e.target.value})}/>
-					<br/>
-					<Input className="input-2" placeholder="E-mail of participante" onChange={e => this.setState({ email: e.target.value})}/>
-					<br/>
-					<Button className="button-parcipants" type="primary" danger onClick={this.verificarCampos}>Incluir novo participante</Button>
-				</div>
-				
+				<div className="list-participants"
+					style={{ display: visible ?  'grid' : 'none' }}
+				>
 
-				<div className="participantes">
-					<h1 className="title-2">Lista de Participantes</h1>
-				
-					{
-						this.state.participantes.map(itemJson => {
-							return (
-								<>
-									<div className="name-participant" >
-										<Checkbox 
-												checked={itemJson.present} 
-												onChange={() => this.onChange(itemJson.name)}>
-												{itemJson.name}
-										</Checkbox>
-									</div>
-									<br/>
-								</>
-							);
-						})
-					}
+					<div className="input-participantes">
+						<h2>Adicione mais participantes a sua lista:</h2>
+						<p className="msg-error-participant">{msgError}</p>
+						<Input className="input-1" placeholder="Nome do participante" value={name} onChange={e => this.setState({ name: e.target.value})}/>
+						<br/>
+						<Input className="input-2" placeholder="E-mail of participante" onChange={e => this.setState({ email: e.target.value})}/>
+						<br/>
+						<Button className="button-parcipants" type="primary" danger onClick={this.verificarCampos}>Incluir novo participante</Button>
 					</div>
-			</div>
+					
+					
+					<div className="participantes">
+						<h1 className="title-2">Lista de Participantes</h1>
+							
+								{
+									participantes.map(itemJson => {
+										return (
+											<>
+												<div className="name-participant" >
+													<Checkbox 
+															checked={itemJson.present} 
+															onChange={() => this.onChange(itemJson.name)}>
+															{itemJson.name}
+													</Checkbox>
+
+													<Button type="primary" disabled={!itemJson.present} onClick={() => this.showModal(itemJson.name, itemJson.course) } >
+														Ver certificado
+													</Button>						
+
+												</div>
+												<br/>
+											</>
+										);
+									})
+
+								}
+					</div>
+				</div>
+				<div style={{ display: visible ?  'none' : 'grid' }}>
+					{this.verCertificado()}
+				</div>
+			</>
 		);
 	}
 }

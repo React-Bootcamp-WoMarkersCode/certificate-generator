@@ -1,0 +1,115 @@
+.certificate-background {
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	font-size: 1.5vw;
+
+	background: url('../../assets/wallpaper-certificate.png');
+	background-repeat: no-repeat;
+	background-size: 85%;
+
+	margin-left: 12%;
+	margin-top: 5%;
+}
+
+/*Logo*/
+.img-logo-certificate {
+	display: flex;
+	margin-left: 35%;
+	margin-top: 10%;
+}
+
+/*Estrelas*/
+.img-stars {
+	display: flex;
+	margin-left: 40%;
+	width: 70px;
+	height: 15px;
+} 
+
+/*Texto*/
+.p-certificate {
+	margin-left: 10%;
+	margin-top: 5%;
+	width: 70%;
+}
+
+hr {
+	width: 20%;
+	color: black;
+	margin-top: 5%;
+	margin-left: 30%;
+	background-color: brown;
+}
+
+/*Colocando as informações principais do certificado em negrito*/
+.info-certificate {
+	font-weight: 400;
+	color: black;
+}
+
+/*Nome do organizador do evento*/
+.p-2-certificate {
+	margin-left: 25%;
+	width: 30%;
+	margin-bottom: 10%;
+}
+
+/*Trio de botões: voltar, e-mail e PDF*/
+.div-buttons {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin-top: 0%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.button-voltar {
+	margin-top: 3%;
+}
+
+.button-email {
+	background-color: #19b2e6;
+	border-color: #19b2e6;
+	color: white;
+	margin-top: 3%;
+}
+
+.button-email:hover {
+	background-color: white;
+	border-color: #19b2e6;
+	color: #19b2e6;
+}
+
+@media screen and (max-width: 700px) {
+	.div-buttons { 
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.img-logo-certificate {
+		margin-top: 10%;
+		margin-left: 38%;
+		width: 10%;
+		height: 10%;
+	}
+
+	.img-stars {
+		width: 35px;
+		height: 7.5px ;
+	}
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px){
+	.img-logo-certificate {
+		margin-top: 5%;
+		margin-left: 37.5%;
+	}
+
+	.button-pdf {
+		background-color: pink;
+	}
+}

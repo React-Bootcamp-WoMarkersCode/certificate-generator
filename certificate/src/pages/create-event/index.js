@@ -11,7 +11,6 @@ function CreateEvent(props) {
 		<>	
 			<Menu2/>
 			<FormEvent />
-			<UploadImg />
 			<Footer />
 		</>
 	);
