@@ -1,0 +1,19 @@
+.title{
+    display: flex;
+    justify-content: center;
+    color: #C6255A;
+    font-weight: bold;
+}
+
+.button-add{
+    border-color: rgb(0, 176, 240);
+    background-color: rgb(0, 176, 240);
+    color: #ffffff;
+    border-radius: 10px;
+    border-width: 0.2em;
+    font-weight: bold;
+    font-size: 15px;
+    height: 50px;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}

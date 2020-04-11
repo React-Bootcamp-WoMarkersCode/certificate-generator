@@ -8,6 +8,7 @@
 		"workload": "30", 
 		"logo": "", 
 		"digitalSignature": "", 
+		"token": false,
 		"participants": [] 
 	},
 	{	
@@ -19,6 +20,7 @@
 		"workload": "30", 
 		"logo": "", 
 		"digitalSignature": "", 
+		"token": false,
 		"participants": [] 
 	},
 	{
@@ -29,6 +31,7 @@
 		"workload": "30", 
 		"logo": "", 
 		"digitalSignature": "", 
+		"token": false,
 		"participants": [] 
 	}
 ]
