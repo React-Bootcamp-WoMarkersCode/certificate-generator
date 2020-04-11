@@ -9,11 +9,19 @@
 [Rose Ahakawa](https://github.com/ahakawa) |
 [Diana Regina](https://github.com/Diana-ops) |
 
-## What is goal of your project? 
+## Descrição do projeto
 
-The objective is to develop an application to generate certificates for all students and participants of events and courses at WoMakersCode and even other technology institutions.
+Desenvolver uma plataforma capaz de gerar certificados em PDF e envia-los por e-mail ou realizar dowload para participantes de eventos/metups/bootcamps e cursos.
 
-Certificates will be sent by email to all confirmed participants.
+## O que a platafroma é capaz de fazer
+
+- Cadastrar organizadores 
+- Cadastrar eventos 
+- Cadastrar participantes para cada evento
+- Gerar PDF com as informações preenchidas no formulário para cada participantes 
+- Envio por e-mail dos PDF's para os participantes
+- Check-list de participantes, permitindo selecionar quem irá receber os certificados 
+- Oferece layout responsivo 
 
 ## Pages 
 
