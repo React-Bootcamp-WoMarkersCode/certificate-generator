@@ -7,7 +7,7 @@ import * as Yup from "yup";
 /*Importando lista de participantes*/
 import users from '../../services/users.json'
 
-import { Redirect, withRouter } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 
 const FormLogin = () => {
 
@@ -76,7 +76,7 @@ const FormLogin = () => {
 
         /*Se o acesso não for aprovado*/
         if(!acessAproved) {
-          message.error('E-mail ou senha estão incorretos, tente novamente!')
+          message.error('E-mail ou senha estão incorretos, tente novamente!', 0.5)
         }
 
       }

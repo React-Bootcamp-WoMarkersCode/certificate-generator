@@ -11,20 +11,22 @@ import users from '../../services/users.json'
 /*Componentes*/
 import CreateUser from '../create-user/index'
 
+import { Redirect } from 'react-router-dom'
+
 const FormRegister = (props) => {
 
-	/*Esses dados podem vir do componente ProfileCard (para editar os dados)*/
-	/*Esses dados podem vir do componente FormRegister (para criar uma nova conta)*/
-	const { name, email, password, action } = props
+	/*Verifica se o acesso foi aprovado*/
+  	const [ acessAproved, setAproved ] = useState(false)
 
 	/*Variavel para renderizar o componente CreateUser*/
 	const [ createUser, setCreateUser] = useState(false)
 
+
 	const formik = useFormik({
 		initialValues: {
-			name: name,
-			email: email,
-			password: password,
+			name: "",
+			email: "",
+			password: "",
 			remember: true,
 		},
 		validationSchema: Yup.object().shape({
@@ -40,28 +42,6 @@ const FormRegister = (props) => {
 	const [ user, setUser ] = useState(users)
 
 	const actionButton = () => {
-		if(action == 'Editar Dados') {
-
-			/*Atualizando os dados*/
-			setUser(
-				user.map(itemJson => {
-
-					/*Buscando usuário ativo*/
-					if(itemJson.token){
-						itemJson['name'] = values.name
-						itemJson['email'] = values.email
-						itemJson['password'] = values.password
-
-						return itemJson
-					} else {
-						return itemJson
-					}
-			})
-		)
-
-
-			/*Criando nova conta*/
-		} else if (action == 'Cadastrar nova conta') {
 			
 			if(!values.name || !values.email || !values.password) {
 				message.warning('Por favor, preencha todos os campos') 
@@ -83,10 +63,12 @@ const FormRegister = (props) => {
 					        name: values.name,
 					        email: values.email,
 					        password: values.password, 
-					        token: false,
+					        token: true,
 					        avatar: ""
 					      }
 					])
+
+					setAproved(true)
 
 				} else {
 					message.warning('Este usuário já está cadastrado')
@@ -96,8 +78,6 @@ const FormRegister = (props) => {
 						
 					}
 				}
-			}
-	
 
 	return (
 		<>
@@ -122,12 +102,12 @@ const FormRegister = (props) => {
 						render={msg => <p className="msg-error" >{msg}</p>} 
 						name="password" />
 
-					<button type="submit" onClick={actionButton} className="button">{action}</button>
+					<button type="submit" onClick={actionButton} className="button">Criar conta</button>
 				</Form>
 			</FormikProvider>
 
 		</div>
-
+		 { acessAproved && <Redirect to="/profile"></Redirect>}
 		</>
 	);
 }

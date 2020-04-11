@@ -195,7 +195,7 @@ class ListOfPresents extends Component {
 
 	render(){
 
-		const { visible, msgError, participantes, name , course} = this.state
+		const { visible, msgError, participantes, name , email, course} = this.state
 		return (
 			<>
 
@@ -208,7 +208,7 @@ class ListOfPresents extends Component {
 						<p className="msg-error-participant">{msgError}</p>
 						<Input className="input-1" placeholder="Nome do participante" value={name} onChange={e => this.setState({ name: e.target.value})}/>
 						<br/>
-						<Input className="input-2" placeholder="E-mail of participante" onChange={e => this.setState({ email: e.target.value})}/>
+						<Input className="input-2" placeholder="E-mail of participante" value={email} onChange={e => this.setState({ email: e.target.value})}/>
 						<br/>
 						<Button className="button-parcipants" type="primary" danger onClick={this.verificarCampos}>Incluir novo participante</Button>
 					</div>
