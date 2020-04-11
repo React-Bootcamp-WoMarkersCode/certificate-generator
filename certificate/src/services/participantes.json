@@ -4,14 +4,138 @@
 		"email": "dianaregina22@outlook.com.br",
 		"present": true,
 		"receiveCertificate": false,
-		"course": "react"
+		"course": "Bootcamp React"
 	}, 
 	{
-		"name": "Alicia Luca",
+		"name": "Chaiana Hermes",
+		"email": "chaiana_hermes@yahoo.com.br",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Bootcamp React"
+	}, 
+	{
+		"name": "Rose Ahakawa",
+		"email": "rose.oyakawa@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Bootcamp React"
+	}, 
+	{
+		"name": "Dayana Maia",
+		"email": "dayrmaia@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Bootcamp React"
+	}, 
+	{
+		"name": "Claudia Caroline Arruda Policarpo",
+		"email": "claudia.policarpo89@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "React Navite"
+	}, 
+	{
+		"name": "Diana Coelho",
+		"email": "coelhodiana04@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "React Navite"
+	}
+	, 
+	{
+		"name": "Larissa Oliveira",
+		"email": "larioli.me@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "React Navite"
+	}
+	, 
+	{
+		"name": "Ariane Sousa",
+		"email": "ariane.sousa011@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "React Navite"
+	}
+	, 
+	{
+		"name": "Anna Carolina Inhasz Aureliano",
+		"email": "anna.inhasz@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Angular"
+	}
+	, 
+	{
+		"name": "Alessandra Nastassja",
+		"email": "alessandra.nastassja@hotmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Angular"
+	}
+	, 
+	{
+		"name": "Isabella Soares de Lima",
+		"email": "isabella.soares.28@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Angular"
+	}, 
+	{
+		"name": "Mariana Tancredi",
+		"email": "matancredi@hotmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Angular"
+	}, 
+	{
+		"name": "Ana Paula Mak",
+		"email": "anapaulamak@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Metodologias Ageis"
+	}
+	, 
+	{
+		"name": "Mariana Tancredi",
 		"email": "alicia@outlook.com.br",
 		"present": true,
 		"receiveCertificate": false,
-		"course": "react"
+		"course": "Metodologias Ageis"
+	}, 
+	{
+		"name": "Leticia Campos",
+		"email": "leehcamposs@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Metodologias Ageis"
+	}, 
+	{
+		"name": "Fernanda R. A.",
+		"email": "fernandaramos.a@outlook.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Metodologias Ageis"
+	}, 
+	{
+		"name": "Angela Mutsumi",
+		"email": "angelamutsumi@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Python Avançado"
+	}, 
+	{
+		"name": "Olívia Resende",
+		"email": "olivinharesende@hotmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Python Avançado"
+	}, 
+	{
+		"name": "Grasiele Kroger",
+		"email": "gelbundschwarz@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Python Avançado"
 	}
-
 ]
