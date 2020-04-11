@@ -1,10 +1,20 @@
-# Certificate Generator
+<p align="center">
+<img src="https://user-images.githubusercontent.com/46378210/79054531-f2f00980-7c1b-11ea-81ca-fa7ef7196566.png"/>
+</p>
 
-## What is goal of your project? 
+## Desenvolvedores 
 
-The objective is to develop an application to generate certificates for all students and participants of events and courses at WoMakersCode and even other technology institutions.
+## Descrição do projeto
 
-Certificates will be sent by email to all confirmed participants.
+## Funcionalidades
+
+## Requesitos 
+
+## Tecnologias/Linguagens
+
+## Arquitetura 
+
+### Paginas  
 
 ## Pages 
 
