@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import Event from '../event/index';
+import { Button } from 'antd';
+
+
+import './styles.css';
 
 function ListEvents(props) {
 
 	return (
 		<>
-		<h1>Esta é a função que trabalha com um componente</h1>
+		<h1 className="title">Eventos Cadastrados</h1>
+		<Button className="button-add">+ Cadastrar mais um evento</Button>
 		<Event />
 		</>
 	);
