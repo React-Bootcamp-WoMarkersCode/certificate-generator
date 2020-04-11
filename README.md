@@ -23,6 +23,10 @@ Desenvolver uma plataforma capaz de gerar certificados em PDF e envia-los por e-
 - Check-list de participantes, permitindo selecionar quem irá receber os certificados 
 - Oferece layout responsivo 
 
+## JSON
+
+A nossa simulação de API foi feita com JSON 
+
 ## Pages 
 
 [Here](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/README_PAGES.md) you can see the layout of pages and what your componets 
