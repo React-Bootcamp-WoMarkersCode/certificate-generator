@@ -1,0 +1,26 @@
+/*Perfil do usuário*/
+.profile {
+	margin-top: 3%;
+	margin-left: 10%;
+}
+
+/*Formulário de Edição*/
+.edit-profile {
+	display: flex;
+	margin: 5% auto;
+	width: 30%;
+}
+
+.button-edit-profile {
+	margin-top: 3%;
+	width: 100%;
+}
+
+.back-button-profile {
+	margin-top: 3%;
+	width: 100%;
+}
+
+.profile-title {
+	text-align: center;
+}

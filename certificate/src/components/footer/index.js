@@ -31,9 +31,6 @@ function Footer(props) {
 							<li>
 								<a href="https://www.linkedin.com/in/rosemeire-oyakawa-25099838/" className="footer-link">Rosemeire</a>
 							</li> 
-							<li>
-								<a href="https://www.linkedin.com/in/sabrina-nabuco-de-oliveira-41008a38/" className="footer-link">Sabrina</a>
-							</li> 
 						</ol>		
 	 			</Row>
 			</Col>
@@ -48,7 +45,7 @@ function Footer(props) {
 							<Link to='/sign-up' className="footer-link">Sign Up</Link> 
 						</li>
 	 					<li>
-	 						<Link to="/sign-up" className="footer-link">Começar</Link> 
+	 						<Link to="/sign-in" className="footer-link">Começar</Link> 
 	 					</li>
 	 				</ol>	
 					</Row>

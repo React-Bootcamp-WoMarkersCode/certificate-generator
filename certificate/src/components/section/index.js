@@ -31,7 +31,7 @@ function Section(props) {
 						prático!
 					</span>
 			</h2>
-			<Link to="/sign-up">
+			<Link to="/sign-in">
 				<button className="button-section">
 					EU QUERO
 				</button>

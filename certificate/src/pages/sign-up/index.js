@@ -19,7 +19,7 @@ function SignUp(props) {
 		<>
 			<Menu1/>
 			<GoogleAccount />
-			<FormRegister name={""} email={""} password={""} action={"Cadastrar nova conta"}/>
+			<FormRegister />
 			<Footer />
 		</>
 	);

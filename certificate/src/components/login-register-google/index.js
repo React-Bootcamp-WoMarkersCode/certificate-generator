@@ -3,6 +3,8 @@ import GoogleLogin from 'react-google-login';
 
 /*Estilos*/
 import './style.css'
+import { message } from 'antd';
+
 
 /*Importando JSON de usuários*/
 import data from '../../services/users.json'
@@ -10,13 +12,51 @@ import data from '../../services/users.json'
 /*Componentes*/
 import CreateUser from '../create-user/index'
 
+import { Redirect } from 'react-router-dom'
+
 /*Componente para fazer login e registro de conta com google*/
 function GoogleAccount(props) {
+	/*Estado do JSON de usuarios*/
+	 const [ usersData, setUsers ] = useState(data)
 
-	const [ dataGoogle, setDataGoogle ] = useState(false)
+	/*Verifica se o acesso foi aprovado*/
+  	const [ acessAproved, setAproved ] = useState(false)
+
 
 	const responseGoogle = response => {
-		setDataGoogle(response)
+		alert('carregado')
+
+		/*Verificando se já existe um usuário cadastrado*/
+		let listEmails = []
+
+		usersData.map(itemJson => {
+			listEmails.push(itemJson.email)
+		})
+
+		/*Se o e-mail digitado pelo usuário pelo usuário ainda não está no JSON de usuários*/
+		if(!listEmails.includes(response.profileObj.email)) {
+
+			message.success('Conta criada com sucesso')
+			
+			setUsers([
+			      ...usersData, {
+			        name: response.profileObj.name,
+			        email: response.profileObj.email,
+			        password: true, 
+			        token: true,
+			        avatar: response.profileObj.imageUrl
+			      }
+			])
+
+			setAproved(true)
+
+		} else {
+			message.warning('Este usuário já está cadastrado')
+		}
+
+
+
+		console.log(response.profileObj)
 	}
 
 	return (
@@ -38,11 +78,8 @@ function GoogleAccount(props) {
 		</div>
 
 		<p className="ou">OU</p>
-		{dataGoogle && <CreateUser  name={dataGoogle.profileObj.name} 
-									email={dataGoogle.profileObj.email} 
-									password={true} 
-									avatar={dataGoogle.profileObj.imageUrl}
-		/>}
+		{ acessAproved && <Redirect to="/profile"></Redirect>}
+
 		</>
 	);
 }

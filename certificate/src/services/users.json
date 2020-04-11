@@ -3,13 +3,34 @@
 		"name": "Diana Regina",
 		"email": "dianaregina22@yahoo.com",
 		"password": "minhasenha",
-		"token": false,
-		"avatar": ""
+		"token": true,
+		"avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9-U_HbQAipum9lWln3APcBIwng7T46hdBA42EJv8Hf6Z4fDT3&usqp=CAU"
 	},
 	{
 		"name": "Lucas",
 		"email": "lucas@gmail.com",
-		"password": "minhasenha",
+		"password": "minhasenhalucas",
+		"token": false,
+		"avatar": ""
+	},
+		{
+		"name": "Luana",
+		"email": "lucas@gmail.com",
+		"password": "minhasenhaluana",
+		"token": false,
+		"avatar": "https://lh3.googleusercontent.com/proxy/3DnsPWn3HBg07x-Qnfie_XfF1CYfB6EyoczZKH-rEVwn3AjCUk0CgjyA6UhfDWAU1_2Pmzf0xdQxCzR9_gBIkX63zLKIRDMHng378RlKA8-ywOTMj734V7IpKrij"
+	},
+		{
+		"name": "Lais",
+		"email": "lais@gmail.com",
+		"password": "minhasenhalais",
+		"token": false,
+		"avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9-U_HbQAipum9lWln3APcBIwng7T46hdBA42EJv8Hf6Z4fDT3&usqp=CAU"
+	},
+		{
+		"name": "Giovana",
+		"email": "giogio@gmail.com",
+		"password": "minhasenhagio",
 		"token": false,
 		"avatar": ""
 	}
