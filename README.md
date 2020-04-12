@@ -95,24 +95,18 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 	}
 ```
 
-## Pages 
+## Paginas: 
 
-[Here](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/README_PAGES.md) you can see the layout of pages and what your componets 
+[Aqui](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/README_PAGES.md) é possível visualizar a proposta de layout do projeto.  
 
-### List of Pages:
+## CRUD: 
 
-- Home
-- SingUp
-- SingIn
-- Profile
-- Edit profile
-- List of Events
-- Create event
-- Edit event
-- List Presents
-- Confirm certificate to send
-- Page of confirmation
-- Page not found
+### Usuários
+
+- [ ] O usuários são **criados** na pagina de Sing-in 
+- [ ] Os dados do usuário podem ser **acessados** na pagina de Sing-in e Profile
+
+
 
 ## Architeture 
 
