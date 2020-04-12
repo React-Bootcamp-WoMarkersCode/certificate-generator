@@ -158,3 +158,11 @@ Autenticação com Google
 ```
 $ npm install react-google-login
 ```
+
+<hr/>
+
+## Licença
+
+The MIT License (MIT)
+
+Copyright (c) 2020 Certificate Generator
