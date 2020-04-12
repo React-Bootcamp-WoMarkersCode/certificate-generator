@@ -44,3 +44,23 @@
     border-width: 0.2em;
     font-weight: bold;
 }
+
+.edit-event{
+    display: flex;
+	margin: 5% auto;
+	width: 30%;
+}
+
+.edit-event-title{
+    display: flex;
+    justify-content: center;
+}
+
+.edit-event-input{
+    margin: 1%;
+}
+
+.button-edit-event{
+    margin-top: 3%;
+    width: 100%;
+}
