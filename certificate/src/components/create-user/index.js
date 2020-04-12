@@ -4,9 +4,6 @@ import { message } from 'antd';
 /*Importando JSON de usuários*/
 import data from '../../services/users.json'
 
-import { Redirect } from 'react-router-dom'
-
-
 function CreateUser(props) {
 
 		/*Verifica se o acesso foi aprovado*/
@@ -52,7 +49,6 @@ function CreateUser(props) {
 		console.log(usersData)
 
 		return null;
-		//return(<>{ acessAproved && <Redirect to="/profile"></Redirect>}</>);
 
 }
 

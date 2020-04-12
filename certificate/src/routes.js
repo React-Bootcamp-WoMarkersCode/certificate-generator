@@ -15,13 +15,12 @@ import  SignIn from './pages/sign-in/index'
 import  SignUp from './pages/sign-up/index'
 import  ListPresentsfrom from'./pages/list-presents/index'
 
-const Routes = () => (
-  <BrowserRouter>
-    <Switch>
-
       /*Em path foi definida a rota de acesso que colocaremos 
       na URL para acessar a page em component*/
       
+const Routes = () => (
+  <BrowserRouter>
+    <Switch>      
       <Route exact path="/" component={Home} />
       <Route exact path="/confirm-certificate-to-send" component={ConfirmCertificateToSend} />
       <Route exact path="/create-event" component={CreateEevent} />

@@ -5,9 +5,6 @@ import 'antd/dist/antd.css';
 import { Avatar, message, Button, Input } from 'antd';
 import './style.css'
 
-/*Componentes*/
-import FormRegister from '../../components/form-register/index'
-
 /*Importando lista de participantes*/
 import users from '../../services/users.json'
 

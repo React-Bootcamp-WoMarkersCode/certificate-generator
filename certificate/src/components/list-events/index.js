@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import Event from '../event/index';
 import { Button } from 'antd';
 import '../../pages/create-event/index';

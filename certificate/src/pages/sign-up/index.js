@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import GoogleLogin from 'react-google-login';
 
 /*Componentes*/
 import Menu1 from '../../components/menu-1/index'

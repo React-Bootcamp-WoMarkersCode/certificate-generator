@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom';
 
 /*Componentes*/
 import Menu1 from '../../components/menu-1/index'

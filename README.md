@@ -1,29 +1,112 @@
-# Certificate Generator
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/46378210/79054531-f2f00980-7c1b-11ea-81ca-fa7ef7196566.png">
+</p>
 
-## What is goal of your project? 
+## Desenvolvedoras :octocat:
 
-The objective is to develop an application to generate certificates for all students and participants of events and courses at WoMakersCode and even other technology institutions.
+| [Chaiana Hermes](https://github.com/chaihermes) |
+[Bee Bones](https://github.com/beebones) |
+[Rose Ahakawa](https://github.com/ahakawa) |
+[Diana Regina](https://github.com/Diana-ops) |
 
-Certificates will be sent by email to all confirmed participants.
+## Descrição do projeto
 
-## Pages 
+Desenvolver uma plataforma capaz de gerar certificados em PDFe  realizar dowload para participantes de eventos/metups/bootcamps e cursos.
 
-[Here](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/README_PAGES.md) you can see the layout of pages and what your componets 
+## O que a plataforma é capaz de fazer
 
-### List of Pages:
+- Cadastrar organizadores 
+- Cadastrar eventos 
+- Cadastrar participantes para cada evento
+- Gerar PDF com as informações preenchidas no formulário para cada participantes 
+- Check-list de participantes, permitindo selecionar quem irá receber os certificados 
+- Oferece layout responsivo 
 
-- Home
-- SingUp
-- SingIn
-- Profile
-- Edit profile
-- List of Events
-- Create event
-- Edit event
-- List Presents
-- Confirm certificate to send
-- Page of confirmation
-- Page not found
+## Como rodar a aplicação
+
+No terminal, clone o projeto: 
+
+```
+git clone https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator
+```
+
+Entre na pasta do projeto:  
+
+```
+cd certificate-generator
+```
+
+Instale as dependecias:
+
+```
+yarn install
+```
+
+Execute a aplicação:
+
+```
+yarn start
+```
+
+Pronto, agora é possível acessar a aplicação a partir da rota http://localhost:3000/ 
+
+## JSON
+
+A nossa simulação de banco de dados foi feita com JSON. Foram separados um para [usuarios](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/certificate/src/services/users.json), [participantes](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/certificate/src/services/participantes.json) e [eventos](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/certificate/src/services/events.json):
+
+### Usuario: 
+
+```
+	{
+		"name": "Lais Lima",
+		"email": "laislima98@hotmail.com",
+		"password": "lais123",
+		"token": true,
+		"avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9-U_HbQAipum9lWln3APcBIwng7T46hdBA42EJv8Hf6Z4fDT3&usqp=CAU"
+	},
+
+```
+
+### Evento: 
+
+```
+	{	
+		"user": "Lais Lima",
+		"company": "WomakersCode", 
+		"course": "Bootcamp React",
+		"startDate": "01/02/2020", 
+		"finishDate": "28/03/2020",
+		"workload": "56", 
+		"logo": "https://miro.medium.com/max/478/1*jriufqYKgJTW4DKrBizU5w.png", 
+		"digitalSignature": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Assinatura_Jos%C3%A9_Saramago.png", 
+		"token": false
+	},
+```
+
+### Participante: 
+
+```
+	{
+		"name": "Chaiana Hermes",
+		"email": "chaiana_hermes@yahoo.com.br",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Bootcamp React"
+	}
+```
+
+## Paginas: 
+
+[Aqui](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/README_PAGES.md) é possível visualizar a proposta de layout do projeto.  
+
+## CRUD: 
+
+### Usuários
+
+- [ ] O usuários são **criados** na pagina de Sing-in 
+- [ ] Os dados do usuário podem ser **acessados** na pagina de Sing-in e Profile
+
+
 
 ## Architeture 
 

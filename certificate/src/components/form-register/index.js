@@ -1,15 +1,11 @@
 import React, { useState } from 'react'
 import { useFormik, FormikProvider, Field, Form, ErrorMessage } from 'formik';
-import { Upload, message, Button } from 'antd';
-import { UploadOutlined } from '@ant-design/icons';
+import { message, Button } from 'antd';
 import * as Yup from 'yup';
 import './styles.css';
 
 /*Importando lista de participantes*/
 import users from '../../services/users.json'
-
-/*Componentes*/
-import CreateUser from '../create-user/index'
 
 import { Redirect } from 'react-router-dom'
 
@@ -17,10 +13,6 @@ const FormRegister = (props) => {
 
 	/*Verifica se o acesso foi aprovado*/
   	const [ acessAproved, setAproved ] = useState(false)
-
-	/*Variavel para renderizar o componente CreateUser*/
-	const [ createUser, setCreateUser] = useState(false)
-
 
 	const formik = useFormik({
 		initialValues: {
@@ -102,7 +94,7 @@ const FormRegister = (props) => {
 						render={msg => <p className="msg-error" >{msg}</p>} 
 						name="password" />
 
-					<button type="submit" onClick={actionButton} className="button">Criar conta</button>
+					<Button type="submit" onClick={actionButton} className="button">Criar conta</Button>
 				</Form>
 			</FormikProvider>
 
