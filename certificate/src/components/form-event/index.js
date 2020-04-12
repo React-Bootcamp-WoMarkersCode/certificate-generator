@@ -1,4 +1,4 @@
-import React, { useState, useEffect }  from 'react'
+import React, { useState }  from 'react'
 import { Form, DatePicker, Button, Input, InputNumber } from 'antd';
 import UploadImg from '../upload-img/index'
 
@@ -74,7 +74,7 @@ const FormEvent = () => {
   /*Verificando se o evento já existe antes de cria-lo*/
   eventosData.map(events => {
 
-      if((events.company == fieldsValue.company) && (events.course == fieldsValue.course)) {
+      if((events.company === fieldsValue.company) && (events.course === fieldsValue.course)) {
         alert('Este evento já foi cadastrado')
 
       } else if(!eventExisting) {

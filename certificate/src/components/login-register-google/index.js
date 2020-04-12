@@ -5,12 +5,8 @@ import GoogleLogin from 'react-google-login';
 import './style.css'
 import { message } from 'antd';
 
-
 /*Importando JSON de usuários*/
 import data from '../../services/users.json'
-
-/*Componentes*/
-import CreateUser from '../create-user/index'
 
 import { Redirect } from 'react-router-dom'
 

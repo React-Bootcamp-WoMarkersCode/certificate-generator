@@ -159,7 +159,7 @@ class ListOfPresents extends Component {
 				</div>
 				<div className="div-buttons">
 					<Button className="button-voltar" onClick={ () => this.setState({ visible: true })}>Voltar para a lista</Button>
-					<Button className="button-email" >Mandar por e-mail</Button>
+					<Button className="button-email"  >Mandar por e-mail</Button>
 
 					<PDFDownloadLink
 				        document={<MyDocument 

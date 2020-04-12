@@ -1,7 +1,6 @@
 import React from 'react';
-import { Page, Text, View, Document, StyleSheet, Image, Font } from '@react-pdf/renderer';
+import { Page, Text, View, Document, StyleSheet, Image } from '@react-pdf/renderer';
 import  ReactPDF from '@react-pdf/renderer'
-import { PDFViewer } from '@react-pdf/renderer'
 
 /*Cria estilo com style componente*/
 const styles = StyleSheet.create({
