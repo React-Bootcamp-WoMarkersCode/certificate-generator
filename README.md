@@ -11,7 +11,7 @@
 
 ## Descrição do projeto
 
-Desenvolver uma plataforma capaz de gerar certificados em PDF e envia-los por e-mail ou realizar dowload para participantes de eventos/metups/bootcamps e cursos.
+Desenvolver uma plataforma capaz de gerar certificados em PDFe  realizar dowload para participantes de eventos/metups/bootcamps e cursos.
 
 ## O que a platafroma é capaz de fazer
 
@@ -19,13 +19,53 @@ Desenvolver uma plataforma capaz de gerar certificados em PDF e envia-los por e-
 - Cadastrar eventos 
 - Cadastrar participantes para cada evento
 - Gerar PDF com as informações preenchidas no formulário para cada participantes 
-- Envio por e-mail dos PDF's para os participantes
 - Check-list de participantes, permitindo selecionar quem irá receber os certificados 
 - Oferece layout responsivo 
 
 ## JSON
 
-A nossa simulação de API foi feita com JSON 
+A nossa simulação de banco de dados foi feita com JSON. Foram separados um para [usuarios](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/certificate/src/services/users.json), [participantes](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/certificate/src/services/participantes.json) e [eventos](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/certificate/src/services/events.json):
+
+### Usuario: 
+
+```
+	{
+		"name": "Lais Lima",
+		"email": "laislima98@hotmail.com",
+		"password": "lais123",
+		"token": true,
+		"avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9-U_HbQAipum9lWln3APcBIwng7T46hdBA42EJv8Hf6Z4fDT3&usqp=CAU"
+	},
+
+```
+
+### Evento: 
+
+```
+	{	
+		"user": "Lais Lima",
+		"company": "WomakersCode", 
+		"course": "Bootcamp React",
+		"startDate": "01/02/2020", 
+		"finishDate": "28/03/2020",
+		"workload": "56", 
+		"logo": "https://miro.medium.com/max/478/1*jriufqYKgJTW4DKrBizU5w.png", 
+		"digitalSignature": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Assinatura_Jos%C3%A9_Saramago.png", 
+		"token": false
+	},
+```
+
+### Participante: 
+
+```
+	{
+		"name": "Chaiana Hermes",
+		"email": "chaiana_hermes@yahoo.com.br",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Bootcamp React"
+	}
+```
 
 ## Pages 
 
