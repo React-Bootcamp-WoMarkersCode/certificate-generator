@@ -13,7 +13,7 @@
 
 Desenvolver uma plataforma capaz de gerar certificados em PDFe  realizar dowload para participantes de eventos/metups/bootcamps e cursos.
 
-## O que a platafroma é capaz de fazer
+## O que a plataforma é capaz de fazer
 
 - Cadastrar organizadores 
 - Cadastrar eventos 
@@ -21,6 +21,34 @@ Desenvolver uma plataforma capaz de gerar certificados em PDFe  realizar dowload
 - Gerar PDF com as informações preenchidas no formulário para cada participantes 
 - Check-list de participantes, permitindo selecionar quem irá receber os certificados 
 - Oferece layout responsivo 
+
+## Como rodar a aplicação
+
+No terminal, clone o projeto: 
+
+```
+git clone https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator
+```
+
+Entre na pasta do projeto:  
+
+```
+cd certificate-generator
+```
+
+Instale as dependecias:
+
+```
+yarn install
+```
+
+Execute a aplicação:
+
+```
+yarn start
+```
+
+Pronto, agora é possível acessar a aplicação a partir da rota http://localhost:3000/ 
 
 ## JSON
 
