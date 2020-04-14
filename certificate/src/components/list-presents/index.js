@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import ReactPDF from '@react-pdf/renderer'
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 /*Estilos*/
 import './style.css'
@@ -133,6 +136,8 @@ class ListOfPresents extends Component {
 		let startDate = ''
 		let finishDate = ''
 		let workload = ''
+		let from = "gelbundschwarz@gmail.com"
+		let to = ''
 
 		eventos.map(itemJson => {
 			if(itemJson.course === course) {
@@ -141,8 +146,40 @@ class ListOfPresents extends Component {
 				workload = itemJson.workload
 				company = itemJson.company
 				user = itemJson.user
+				to = itemJson.email
 			}
-		})
+		})			
+
+		function sendEmail(e) {		
+			e.preventDefault();			
+			const input = document.getElementsByClassName('certificate-background')[0];
+			window.scrollTo(0,0);
+			html2canvas(input, {
+					windowWidth: input.scrollWidth,
+					windowHeight: input.scrollHeight
+				})
+				.then((canvas) => {
+					const imgData = canvas.toDataURL('image/png');
+					const pdf = new jsPDF('l', 'mm', 'a4', true);
+
+					pdf.addImage(imgData, 'JPEG', 0, 0, 410, 280, '', 'FAST');
+					var formData = new FormData();
+					console.log(to)
+					formData.append('file', new Blob([pdf.output('blob')], {type: 'application/pdf'}), "certificado.pdf");
+					formData.append('from', from);
+					formData.append('to', to);
+
+					fetch('http://localhost:8080/send-mail', {
+						method: 'POST',
+						body: formData,
+					})
+					.then(res => console.log(res.json()))
+					.then(success => alert("Email enviado com sucesso!"))
+					.catch(error => alert("Não foi possível enviar seu email!")
+					);
+				});
+			
+		}
 
 		return(
 			<>   
@@ -159,35 +196,33 @@ class ListOfPresents extends Component {
 				</div>
 				<div className="div-buttons">
 					<Button className="button-voltar" onClick={ () => this.setState({ visible: true })}>Voltar para a lista</Button>
-					<Button className="button-email"  >Mandar por e-mail</Button>
+					<Button className="button-email" onClick={sendEmail}>Mandar por e-mail</Button>
 
 					<PDFDownloadLink
-				        document={<MyDocument 
-
-				        	name={nameParticipant} 
-				        	course={course}
-				        	company={company} 
-				        	startDate={startDate} 
-				        	finishDate={finishDate} 
-				        	workload={workload}
-				        	user={user}
-				        
-				        />}
-				        fileName="certificado.pdf"
-				        style={{
-					          textDecoration: "none",
-					          padding: "10px",
-					          height: '10px',
-					          textAlign: 'center',
-					          color: "#ff4000",
-					  
-					        }}
-					      >
-				        {({ blob, url, loading, error }) =>
-				          loading ? "Loading document..." : "Download Pdf"
-				        }
-				      </PDFDownloadLink>
-
+					document={<MyDocument 
+						name={nameParticipant} 
+						course={course}
+						company={company} 
+						startDate={startDate} 
+						finishDate={finishDate} 
+						workload={workload}
+						user={user}		
+					/>}
+					fileName="certificado.pdf"
+					style={{
+							textDecoration: "none",
+							padding: "10px",
+							height: '10px',
+							textAlign: 'center',
+							color: "#ff4000",
+					
+						}}
+						>
+					{({ blob, url, loading, error }) =>
+						loading ? "Loading document..." : "Download Pdf"
+					}
+					</PDFDownloadLink>				
+					
 				</div>
 			</>
 		);
