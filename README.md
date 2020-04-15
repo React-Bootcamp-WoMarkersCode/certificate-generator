@@ -131,6 +131,8 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 - AntDesign 
 - Login com Google
 - jspdf e html2canvas
+- Reactjs-Popup
+- react-signature-canvas
 
 ## Dependencias instaladas no projeto
 
@@ -165,8 +167,16 @@ Para mandar PDF por email
 $ yarn add jspdf
 ```
 Para inserir HTML no corpo do email
+
 ```
-$ npm install html2canvas
+$ yarn add html2canvas
+```
+
+Para desenvolver a assinatura digital
+
+```
+$ npm install --save reactjs-popup
+$ npm install --save react-signature-canvas
 ```
 <hr/>
 
