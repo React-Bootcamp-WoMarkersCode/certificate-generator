@@ -137,7 +137,7 @@ class ListOfPresents extends Component {
 		let finishDate = ''
 		let workload = ''
 		let from = "gelbundschwarz@gmail.com"
-		let to = ''
+		let to = "dianaregina22@outlook.com.br"
 
 		eventos.map(itemJson => {
 			if(itemJson.course === course) {
@@ -146,7 +146,6 @@ class ListOfPresents extends Component {
 				workload = itemJson.workload
 				company = itemJson.company
 				user = itemJson.user
-				to = itemJson.email
 			}
 		})			
 
@@ -164,12 +163,11 @@ class ListOfPresents extends Component {
 
 					pdf.addImage(imgData, 'JPEG', 0, 0, 410, 280, '', 'FAST');
 					var formData = new FormData();
-					console.log(to)
 					formData.append('file', new Blob([pdf.output('blob')], {type: 'application/pdf'}), "certificado.pdf");
 					formData.append('from', from);
 					formData.append('to', to);
 
-					fetch('http://localhost:8080/send-mail', {
+					fetch('https://server-mailjet-go.uc.r.appspot.com/send-mail', {
 						method: 'POST',
 						body: formData,
 					})
