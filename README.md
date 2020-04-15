@@ -176,8 +176,8 @@ $ yarn add html2canvas
 Para desenvolver a assinatura digital
 
 ```
-$ npm install --save reactjs-popup
-$ npm install --save react-signature-canvas
+$ yarn add reactjs-popup
+$ yarn add react-signature-canvas
 ```
 <hr/>
 
