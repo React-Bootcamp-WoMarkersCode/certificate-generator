@@ -19,8 +19,9 @@ Desenvolver uma plataforma capaz de gerar certificados em PDFe  realizar dowload
 - Cadastrar organizadores 
 - Cadastrar eventos 
 - Cadastrar participantes para cada evento
-- Gerar PDF com as informações preenchidas no formulário para cada participantes 
+- Gerar PDF com as informações preenchidas no formulário para cada participantes via dowload e/ou envio de e-mail 
 - Check-list de participantes, permitindo selecionar quem irá receber os certificados 
+- Permite que o organizador do evento escreva sua assinatura digital dentro da plataforma
 - Oferece layout responsivo 
 
 ## Como rodar a aplicação
