@@ -105,23 +105,23 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 
 ### Usuários
 
-- [ ] O usuário pode ser **criado** na pagina de Sing-up a partir de um formulário
-- [ ] Os dados do usuário podem ser **acessados** na pagina de Sing-in e Profile
-- [ ] Os dados do usuário podem ser **atualizados** na pagina de Profile a partir de um formulário
-- [ ] A conta do usuário pode ser **deletada** na pagina de Profile
+- [X] O usuário pode ser **criado** na pagina de Sing-up a partir de um formulário ou com uma conta existente no Google
+- [X] Os dados do usuário podem ser **acessados** na pagina de Sing-in e Profile
+- [X] Os dados do usuário podem ser **atualizados** na pagina de Profile a partir de um formulário
+- [X] A conta do usuário pode ser **deletada** na pagina de Profile
 
 ### Eventos
 
-- [ ] Podem ser **criados** a partir de um formulário na pagina List Of Events 
-- [ ] Podem ser **acessados** na pagina List Of Events 
-- [ ] Podem ser **atualizados** na pagina List of Events a partir de um formulário
-- [ ] Podem ser **deletados** na pagina List of Events
+- [X] Podem ser **criados** a partir de um formulário na pagina List Of Events 
+- [X] Podem ser **acessados** na pagina List Of Events 
+- [X] Podem ser **atualizados** na pagina List of Events a partir de um formulário
+- [X] Podem ser **deletados** na pagina List of Events
 
 ### Participantes
 
-- [ ] Podem ser **criados** a partir de um formulário na pagina List Presents 
-- [ ] Podem ser **acessados** em uma lista na pagina List Presents
-- [ ] Podem ser **atualizados**, indicando se aquele partifipante poderá ou não receber um certificado na pagina List Presents
+- [X] Podem ser **criados** a partir de um formulário na pagina List Presents 
+- [X] Podem ser **acessados** em uma lista na pagina List Presents
+- [X] Podem ser **atualizados**, indicando se aquele partifipante poderá ou não receber um certificado na pagina List Presents
 - [ ] Nenhuma ação foi feita para exlcuir os participantes
 
 ## Linguagens e libs utilizadas 
