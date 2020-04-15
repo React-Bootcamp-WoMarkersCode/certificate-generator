@@ -130,6 +130,7 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 - React Router
 - AntDesign 
 - Login com Google
+- jspdf e html2canvas
 
 ## Dependencias instaladas no projeto
 
@@ -159,6 +160,14 @@ Autenticação com Google
 $ npm install react-google-login
 ```
 
+Para mandar PDF por email
+```
+$ yarn add jspdf
+```
+Para inserir HTML no corpo do email
+```
+$ npm install html2canvas
+```
 <hr/>
 
 ## Licença
