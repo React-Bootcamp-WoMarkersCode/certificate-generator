@@ -105,8 +105,8 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 
 ### Usuários
 
-- [X] O usuário pode ser **criado** na pagina de Sing-up a partir de um formulário ou com uma conta existente no Google
-- [X] Os dados do usuário podem ser **acessados** na pagina de Sing-in e Profile
+- [X] O usuário pode ser **criado** na pagina de Sign-up a partir de um formulário ou com uma conta existente no Google
+- [X] Os dados do usuário podem ser **acessados** na pagina de Sign-in e Profile
 - [X] Os dados do usuário podem ser **atualizados** na pagina de Profile a partir de um formulário
 - [X] A conta do usuário pode ser **deletada** na pagina de Profile
 
@@ -121,7 +121,7 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 
 - [X] Podem ser **criados** a partir de um formulário na pagina List Presents 
 - [X] Podem ser **acessados** em uma lista na pagina List Presents
-- [X] Podem ser **atualizados**, indicando se aquele partifipante poderá ou não receber um certificado na pagina List Presents
+- [X] Podem ser **atualizados**, indicando se aquele participante poderá ou não receber um certificado na pagina List Presents
 - [ ] Nenhuma ação foi feita para exlcuir os participantes
 
 ## Linguagens e libs utilizadas 
