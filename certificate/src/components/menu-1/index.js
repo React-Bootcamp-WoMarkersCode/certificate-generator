@@ -4,17 +4,13 @@ import { Link } from "react-router-dom";
 import logoWomakers from "../../assets/img/logo_texto_cinza.png";
 import "./style.css";
 
-function Menu1() {
+function MenuComponent() {
   return (
     <Layout>
       <Menu className="menu-1" >
         <div className="logoWomakers">
           <Link to="/"><img src={logoWomakers} alt="logo" /></Link>
         </div>
-
-        <Menu.Item key="1">
-          <Link to="/">Home</Link>
-        </Menu.Item>
         <Menu.Item key="2">
           <Link to="/sign-up">Cadastro</Link>
         </Menu.Item>
@@ -26,4 +22,4 @@ function Menu1() {
   );
 }
 
-export default Menu1;
+export default MenuComponent;

@@ -1,3 +1,10 @@
+/*Bem vindo organizador*/
+.title-2-list-events {
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+/*Lista de eventos*/
 .title{
     display: flex;
     justify-content: center;
@@ -9,11 +16,32 @@
     border-color: rgb(0, 176, 240);
     background-color: rgb(0, 176, 240);
     color: #ffffff;
-    border-radius: 10px;
+    border-radius: 5px;
     border-width: 0.2em;
-    font-weight: bold;
     font-size: 15px;
     height: 50px;
     margin-left: 5%;
     margin-bottom: 2%;
+}
+
+.button-add:hover {
+    color:  rgb(0, 176, 240);
+    transition: 0.3s;
+}
+
+.button-profile {
+    border-color: #c6255a;
+    background-color: #c6255a;
+    color: #ffffff;
+    border-radius: 5px;
+    border-width: 0.2em;
+    font-size: 15px;
+    height: 50px;
+    margin-left: 5%;
+}
+
+.button-profile:hover {
+    border-color: #c6255a;
+    color: #c6255a;
+    transition: 0.3s;
 }

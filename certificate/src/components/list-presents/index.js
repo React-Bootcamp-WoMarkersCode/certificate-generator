@@ -1,216 +1,153 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 /*Estilos*/
 import './style.css'
 import './style-certificate.css'
 import 'antd/dist/antd.css';
-import { Checkbox, Button, Input } from 'antd';
+import { Checkbox, Button, Input, message } from 'antd';
 
 /*Importando lista de participantes*/
 import participantesData from '../../services/participantes.json'
 
-/*Importando lista de eventos*/
-import eventosData from '../../services/events.json'
 import { PDFDownloadLink } from '@react-pdf/renderer'
 import MyDocument from '../../components/my-document/index'
 
 import stars from '../../assets/stars.png'
 import logo from '../../assets/img/logo_texto_preto.png'
 
-class ListOfPresents extends Component {
+function ListOfPresents(props) {
 
-	/*Toda vez que o checkbox de cada participante 
-	mudar de estado essa função será executada*/
+		/*Recebe o evento selecionado pelo organizador*/
+		const { evento } = props
 
-	constructor(props) {
-		super(props)
-		this.state = {
+		/*Nome do novo participante no input*/
+		const [ name, setName ] = useState('')
 
-			/*Define o estado do JSON*/
-			participantes: participantesData,
-			eventos: eventosData,
+		/*E-mail do novo participante no input*/
+		const [ email, setEmail ] = useState('')
 
-			name: '',
-			email: '',
-			msgError: '',
+		/*JSON dos participantes*/
+		const [ participantes, setParticipantes ] = useState(participantesData)
 
-			/*Permite a troca de tela entre a lista de participante e o seu certificado*/
-			visible: true,
+		/*Variavel que troca a lista de participants pelos certificados*/
+		const [ visible, setVisible ] = useState(true)
 
-			/*Informações que serão mostradas no certificado*/
-			nameParticipant: '',
-			course: '',
+		/*Participante selecionado*/
+		const [ thisParticipante, setThisParticipante ] = useState('')
+
+		/*Verifica se existem participantes cadastrados */
+		let noEvents = true
+
+		const showModal = (participante) => {
+			setVisible(false)
+			setThisParticipante(participante)
 		}
-	}
 
-	showModal = (nameParticipant, course) => {
-    	this.setState({	visible: false });
-    	this.setState({ nameParticipant: nameParticipant})
-    	this.setState({ course: course})
-  	};
-		
-	/*Esta função recebe o nome do participante como parametro*/
-	onChange(participante) {
+		/*Valida os campos de input*/
+		const verificarCampos = () => {
+			if(!name || !email ) {
+				message.error('Por favor, preencha todos os campos')
 
-		/*Vamos atualizar o estado do JSON de participantes*/
-		/*Estou fazendo o (U)pdate do CRUD dos participantes*/
-		this.setState({
-
-			/*Ao percorrer novamente o JSON, o estado será
-			atualizado com os valores que iremos retornar*/
-			participantes: this.state.participantes.map(itemJson => {
-
-				/*Se econtrarmos o participante*/
-				if(itemJson.name === participante) {
-
-					/*Invertendo o estado de sua condição de presença 
-					no evento*/
-					itemJson['present'] = !itemJson.present
-
-					/*Retornamos esse dado ao JSON novamente*/
-					return itemJson;
-				}
-
-				/*Retornamos esse dado ao JSON novamente*/
-				return itemJson;
-			})
-		})
-	}
-
-	/*Esta função faz o (C)reate no JSON de participantes*/
-	adicionarParticipante() {
-
-		const { name, email } = this.state;
-
-			this.setState({ participantes: [...this.state.participantes, {
-				"name": name,
-				"email": email,
-				"present": true,
-				"receiveCertificate": false,
-				"course": 'Java Poo'
-			}]})		
-	}
-
-	
-	/*Esta função será executada ao clicar no botão*/
-	/*Verificaremos se o usuário digitou os campos*/
-	/*Se sim, chamaremos outra função para  
-	verificar se o participante já existe*/
-	/*Se não, uma mensagem de erro será mostrada*/
-	verificarCampos = event => {
-
-		event.preventDefault();
-
-		const { name, email } = this.state;
-
-		if(!name || !email) {
-			this.setState({ msgError: 'Por favor, preencha os dados'} ) 
-		} else {
-			this.setState({ msgError: ''})
-			
-			/*Verificando se já existe um participante cadastrado*/
-			let listEmails = []
-
-			this.state.participantes.map(itemJson => {
-				listEmails.push(itemJson.email)
-			})
-
-			if(!listEmails.includes(email)) {
-				this.adicionarParticipante()
 			} else {
-				this.setState({ msgError: 'Este participante já está na sua lista'} )
+				/*Verificando se já existe um participante cadastrado*/
+			    let listEmails = []
+
+			    participantes.map(itemJson => {
+			    	listEmails.push(itemJson.email)
+			    })
+
+			    if(!listEmails.includes(email)) {
+					
+					setParticipantes([
+						...participantes, {
+							name: name,
+							email: email,
+							present: true,
+							receiveCertificate: false,
+							course: evento.course
+						}
+					])
+
+					message.success('Participante criado com sucesso')
+
+				} else {
+					message.warning('Este participante já está na sua lista')
+				}
 			}
 		}
-	}
 
-	/*Esta função mostra o certificado do participante*/
-	verCertificado() {
+		/*Na mudança de check do participante*/
+		const onChange = (participante) => {
 
-		const { nameParticipant, course, eventos } = this.state 
+			setParticipantes(participantes.map(itemParticipante => {
+				
+				if(itemParticipante.name === participante.name) {
+					itemParticipante['present'] = !participante.present
 
-		let company = ''
-		let user = ''
-		let startDate = ''
-		let finishDate = ''
-		let workload = ''
+					if(participante.present) {
+						message.success('Este participante receberá certificado')
 
-		eventos.map(itemJson => {
-			if(itemJson.course === course) {
-				startDate = itemJson.startDate
-				finishDate = itemJson.finishDate
-				workload = itemJson.workload
-				company = itemJson.company
-				user = itemJson.user
-			}
-		})
+					} else {
+						message.info('Este participante não receberá certificado')
+					}
 
-		return(
-			<>   
-			    <div className="certificate-background">
-					<img src={logo} className="img-logo-certificate"/>
-					<img src={stars} className="img-stars"/>   
-					<p className="p-certificate">A comunidade empresa confere ao participante <span className="info-certificate">{nameParticipant}</span> o presente certificado 
-						<br/>referente a sua participação no evento <span className="info-certificate">{course}</span> oferecido pela <span className="info-certificate">{company}</span> realizado do 
-						<br/>dia <span className="info-certificate">{startDate}</span> ao <span className="info-certificate">{finishDate}</span>, com carga horaria de <span className="info-certificate">{workload} horas.</span>
-						<br/>
-					</p>
-					<hr/>
-					<p className="p-2-certificate">{user}</p>
-				</div>
-				<div className="div-buttons">
-					<Button className="button-voltar" onClick={ () => this.setState({ visible: true })}>Voltar para a lista</Button>
-					<Button className="button-email"  >Mandar por e-mail</Button>
+					return itemParticipante;
+				} else {
 
-					<PDFDownloadLink
-				        document={<MyDocument 
+					return itemParticipante;
+				}
+				
+			}) )
+		}
 
-				        	name={nameParticipant} 
-				        	course={course}
-				        	company={company} 
-				        	startDate={startDate} 
-				        	finishDate={finishDate} 
-				        	workload={workload}
-				        	user={user}
-				        
-				        />}
-				        fileName="certificado.pdf"
-				        style={{
-					          textDecoration: "none",
-					          padding: "10px",
-					          height: '10px',
-					          textAlign: 'center',
-					          color: "#ff4000",
-					  
-					        }}
-					      >
-				        {({ blob, url, loading, error }) =>
-				          loading ? "Loading document..." : "Download Pdf"
-				        }
-				      </PDFDownloadLink>
+		const sendEmail = (e) =>{	
 
-				</div>
-			</>
-		);
-	}
+			let from = "gelbundschwarz@gmail.com"
+			let to = "dianaregina22@outlook.com.br"
+	
+			const input = document.getElementsByClassName('certificate-background')[0];
+			window.scrollTo(0,0);
+			html2canvas(input, {
+					windowWidth: input.scrollWidth,
+					windowHeight: input.scrollHeight
+				})
+				.then((canvas) => {
+					const imgData = canvas.toDataURL('image/png');
+					const pdf = new jsPDF('l', 'mm', 'a4', true);
 
-	render(){
+					pdf.addImage(imgData, 'JPEG', 0, 0, 410, 280, '', 'FAST');
+					var formData = new FormData();
+					formData.append('file', new Blob([pdf.output('blob')], {type: 'application/pdf'}), "certificado.pdf");
+					formData.append('from', from);
+					formData.append('to', to);
 
-		const { visible, msgError, participantes, name , email, course} = this.state
+					fetch('https://server-mailjet-go.uc.r.appspot.com/send-mail', {
+						method: 'POST',
+						body: formData,
+					})
+					.then(success => message.success("Email enviado com sucesso!"))
+					.catch(error => message.error("Não foi possível enviar seu email!")
+					);
+				});
+			
+		}
+
 		return (
 			<>
-
 				<div className="list-participants"
 					style={{ display: visible ?  'grid' : 'none' }}
 				>
 
 					<div className="input-participantes">
 						<h2>Adicione mais participantes a sua lista:</h2>
-						<p className="msg-error-participant">{msgError}</p>
-						<Input className="input-1" placeholder="Nome do participante" value={name} onChange={e => this.setState({ name: e.target.value})}/>
+						
+						<Input className="input-1" placeholder="Nome do participante" value={name} onChange={newName => setName(newName.target.value)}/>
 						<br/>
-						<Input className="input-2" placeholder="E-mail of participante" value={email} onChange={e => this.setState({ email: e.target.value})}/>
+						<Input className="input-2" placeholder="E-mail of participante" value={email} onChange={newEmail => setEmail(newEmail.target.value)}/>
 						<br/>
-						<Button className="button-parcipants" type="primary" danger onClick={this.verificarCampos}>Incluir novo participante</Button>
+						<Button className="button-parcipants" type="primary" danger onClick={() => {verificarCampos()}}>Incluir novo participante</Button>
 					</div>
 					
 					
@@ -218,35 +155,75 @@ class ListOfPresents extends Component {
 						<h1 className="title-2">Lista de Participantes</h1>
 							
 								{
-									participantes.map(itemJson => {
-										return (
-											<>
-												<div className="name-participant" >
-													<Checkbox 
-															checked={itemJson.present} 
-															onChange={() => this.onChange(itemJson.name)}>
-															{itemJson.name}
-													</Checkbox>
+									participantes.map(participante => {
 
-													<Button type="primary" disabled={!itemJson.present} onClick={() => this.showModal(itemJson.name, itemJson.course) } >
-														Ver certificado
-													</Button>						
+										if(participante.course === evento.course) {
+											noEvents = false
+											return (
+												<>
+													<div className="name-participant" >
+														<Checkbox 
+																checked={participante.present} 
+																onChange={() => onChange(participante) }>
+																{participante.name}
+														</Checkbox>
+														-> &nbsp;<p style={{ textDecoration: participante.receiveCertificate ?  'line-through' : 'none' }} >{participante.email}</p> &nbsp;(e-mail)
+														<Button type="primary" disabled={!participante.present} className="buttom-ver-certificado" onClick={() => showModal(participante.name)}>
+															Ver certificado
+														</Button>						
 
-												</div>
-												<br/>
-											</>
-										);
+													</div>
+													<br/>
+												</>
+											);
+										}
 									})
-
 								}
 					</div>
+					{ noEvents && <h1>Nenhum participante cadastradoo</h1> }
 				</div>
 				<div style={{ display: visible ?  'none' : 'grid' }}>
-					{this.verCertificado()}
+					<div className="certificate-background">
+						<img src={logo} alt="Logo da empresa" className="img-logo-certificate"/>
+						<img src={stars} alt="5 estrelas" className="img-stars"/> 
+						<p className="p-certificate">A comunidade empresa confere ao participante <span className="info-certificate">{thisParticipante}</span> o presente certificado 
+							<br/>referente a sua participação no evento <span className="info-certificate">{evento.course}</span> oferecido pela <span className="info-certificate">{evento.company}</span> realizado do 
+							<br/>dia <span className="info-certificate">{evento.startDate}</span> ao <span className="info-certificate">{evento.finishDate}</span>, com carga horaria de <span className="info-certificate">{evento.workload} horas.</span>
+							<br/>
+						</p>
+						<img alt="Assinatura Digital" src={evento.digitalSignature} className="digitalSignature" />
+						<hr/>
+						<p className="p-2-certificate">{evento.user}</p>
+					</div>
+
+					<div className="div-buttons">
+						<Button className="button-voltar" onClick={ () => setVisible(true) }>Voltar para a lista</Button>
+						<Button className="button-email" onClick={() => sendEmail()}>Mandar por e-mail</Button>
+
+						<PDFDownloadLink 
+
+							document={<MyDocument 
+								name={thisParticipante} 
+								course={evento.course}
+								company={evento.company} 
+								startDate={evento.startDate} 
+								finishDate={evento.finishDate} 
+								workload={evento.workload}
+								user={evento.user}	
+								digitalSignature={evento.digitalSignature} />}
+
+							fileName="PDF_Certificado.pdf"
+						>
+
+						{({ blob, url, loading, error }) => (loading ? 'Carregando PDF ... ' : 'Baixar PDF') }
+						
+
+						</PDFDownloadLink>
+					</div>
+
 				</div>
 			</>
 		);
-	}
 }
 
 export default ListOfPresents;

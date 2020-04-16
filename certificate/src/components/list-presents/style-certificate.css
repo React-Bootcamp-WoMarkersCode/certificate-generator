@@ -8,9 +8,10 @@
 
 	background: url('../../assets/wallpaper-certificate.png');
 	background-repeat: no-repeat;
-	background-size: 85%;
+	background-size: 100%;
 
-	margin-left: 12%;
+	margin-left: 10%;
+	margin-right: 10%;
 	margin-top: 5%;
 }
 
@@ -31,15 +32,21 @@
 
 /*Texto*/
 .p-certificate {
-	margin-left: 10%;
+	margin-left: 5%;
 	margin-top: 5%;
-	width: 70%;
+	width: 90%;
+}
+
+/*Assinatura Digital*/
+.digitalSignature {
+	width: 20%;
+	height: 20%;
 }
 
 hr {
-	width: 20%;
+	width: 35%;
 	color: black;
-	margin-top: 5%;
+	margin-top: 0%;
 	margin-left: 30%;
 	background-color: brown;
 }
@@ -52,7 +59,7 @@ hr {
 
 /*Nome do organizador do evento*/
 .p-2-certificate {
-	margin-left: 25%;
+	margin-left: 32%;
 	width: 30%;
 	margin-bottom: 10%;
 }

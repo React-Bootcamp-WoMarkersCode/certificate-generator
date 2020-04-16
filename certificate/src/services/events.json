@@ -7,8 +7,7 @@
 		"finishDate": "28/03/2020",
 		"workload": "56", 
 		"logo": "https://miro.medium.com/max/478/1*jriufqYKgJTW4DKrBizU5w.png", 
-		"digitalSignature": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Assinatura_Jos%C3%A9_Saramago.png", 
-		"token": false
+		"digitalSignature": ""
 	},
 	{	
 		"user": "Marília Suzart",
@@ -16,11 +15,9 @@
 		"course": "React Navite",
 		"startDate": "03/03/2020", 
 		"finishDate": "03/04/2020",
-
 		"workload": "30", 
 		"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTk4anvjc5Nyx05EpG5SVa-h_cYcp2CgOS3nAaaQoiPi_GgJylp&usqp=CAU", 
-		"digitalSignature": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTsJnbz0CfmUvhbBlfwCV_jQHKShqVMNk1UAAMjGOmuczwrWEEZ&usqp=CAU", 
-		"token": false
+		"digitalSignature": "" 
 	},
 	{
 		"user": "Rebecca Arantes",
@@ -29,9 +26,18 @@
 		"startDate": "03/03/2020", 
 		"finishDate": "03/04/2020",
 		"workload": "30", 
-		"digitalSignature": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTsJnbz0CfmUvhbBlfwCV_jQHKShqVMNk1UAAMjGOmuczwrWEEZ&usqp=CAU", 
-		"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTk4anvjc5Nyx05EpG5SVa-h_cYcp2CgOS3nAaaQoiPi_GgJylp&usqp=CAU", 
-		"token": false 
+		"digitalSignature": "", 
+		"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTk4anvjc5Nyx05EpG5SVa-h_cYcp2CgOS3nAaaQoiPi_GgJylp&usqp=CAU" 
+	},
+	{
+		"user": "Rebecca Arantes",
+		"company": "Liv Up", 
+		"course": "Boodstrap",
+		"startDate": "03/03/2020", 
+		"finishDate": "03/04/2020",
+		"workload": "30", 
+		"digitalSignature": "", 
+		"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTk4anvjc5Nyx05EpG5SVa-h_cYcp2CgOS3nAaaQoiPi_GgJylp&usqp=CAU" 
 	},
 	{
 		"user": "Brennda Farinha",
@@ -40,9 +46,8 @@
 		"startDate": "03/03/2020", 
 		"finishDate": "03/04/2020",
 		"workload": "70", 
-		"digitalSignature": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Assinatura_Ant%C3%B3nio_Jos%C3%A9_de_Almeida.svg/1280px-Assinatura_Ant%C3%B3nio_Jos%C3%A9_de_Almeida.svg.png", 
-		"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQx_9qBzg7v5vapa-NG-t0e9HSYRi3lJjwKomUgFEfIfYMa5U1J&usqp=CAU", 
-		"token": false 
+		"digitalSignature": "", 
+		"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQx_9qBzg7v5vapa-NG-t0e9HSYRi3lJjwKomUgFEfIfYMa5U1J&usqp=CAU" 
 	},
 	{
 		"user": "Adriele Rodrigues",
@@ -52,7 +57,6 @@
 		"finishDate": "03/04/2020",
 		"workload": "120", 
 		"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSJVBXCc4s68lb4RLyO3xncK1D6HQH7EuyENcf_Wb1eR9XlsYU6&usqp=CAU", 
-		"digitalSignature": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSEn3F0_7Ks3qZOEC2PcuCuKNqvcMNltGHVaa7pzYTbQQZMxFdU&usqp=CAU", 
-		"token": false 
+		"digitalSignature": "" 
 	}
 ]

@@ -2,7 +2,7 @@
 /*Estou usando o Antd para me auxiliar na construção e layout*/
 
 import React from 'react'
-import { Card, Col, Row } from 'antd';
+import { Card } from 'antd';
 import 'antd/dist/antd.css';
 import './style.css'
 
@@ -20,23 +20,23 @@ function Cards(props) {
 			        </Card>
 				
 			        <Card className="card" title="Envios Ilimitados" bordered={false}>
-			          	Envie por e-mail o certificado para todos os participantes apenas com um click
+			          	Envie por e-mail o certificado para todos os participantes apenas com um click ou faça dowload. 
 			        </Card>
 				
 			        <Card className="card" title="Controle de participantes" bordered={false}>
 			          	Cadastre seus participantes para cada evento e selecione quem irá receber os certificados em nosso <em>check-list</em>.
 			        </Card>
 				
-			        <Card className="card" title="Importe sua assinatura e logo" bordered={false}>
-			          	Faça upload de sua assinatura digital e o logo de sua empresa para contruir os certificados.
+			        <Card className="card" title="Escreva sua assinatura" bordered={false}>
+			          	Escreva sua assinatura digital em nosso Pad para os seus certificados.
 			        </Card>
 				
 			        <Card className="card" title="Uso empresarial" bordered={false}>
-			          	Crie uma conta para a sua você ou empresa e gere certificados para seus eventos e cursos
+			          	Crie uma conta para a sua você ou empresa e gere certificados para seus eventos e cursos.
 			        </Card>
 				
 					<Card className="card" title="Praticidade" bordered={false}>
-			          	Registre seus eventos/cursos e gere os certificados quando for melhor para você
+			          	Registre seus eventos/cursos e gere os certificados quando for melhor para você e envie a hora que quiser. 
 			        </Card>
 			
 			</div>

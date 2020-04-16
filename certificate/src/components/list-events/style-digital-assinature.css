@@ -1,0 +1,46 @@
+.signatureCanvas {
+  border: 1px solid black;
+  width: 100%;
+  min-height: 500px;
+}
+
+.buttons-pad {
+	display: block;
+	margin: 0 auto;
+	border: 1px slid black;
+	width: 150px;
+}
+
+.button-open-pad {
+	display: flex;
+	margin-left: 24%;
+	color: orange;
+	border-color: orange;
+}
+
+.button-save, .button-close {
+	border-color: transparent;
+	color: white;
+}
+
+.button-save {
+	background-color: rgb(255, 91, 91);
+}
+
+.button-save:hover {
+	background-color: white;
+	border-color: rgb(255, 91, 91);
+	color: rgb(255, 91, 91);
+	transition: 0.5;
+}
+
+.button-close {
+	background-color: black;
+}
+
+.button-close:hover {
+	background-color: white;
+	border-color: black;
+	color: black;
+	transition: 0.5;
+}

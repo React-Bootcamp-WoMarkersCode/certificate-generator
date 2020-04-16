@@ -1,11 +1,4 @@
-.buttons{
-    display: flex;
-    flex-direction: row;
-    margin-left: 5%;
-}
-
 .course{
-    width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,14 +6,25 @@
     font-weight: bold;
 }
 
+/*Informações do evento*/
+.span-list-event {
+    color: pink;
+}
+
+.h4-list-event {
+    color: pink;
+    font-weight: bold;
+}
+
 .button-delete{
-    margin: 0.5%;
+    margin: 5%;
     border-width: 0.2em;
     font-weight: bold;
 }
 
 .button-edit{
-    margin: 0.5%;
+    margin: 5%;
+    margin-left: -4%;
     border-color: rgb(255, 102, 0);
     color: rgb(255, 102, 0);
     border-width: 0.2em;
@@ -28,21 +32,18 @@
 }
 
 .button-check{
-    margin: 0.5%;
+    margin: 5%;
     border-color: #C6255A;
     color: #C6255A;
     border-width: 0.2em;
-    font-weight: bold;
 }
 
-.button-certificate{
-    margin: 0.5%;
-    border-color: rgb(153, 0, 153);
-    background-color: rgb(153, 0, 153);
-    color: #ffffff;
-    border-radius: 10px;
+.button-info {
+    margin: 5%;
+    margin-left: -4%;
+    border-color: gray;
+    color: gray;
     border-width: 0.2em;
-    font-weight: bold;
 }
 
 .edit-event{

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Page, Text, View, Document, StyleSheet, Image } from '@react-pdf/renderer';
-import  ReactPDF from '@react-pdf/renderer'
 
 /*Cria estilo com style componente*/
 const styles = StyleSheet.create({
@@ -27,7 +26,7 @@ const styles = StyleSheet.create({
 
 const MyDocument = (props) => {
 
-	const { name, course, company, startDate, finishDate, workload, user } = props
+	const { name, course, company, startDate, finishDate, workload, user, digitalSignature } = props
 
 	return(
 		
@@ -37,10 +36,11 @@ const MyDocument = (props) => {
 					orientation="landscape"
 					style={styles.page}>
 					<View style={styles.section} >
-						<Image style={styles.image} src="logo_texto_cinza.png"/>
+						
 						<Text lineHeight="50px">A comunidade {company} confere ao participante {name} o presente certificado</Text>
 						<Text>referente a sua participação no evento {course} realizado do</Text>
 						<Text>dia {startDate} ao {finishDate}, totalizando {workload} horas de atividades.</Text>
+						<Image style={styles.image} source={digitalSignature} alt="Assinatura Digital" />
 						<Text style={styles.user}>{user}</Text>
 					</View>
 				</Page>
