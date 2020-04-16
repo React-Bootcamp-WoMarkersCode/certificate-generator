@@ -121,7 +121,7 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 
 - [X] Podem ser **criados** a partir de um formulário na pagina List Presents 
 - [X] Podem ser **acessados** em uma lista na pagina List Presents
-- [X] Podem ser **atualizados**, indicando se aquele partifipante poderá ou não receber um certificado na pagina List Presents
+- [X] Podem ser **atualizados**, indicando se aquele participante poderá ou não receber um certificado na pagina List Presents
 - [ ] Nenhuma ação foi feita para exlcuir os participantes
 
 ## Linguagens e libs utilizadas 
