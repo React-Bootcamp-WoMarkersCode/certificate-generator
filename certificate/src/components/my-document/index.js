@@ -36,7 +36,7 @@ const MyDocument = (props) => {
 					orientation="landscape"
 					style={styles.page}>
 					<View style={styles.section} >
-						
+					
 						<Text lineHeight="50px">A comunidade {company} confere ao participante {name} o presente certificado</Text>
 						<Text>referente a sua participação no evento {course} realizado do</Text>
 						<Text>dia {startDate} ao {finishDate}, totalizando {workload} horas de atividades.</Text>

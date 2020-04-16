@@ -16,6 +16,8 @@
     "react-google-login": "^5.1.2",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
+    "react-signature-canvas": "^1.0.3",
+    "reactjs-popup": "^1.5.0",
     "tachyon": "^0.0.11",
     "yup": "^0.28.3"
   },
