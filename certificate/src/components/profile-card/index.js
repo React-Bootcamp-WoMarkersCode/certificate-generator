@@ -5,13 +5,12 @@ import 'antd/dist/antd.css';
 import { Avatar, message, Button, Input } from 'antd';
 import './style.css'
 
-/*Importando lista de participantes*/
-import users from '../../services/users.json'
-
 /*Rotas*/
 import { Redirect } from 'react-router-dom'
 
 function ProfileCard(props) {
+
+	const { organizador, users, assinatura } = props
 
 	/*Variável que irá renderizar o formulário de registro, mas com 
 	os dados do usuário para que possam ser atualizados*/
@@ -66,7 +65,7 @@ function ProfileCard(props) {
 					user.map(itemJson => {
 						
 						/*Atualizando o JSON de usuários sem o usuário ativo*/
-						if(itemJson.token){
+						if(itemJson.name === organizador){
 							itemJson['name'] = name
 							itemJson['email'] = email
 							itemJson['password'] = password
@@ -114,9 +113,6 @@ function ProfileCard(props) {
 	}
 	return (
 		<>
-
-			
-
 			<div className="profile"
 				style={{ display: toEditForm ?  'none' : 'block' }}
 			>
@@ -140,6 +136,18 @@ function ProfileCard(props) {
 				
 				<Button type="primary" primary onClick={beforeEditForm}>Editar minha conta</Button>
 				<Button type="primary" danger onClick={deleteAccount}>Deletar minha conta</Button>
+				<h4 style={{ marginTop: '3%'}}>Sua assinatura</h4>
+				<hr style={{ marginLeft: '-3%'}} />
+				<br/>
+				{ assinatura ? (
+					<img
+						src={assinatura}
+						alt="Minha assinatura Digital"
+						className="buttons-pad" 
+						style={{ marginLeft: '-3%'}}
+						/>
+				) : <h4 style={{ color: 'red'}}>Sem assinatura</h4> }
+				
 			</div>
 			{ goToHome && <Redirect to="/"></Redirect>}
 			
@@ -159,7 +167,7 @@ function ProfileCard(props) {
 						<br/>
 						<Button className="button-edit-profile" type="primary" primary onClick={afterEditForm}>Atualizar dados</Button>
 						<br/>
-						<Button className="back-button-profile" onClick={beforeEditForm}>Voltar</Button>
+						<Button className="back-button-profile" onClick={beforeEditForm}>Voltar para o perfil</Button>
 					</div>
 			}
 		</>

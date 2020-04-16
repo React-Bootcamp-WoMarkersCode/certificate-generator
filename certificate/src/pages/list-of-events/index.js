@@ -1,15 +1,19 @@
 import React from 'react';
-import Menu2 from '../../components/menu-2/index';
+
+/*Componentes*/
+import MenuComponent from '../../components/menu-1/index'
 import ListEvents from '../../components/list-events/index';
 import Footer from '../../components/footer/index';
 
 function ListOfEvents(props) {
 
+	const { organizador } = props
+
 	return (
 		<>
-		<Menu2 />
-		<ListEvents />
-		<Footer />
+			<MenuComponent/>
+			<ListEvents organizador={organizador}/>
+			<Footer/>
 		</>
 	);
 }

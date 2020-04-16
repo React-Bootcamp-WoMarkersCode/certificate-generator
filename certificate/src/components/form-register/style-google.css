@@ -1,0 +1,23 @@
+.button-google {
+	margin-left: -10%;
+	margin-top: 8%;
+}
+
+.ou {
+	display: flex;
+	justify-content: center;
+	margin-top: 3%;
+}
+
+@media screen and (max-width: 900px) {
+	.button-google { 
+		margin-left: -30%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.button-google { 
+		width: 100%;
+		margin-left: -10%;
+	}
+}

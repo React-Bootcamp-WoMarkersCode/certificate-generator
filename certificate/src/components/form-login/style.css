@@ -3,3 +3,26 @@
     border-color: pink;
     margin-right: 15%;
 }
+
+.article {
+	width: 40%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.login-form {
+	margin-bottom: -50%;
+}
+
+
+@media screen and (max-width: 900px) {
+	.article { 
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.article { 
+		width: 80%;
+	}
+}

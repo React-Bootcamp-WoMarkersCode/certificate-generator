@@ -62,7 +62,7 @@
 		"name": "Anna Carolina Inhasz Aureliano",
 		"email": "anna.inhasz@gmail.com",
 		"present": true,
-		"receiveCertificate": false,
+		"receiveCertificate": true,
 		"course": "Angular"
 	}
 	, 
@@ -70,7 +70,7 @@
 		"name": "Alessandra Nastassja",
 		"email": "alessandra.nastassja@hotmail.com",
 		"present": true,
-		"receiveCertificate": false,
+		"receiveCertificate": true,
 		"course": "Angular"
 	}
 	, 

@@ -7,7 +7,7 @@ function ModelCertificateHome(props) {
 	return (
 		<div className="model">
 			<h1 className="h1-model "> <span className="sub-title-1">Nosso </span> <span className="sub-title-1 model-color">modelo</span></h1>
-			<img src={modelCertificate} className="modelCertificate" />
+			<img src={modelCertificate} className="modelCertificate" alt="Modelo de Certificado"/>
 		</div>
 	);
 }

@@ -19,8 +19,9 @@ Desenvolver uma plataforma capaz de gerar certificados em PDFe  realizar dowload
 - Cadastrar organizadores 
 - Cadastrar eventos 
 - Cadastrar participantes para cada evento
-- Gerar PDF com as informações preenchidas no formulário para cada participantes 
+- Gerar PDF com as informações preenchidas no formulário para cada participantes via dowload e/ou envio de e-mail 
 - Check-list de participantes, permitindo selecionar quem irá receber os certificados 
+- Permite que o organizador do evento escreva sua assinatura digital dentro da plataforma
 - Oferece layout responsivo 
 
 ## Como rodar a aplicação
@@ -104,23 +105,23 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 
 ### Usuários
 
-- [ ] O usuário pode ser **criado** na pagina de Sing-up a partir de um formulário
-- [ ] Os dados do usuário podem ser **acessados** na pagina de Sing-in e Profile
-- [ ] Os dados do usuário podem ser **atualizados** na pagina de Profile a partir de um formulário
-- [ ] A conta do usuário pode ser **deletada** na pagina de Profile
+- [X] O usuário pode ser **criado** na pagina de Sign-up a partir de um formulário ou com uma conta existente no Google
+- [X] Os dados do usuário podem ser **acessados** na pagina de Sign-in e Profile
+- [X] Os dados do usuário podem ser **atualizados** na pagina de Profile a partir de um formulário
+- [X] A conta do usuário pode ser **deletada** na pagina de Profile
 
 ### Eventos
 
-- [ ] Podem ser **criados** a partir de um formulário na pagina List Of Events 
-- [ ] Podem ser **acessados** na pagina List Of Events 
-- [ ] Podem ser **atualizados** na pagina List of Events a partir de um formulário
-- [ ] Podem ser **deletados** na pagina List of Events
+- [X] Podem ser **criados** a partir de um formulário na pagina List Of Events 
+- [X] Podem ser **acessados** na pagina List Of Events 
+- [X] Podem ser **atualizados** na pagina List of Events a partir de um formulário
+- [X] Podem ser **deletados** na pagina List of Events
 
 ### Participantes
 
-- [ ] Podem ser **criados** a partir de um formulário na pagina List Presents 
-- [ ] Podem ser **acessados** em uma lista na pagina List Presents
-- [ ] Podem ser **atualizados**, indicando se aquele partifipante poderá ou não receber um certificado na pagina List Presents
+- [X] Podem ser **criados** a partir de um formulário na pagina List Presents 
+- [X] Podem ser **acessados** em uma lista na pagina List Presents
+- [X] Podem ser **atualizados**, indicando se aquele participante poderá ou não receber um certificado na pagina List Presents
 - [ ] Nenhuma ação foi feita para exlcuir os participantes
 
 ## Linguagens e libs utilizadas 
@@ -130,6 +131,9 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 - React Router
 - AntDesign 
 - Login com Google
+- jspdf e html2canvas
+- Reactjs-Popup
+- react-signature-canvas
 
 ## Dependencias instaladas no projeto
 
@@ -159,6 +163,22 @@ Autenticação com Google
 $ npm install react-google-login
 ```
 
+Para mandar PDF por email
+```
+$ yarn add jspdf
+```
+Para inserir HTML no corpo do email
+
+```
+$ yarn add html2canvas
+```
+
+Para desenvolver a assinatura digital
+
+```
+$ yarn add reactjs-popup
+$ yarn add react-signature-canvas
+```
 <hr/>
 
 ## Licença
