@@ -99,9 +99,9 @@ function ListOfPresents(props) {
 					return itemParticipante;
 				}
 				
-			}) )
+			}))
 		}
-
+    
 		const sendEmail = (e) =>{	
 
 			let from = "gelbundschwarz@gmail.com"
@@ -180,7 +180,7 @@ function ListOfPresents(props) {
 									})
 								}
 					</div>
-					{ noEvents && <h1>Nenhum participante cadastradoo</h1> }
+				{ noEvents && <h1>Nenhum participante cadastradoo</h1> }
 				</div>
 				<div style={{ display: visible ?  'none' : 'grid' }}>
 					<div className="certificate-background">
