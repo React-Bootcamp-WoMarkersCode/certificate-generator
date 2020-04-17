@@ -72,7 +72,7 @@ Pronto, agora é possível acessar a aplicação a partir da rota http://localho
 
 A nossa simulação de banco de dados foi feita com JSON. Foram separados um para [usuarios](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/certificate/src/services/users.json), [participantes](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/certificate/src/services/participantes.json) e [eventos](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/certificate/src/services/events.json):
 
-### Usuario: 
+### Usuário: 
 
 ```
 	{
@@ -112,7 +112,7 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 	}
 ```
 
-## Paginas: 
+## Páginas: 
 
 [Aqui](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/README_PAGES.md) é possível visualizar a **proposta** de layout do projeto.  
 
