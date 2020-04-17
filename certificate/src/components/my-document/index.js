@@ -11,15 +11,19 @@ const styles = StyleSheet.create({
 		flexDirection: 'row'
 	}, section: {
 		marginTop: '10%',
-		marginLeft: '3%',
 		padding: 10,
 		flexGrow: 1,
-		textAlign: 'center'
-	}, image: {
+		textAlign: 'center',
+		alignItems: 'center',
+	}, assinatura: {
 		width: '10%',
-		marginLeft: '35%'
-	}, user: {
-		marginTop: '3%'
+		height: '10%',
+		marginTop: '5%'
+	}, logo: {
+		width: '15%',
+		height: '15%'
+	}, text: {
+		width: '70%'
 	}
 });
 
@@ -36,12 +40,13 @@ const MyDocument = (props) => {
 					orientation="landscape"
 					style={styles.page}>
 					<View style={styles.section} >
-					
-						<Text lineHeight="50px">A comunidade {company} confere ao participante {name} o presente certificado</Text>
-						<Text>referente a sua participação no evento {course} realizado do</Text>
-						<Text>dia {startDate} ao {finishDate}, totalizando {workload} horas de atividades.</Text>
-						<Image style={styles.image} source={digitalSignature} alt="Assinatura Digital" />
-						<Text style={styles.user}>{user}</Text>
+						<Image alt="Logo" style={styles.logo} source="logo_texto_cinza.png"  />
+						<Text style={styles.text}>A comunidade {company} confere ao participante {name} o presente certificado</Text>
+						<Text style={styles.text}>referente a sua participação no evento {course} realizado do</Text>
+						<Text style={styles.text}>dia {startDate} ao {finishDate}, totalizando {workload} horas de atividades.</Text>
+
+						<Image style={styles.assinatura} source={digitalSignature} alt="Assinatura Digital" />
+						<Text style={styles.text}>{user}</Text>
 					</View>
 				</Page>
 			</Document>	

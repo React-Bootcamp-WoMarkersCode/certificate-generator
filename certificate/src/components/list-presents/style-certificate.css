@@ -18,14 +18,14 @@
 /*Logo*/
 .img-logo-certificate {
 	display: flex;
-	margin-left: 35%;
+	margin-left: 40%;
 	margin-top: 10%;
 }
 
 /*Estrelas*/
 .img-stars {
 	display: flex;
-	margin-left: 40%;
+	margin-left: 45%;
 	width: 70px;
 	height: 15px;
 } 
@@ -39,8 +39,8 @@
 
 /*Assinatura Digital*/
 .digitalSignature {
-	width: 20%;
-	height: 20%;
+	width: 80px;
+	height: 80px;
 }
 
 hr {
@@ -88,6 +88,15 @@ hr {
 	background-color: white;
 	border-color: #19b2e6;
 	color: #19b2e6;
+	transition: 0.5s;
+}
+
+.button-pdf {
+	color: #cc0000;
+}
+
+.button-pdf:hover {
+	color: gray;
 }
 
 @media screen and (max-width: 700px) {
@@ -99,7 +108,7 @@ hr {
 @media screen and (max-width: 800px) {
 	.img-logo-certificate {
 		margin-top: 10%;
-		margin-left: 38%;
+		margin-left: 46.5%;
 		width: 10%;
 		height: 10%;
 	}
@@ -107,16 +116,29 @@ hr {
 	.img-stars {
 		width: 35px;
 		height: 7.5px ;
+		margin-left: 47%;
+	}
+
+	/*Assinatura Digital*/
+	.digitalSignature {
+		width: 20px;
+		height: 20px;
 	}
 }
 
 @media screen and (min-width: 800px) and (max-width: 1000px){
 	.img-logo-certificate {
 		margin-top: 5%;
-		margin-left: 37.5%;
+		margin-left: 40%;
 	}
 
 	.button-pdf {
 		background-color: pink;
+	}
+
+	/*Assinatura Digital*/
+	.digitalSignature {
+		width: 40px;
+		height: 40px;
 	}
 }

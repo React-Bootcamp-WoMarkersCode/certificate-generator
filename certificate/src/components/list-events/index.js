@@ -119,7 +119,10 @@ function ListEvents(props) {
 	    /*Dados do calendário*/
 	    const rangeValue = fieldsValue['range-picker'];
 
-	    setEventos([
+	    if(imageURL === null) {
+	    	message.error('Por favor, escreva sua assinatura digital')
+	    } else {
+	    	setEventos([
 				...eventos, {
 				user: organizador,
 				company: fieldsValue.company, 
@@ -133,8 +136,10 @@ function ListEvents(props) {
 		])
 
 		message.success('Evento criado com sucesso')
+
+		/*Retira o componente do formulário de eventos e volta para a lista*/
 	    setToCreateFormEvent(false)
-	    
+	    }  
 	};
 
 	/*Buscando os eventos do organizador*/
@@ -233,28 +238,21 @@ function ListEvents(props) {
 		
 		<div style={{ display: ( toEditFormEvent || toCreateFormEvent || toProfile || toList )?  'none' : null }}>
 			<h1 className="title-2-list-events">Olá, {organizador}</h1>
-			<h1 className="title">Eventos Cadastrados</h1>
+			
 			<Button className="button-add" onClick={() => setToCreateFormEvent(true)}>+ Cadastrar mais um evento</Button>
-			<br/>
 			<Button className="button-profile" onClick={() => setProfile(true)}>Meu Perfil</Button>
 			<br/>
-			
+			<h1 className="title">Eventos Cadastrados</h1>
+			<div className="listEvents">
 			{
 				eventos.map(eventoJson => {
 
 					if(eventoJson.user === organizador ){
 						noEvents = false
 						return(
-							<div style={{ flexDirection: 'row', display: 'flex', width: '100%', marginBottom: '-5%'}}>
-								<Button danger className="button-delete" 
-									onClick={ () => deleteEvent(eventoJson.course) } > X 
-								</Button>
+							<div className="each-event">
 
-								<Button className="button-edit" 
-									onClick={() => clickEditFormEvent(eventoJson)} > EDITAR 
-								</Button>
-
-								<p className="course">{eventoJson.course}</p>
+								<p className="course">{eventoJson.course}</p>								
 
 								<Button className="button-check" onClick={() => saveEventToList(eventoJson)}>
 									Check-List de Participantes 
@@ -282,12 +280,22 @@ function ListEvents(props) {
 								>
 								    <Button className="button-info" >Informações do Evento</Button>
 								</Popover>
-								
+
+								<Button className="button-edit" 
+									onClick={() => clickEditFormEvent(eventoJson)} > Editar 
+								</Button>
+
+
+								<Button danger className="button-delete" 
+									onClick={ () => deleteEvent(eventoJson.course) } > X 
+								</Button>
+	
 							</div>
 						)
 					}
 				})
 			}
+			</div>
 			
 			{ noEvents && <Empty style={{marginTop: '5%'}}/> }
 
@@ -374,6 +382,7 @@ function ListEvents(props) {
 
 		{ toCreateFormEvent && 
 			<>
+				
 				<Form name="time_related_controls" {...formItemLayout} onFinish={onFinish}>  
 			      <div className="inputs-event">
 			        <h1 className="h1-form-event">Criando um novo evento</h1>
@@ -383,6 +392,7 @@ function ListEvents(props) {
 			          className="input-1-event"
 				        name="company"
 				        label="Empresa" >
+
 			          <Input placeholder="Digite a empresa responsável pelo evento" />
 			        </Form.Item>
 
@@ -411,9 +421,9 @@ function ListEvents(props) {
 			          <RangePicker />
 			        </Form.Item>
 
-			        <div className="upload-button">
-			          <h3 className="h3-form-event">Assinatura Digital:</h3>
-			          <div>
+			        <div className="upload-assinature">
+			        	<h3 className="h3-form-event">Assinatura Digital:</h3>
+			        	<div>
 							<Popup modal trigger={<Button className="button-open-pad">Abrir Pad para assinar</Button>}>
 								{ close => (
 									<>
@@ -436,22 +446,25 @@ function ListEvents(props) {
 									alt="Minha assinatura Digital"
 									className="buttons-pad"
 								/>
-							) : <h4 style={{ marginLeft: '10%', color: 'red'}}>Sem assinatura</h4> }
+							) : <h4 style={{ color: 'red'}}>Sem assinatura</h4> }
 						</div>
 			        </div>
 
 
-			          <Form.Item>
-			            <Button type="primary" htmlType="submit" className="button-events">
-			              Cadastrar Novo Evento
-			            </Button>
+			        <Form.Item>
+			        	<Button type="primary" htmlType="submit" className="button-events">
+			        		Cadastrar Novo Evento
+			        	</Button>
 			            <br/>
-			          </Form.Item>
+			        </Form.Item>
 
 			         
 			      </div>
 			    </Form>
-				<Button onClick={() => setToCreateFormEvent(false)} className="button-back-to-list">
+				<Button 
+					onClick={() => setToCreateFormEvent(false)} 
+					className="button-back-from-create"
+					>
 	                Voltar para a lista de Eventos
 	            </Button>
 			</>
@@ -460,7 +473,10 @@ function ListEvents(props) {
 		{ toProfile && 
 			<>
 				<ProfileCard organizador={organizador} users={users} assinatura={imageURL}/>
-				<Button onClick={() => setProfile(false)} className="button-back-to-list" style={{ marginLeft:"10%"}}>
+				<Button 
+					onClick={() => setProfile(false)}
+					className="button-back-of-profile" 
+					>
 	                Voltar para a lista de Eventos
 	            </Button>
 			</>

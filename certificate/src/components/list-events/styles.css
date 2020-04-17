@@ -7,10 +7,10 @@
 /*Lista de eventos*/
 .title{
     display: flex;
-    justify-content: center;
+    margin-left: 5%;
     color: #C6255A;
-    font-weight: bold;
 }
+
 
 .button-add{
     border-color: rgb(0, 176, 240);
@@ -38,10 +38,30 @@
     font-size: 15px;
     height: 50px;
     margin-left: 5%;
+    margin-bottom: 5%;
 }
 
 .button-profile:hover {
     border-color: #c6255a;
     color: #c6255a;
     transition: 0.3s;
+}
+
+/*Botão para voltar para a lista de eventos dentro do perfil*/
+.button-back-of-profile {
+    display: flex;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: -30%;
+
+    background-color: #616cd0;
+    color: white;
+    border-color: #616cd0;
+}
+
+.button-back-of-profile:hover {
+    background-color: white;
+    color: #616cd0;
+    border-color: #616cd0;
+    transition: 0.5s;
 }

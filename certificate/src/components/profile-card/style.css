@@ -2,20 +2,32 @@
 .profile {
 	margin-top: 3%;
 	margin-left: 10%;
+	
 }
 
 /*Formulário de Edição*/
 .edit-profile {
 	display: flex;
 	margin: 5% auto;
-	width: 30%;
+	width: 50%;
 }
 
 .button-edit-profile {
 	margin-top: 3%;
 	width: 100%;
+	border-color: orange;
+	background-color: orange;
+	color: white;
 }
 
+.button-edit-profile:hover {
+	border-color: orange;
+	background-color: white;
+	color: orange;
+	transition: 0.5;
+}
+
+/*Botão para voltar ao perfil dentro do formulario para editar perfil*/
 .back-button-profile {
 	margin-top: 3%;
 	width: 100%;
@@ -23,4 +35,21 @@
 
 .profile-title {
 	text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .edit-profile { 
+        width: 80%;
+    }
+
+    .button-back-of-profile {
+    	margin-right: auto;
+    	margin-left: auto;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px){
+	.edit-profile { 
+        width: 70%;
+    }
 }

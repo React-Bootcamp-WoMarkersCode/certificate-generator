@@ -137,7 +137,7 @@ function ProfileCard(props) {
 				<Button type="primary" primary onClick={beforeEditForm}>Editar minha conta</Button>
 				<Button type="primary" danger onClick={deleteAccount}>Deletar minha conta</Button>
 				<h4 style={{ marginTop: '3%'}}>Sua assinatura</h4>
-				<hr style={{ marginLeft: '-3%'}} />
+				<hr style={{ marginLeft: '0%'}} />
 				<br/>
 				{ assinatura ? (
 					<img
