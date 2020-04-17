@@ -142,7 +142,7 @@ function ListOfPresents(props) {
 					const imgData = canvas.toDataURL('image/png');
 					const pdf = new jsPDF('l', 'mm', 'a4', true);
 
-					pdf.addImage(imgData, 'JPEG', 3, 3, 400, 280, '', 'FAST');
+					pdf.addImage(imgData, 'PNG', 3, 3, 380, 265, '', 'SLOW');
 					var formData = new FormData();
 					formData.append('file', new Blob([pdf.output('blob')], {type: 'application/pdf'}), "certificado.pdf");
 					formData.append('from', from);
