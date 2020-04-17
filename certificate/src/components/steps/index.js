@@ -36,7 +36,7 @@ function Steps(props) {
 					Está na hora de enviar os certificados?
 			</h3>
 				<h4 className="h4-steps">
-					Basta clicar em mandar e-mail para cada um dos participantes.
+					Basta clicar em 'Enviar Certificado' para cada um dos participantes.
 			</h4>
 		</div>
 	);
