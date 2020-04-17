@@ -62,7 +62,7 @@ const FormRegister = (props) => {
 			message.warning('Por favor, preencha todos os campos') 
 
 		} else {
-
+			
 			/*Verificando se já existe um usuário cadastrado*/
 			let listEmails = []
 

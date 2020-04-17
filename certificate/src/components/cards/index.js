@@ -15,7 +15,7 @@ function Cards(props) {
 			<div  className="site-card-wrapper">	
 
 					<Card className="card" title="Certificados Ilimitados" bordered={false}>
-			          	Envie quantos certificados você precisar 
+			          	Envie quantos certificados você precisar. 
 			        </Card>
 				
 			        <Card className="card" title="Envios Ilimitados" bordered={false}>

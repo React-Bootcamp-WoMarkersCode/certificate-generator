@@ -91,6 +91,16 @@ function ListOfPresents(props) {
 			}
 		}
 
+		/* ------------- Deletando Participantes ---------------*/
+		const deleteParticipant = (participantToBeDeleted) => {
+
+			setParticipantes( participantes.filter(participante => {
+				if(participante.name !== participantToBeDeleted) {
+					return participante
+				}
+			}))
+		}
+
 		/*Na mudança de check do participante*/
 		const onChange = (participante) => {
 
@@ -121,7 +131,6 @@ function ListOfPresents(props) {
 			/*Este e-mail enviará os certificados*/
 			let from = "gelbundschwarz@gmail.com"
 			
-			
 			setLoadingEmail(true)
 			const input = document.getElementsByClassName('certificate-background')[0];
 			window.scrollTo(0,0);
@@ -143,11 +152,14 @@ function ListOfPresents(props) {
 						method: 'POST',
 						body: formData,
 					})
-					.then(closeLoading => setLoadingEmail(false))
-					.then(success =>  message.success("Email enviado com sucesso!"))
-					.catch(error => message.error("Não foi possível enviar seu email!")
+					.then(before => setLoadingEmail(false))
+					.then(sucess =>  message.success("Email enviado com sucesso!")
+					.catch(error => setLoadingEmail(false))
+					.then(before => message.error("Não foi possível enviar seu email!"))
 					);
 				});
+
+			
 
 			setParticipantes(participantes.map(itemParticipante => {
 				
@@ -194,9 +206,13 @@ function ListOfPresents(props) {
 																{participante.name}
 													</Checkbox>
 														-> &nbsp;<p style={{ textDecoration: participante.receiveCertificate ?  'line-through' : 'none' }} >{participante.email}</p> &nbsp;(e-mail)
-														<Button type="primary" disabled={!participante.present} className="buttom-ver-certificado" onClick={() => showModal(participante)}>
-															Acessar certificado
-														</Button>
+													<Button type="primary" disabled={!participante.present} className="buttom-ver-certificado" onClick={() => showModal(participante)}>
+														Acessar certificado
+													</Button>
+
+													<Button danger className="button-delete" 
+														onClick={ () => deleteParticipant(participante.name) } > X 
+													</Button>
 																				
 												</div>
 												<br/>

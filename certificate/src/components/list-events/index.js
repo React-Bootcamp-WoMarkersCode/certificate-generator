@@ -295,9 +295,8 @@ function ListEvents(props) {
 					}
 				})
 			}
-			</div>
-			
 			{ noEvents && <Empty style={{marginTop: '5%'}}/> }
+			</div>
 
 		</div>
 		{toEditFormEvent && 
