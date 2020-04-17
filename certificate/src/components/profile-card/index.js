@@ -158,11 +158,13 @@ function ProfileCard(props) {
 						style={{ display: toEditForm ?  'block' : 'none' }}
 					>
 						<h2 className="profile-title">Edite os dados da sua conta:</h2>
-						
+						<h4>Nome:</h4>
 						<Input className="input-edit-1" placeholder="Nome" value={name} onChange={ newValue => setName(newValue.target.value) }/>
 						<br/>
+						<h4>E-mail:</h4>
 						<Input className="input-edit-2" placeholder="E-mail" value={email} onChange={ newValue => setEmail(newValue.target.value) } />
 						<br/>
+						<h4>Senha:</h4>
 						<Input.Password className="input-edit-3" placeholder="Senha" value={password} onChange={ newValue => setPassword(newValue.target.value) }/>
 						<br/>
 						<Button className="button-edit-profile" type="primary" primary onClick={afterEditForm}>Atualizar dados</Button>

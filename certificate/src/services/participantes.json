@@ -21,8 +21,8 @@
 		"course": "Bootcamp React"
 	}, 
 	{
-		"name": "Dayana Maia",
-		"email": "dayrmaia@gmail.com",
+		"name": "Grasiele Kroger",
+		"email": "gelbundschwarz@gmail.com",
 		"present": true,
 		"receiveCertificate": false,
 		"course": "Bootcamp React"
@@ -130,12 +130,13 @@
 		"present": true,
 		"receiveCertificate": false,
 		"course": "Python Avançado"
-	}, 
+	},
 	{
-		"name": "Grasiele Kroger",
-		"email": "gelbundschwarz@gmail.com",
+		"name": "Dayana Maia",
+		"email": "dayrmaia@gmail.com",
 		"present": true,
 		"receiveCertificate": false,
 		"course": "Python Avançado"
 	}
 ]
+

@@ -25,25 +25,25 @@
 }
 
 .buttom-ver-certificado {
-	margin-left: 5%;
+	margin-left: 3%;
+	margin-right: 1%;
 }
 
 /*-------------------------------------*/
 
 /*Lista de participantes*/
 .title-2 {
-	text-align: center;
 	margin-top: 0;
 	color: #c6255a;
 	font-family: 'Raleway', sans-serif;
-	font-weight: 800;
 }
 
 /*Todos os articipantes*/
 .participantes {
-	margin-top: 10%;
+	margin-top: 5%;
 	margin-right: auto;
 	margin-left: auto;
+	margin-bottom: -40%;
 	width: 100%;
 }
 
@@ -61,15 +61,16 @@
 	padding: 1%;
 }
 
-/*Certificado do usuário*/
-
-
 @media screen and (max-width: 800px) {
 	.list-participants { 
 		grid-template-columns: repeat(1, 1fr);
 	}
 	.title-2 {
 		margin-top: 5%;
+	}
+
+	.name-participant {
+		display: block;
 	}
 }
 

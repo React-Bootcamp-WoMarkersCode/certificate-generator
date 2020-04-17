@@ -168,7 +168,7 @@ function ListEvents(props) {
 	/* -------------- Editando eventos ----------------*/
 	const beforeEdit = () => {
 
-		if( !company || !course || !startDate || !finishDate || ! workload){
+		if( !company || !course || !startDate || !finishDate || ! workload || !imageURL){
 			message.error('Por favor, não deixe seus dados vazios.')
 			//quando o formulário aparece na tela, essa mensagem aparece, caso o campo não tenha sido preenchido.
 		} else {
@@ -180,7 +180,7 @@ function ListEvents(props) {
 	const saveEditFormEvent = (e) => {
 		e.preventDefault();
 		//Os campos que devem ser preenchidos:
-		if( !company || !course || !startDate || !finishDate || ! workload){
+		if( !company || !course || !startDate || !finishDate || ! workload || !imageURL){
 			message.error('Por favor, preencha todos os campos do formulário.')
 			//quando o formulário aparece na tela, essa mensagem aparece, caso o campo não tenha sido preenchido.
 
@@ -238,7 +238,6 @@ function ListEvents(props) {
 		
 		<div style={{ display: ( toEditFormEvent || toCreateFormEvent || toProfile || toList )?  'none' : null }}>
 			<h1 className="title-2-list-events">Olá, {organizador}</h1>
-			
 			<Button className="button-add" onClick={() => setToCreateFormEvent(true)}>+ Cadastrar mais um evento</Button>
 			<Button className="button-profile" onClick={() => setProfile(true)}>Meu Perfil</Button>
 			<br/>
@@ -266,6 +265,7 @@ function ListEvents(props) {
 											<p><span className="span-list-event">Inicio do Evento:</span> {eventoJson.startDate}</p>
 											<p><span className="span-list-event">Final do Evento:</span> {eventoJson.finishDate}</p>
 											<p><span className="span-list-event">Carga Horária:</span> {eventoJson.workload}</p>
+											
 											<span className="span-list-event">Assinatura Digital</span>
 											{ imageURL ? (
 													<img
@@ -308,42 +308,42 @@ function ListEvents(props) {
 				style={{ display: toEditFormEvent ?  'block' : 'none' }} >
 
 				<h2 className="edit-event-title">Edite os dados do seu evento:</h2>
-				
+				<h4>Organização:</h4>
 				<Input 
 					className="edit-event-input" 
 					placeholder="Organização" 
 					value={company} 
 					onChange={ newValue => setCompany(newValue.target.value) } />
 				<br/>
-				
+				<h4>Evento:</h4>
 				<Input 
 					className="edit-event-input" 
 					placeholder="Evento" 
 					value={course} 
 					onChange={ newValue => setCourse(newValue.target.value) }/>
 				<br/>
-
+				<h4>Data de Inicio:</h4>
 				<Input 
 					className="edit-event-input" 
 					placeholder="Data de Início" 
 					value={startDate} 
 					onChange={ newValue => setStartDate(newValue.target.value) }/>
 				<br/>
-
+				<h4>Data de Encerramento:</h4>
 				<Input 
 					className="edit-event-input" 
 					placeholder="Data de Fim" 
 					value={finishDate} 
 					onChange={ newValue => setFinishDate(newValue.target.value) }/>
 				<br/>
-
+				<h4>Carga Horaria:</h4>
 				<Input 
 					className="edit-event-input" 
 					placeholder="Carga Horária" 
 					value={workload} 
 					onChange={ newValue => setWorkload(newValue.target.value) }/>
 				<br/>
-
+				<h4>Assinatura Digital:</h4>
 				<div>
 					<Popup modal trigger={<Button className="button-open-pad">Abrir Pad para assinar</Button>}>
 						{ close => (
@@ -376,7 +376,7 @@ function ListEvents(props) {
 					onClick={saveEditFormEvent}>Atualizar dados</Button>
 				<br/>
 
-				<Button className="button-edit-event" onClick={beforeEdit}>Voltar</Button>
+				<Button className="back-edit-event" onClick={beforeEdit}>Voltar para a lista de eventos</Button>
 			</div>
 		}
 
@@ -485,7 +485,7 @@ function ListEvents(props) {
 		{ toList &&
 				<>
 					<ListOfPresents evento={eventChecked}/>
-					<Button onClick={() => setList(false)} className="button-back-to-list" style={{ marginLeft:"10%"}}>
+					<Button onClick={() => setList(false)} className="button-back-from-list" style={{ marginButtom: '-20%'}}>
 	                	Voltar para a lista de Eventos
 	            	</Button>
 	            </>

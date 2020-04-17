@@ -15,12 +15,11 @@ function Cards(props) {
 			<div  className="site-card-wrapper">	
 
 					<Card className="card" title="Certificados Ilimitados" bordered={false}>
-
 			          	Envie quantos certificados você precisar 
 			        </Card>
 				
 			        <Card className="card" title="Envios Ilimitados" bordered={false}>
-			          	Envie por e-mail o certificado para todos os participantes apenas com um click ou faça dowload. 
+			          	Envie o certificado de cada participantes por e-mail.
 			        </Card>
 				
 			        <Card className="card" title="Controle de participantes" bordered={false}>

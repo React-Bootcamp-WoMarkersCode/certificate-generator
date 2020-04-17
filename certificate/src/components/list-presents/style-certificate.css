@@ -13,6 +13,7 @@
 	margin-left: 10%;
 	margin-right: 10%;
 	margin-top: 5%;
+	margin-bottom: -30%;
 }
 
 /*Logo*/
@@ -60,43 +61,49 @@ hr {
 /*Nome do organizador do evento*/
 .p-2-certificate {
 	margin-left: 32%;
-	width: 30%;
 	margin-bottom: 10%;
+
+	width: 30%;
 }
 
-/*Trio de botões: voltar, e-mail e PDF*/
-.div-buttons {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	margin-top: 0%;
+/*Botão para voltar a lista de participantes*/
+.button-voltar {
+	display: flex;
+	margin-top: 35%;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: -35%;
+
+	background-color: #00b7d2;
+	border-color: #00b7d2;
+	color: white;
 }
 
-.button-voltar {
-	margin-top: 3%;
+.button-voltar:hover {
+	background-color: white;
+	border-color: #00b7d2;
+	color: #00b7d2;
+	transition: 0.5s;
 }
 
 .button-email {
-	background-color: #19b2e6;
-	border-color: #19b2e6;
+
+	display: flex;
+	margin-top: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: -35%;
+
+	background-color: #50c878;
+	border-color: #50c878;
 	color: white;
-	margin-top: 3%;
 }
 
 .button-email:hover {
 	background-color: white;
-	border-color: #19b2e6;
-	color: #19b2e6;
+	border-color: #50c878;
+	color: #50c878;
 	transition: 0.5s;
-}
-
-.button-pdf {
-	color: #cc0000;
-}
-
-.button-pdf:hover {
-	color: gray;
 }
 
 @media screen and (max-width: 700px) {

@@ -12,6 +12,11 @@
 	width: 50%;
 }
 
+/*Inputs do formulário de edição do perfil*/
+.input-edit-1, .input-edit-2 {
+	margin-bottom: 3%;
+}
+
 .button-edit-profile {
 	margin-top: 3%;
 	width: 100%;

@@ -193,7 +193,7 @@ const FormLogin = () => {
                 background: "#C6255A",
                 "borderColor": "#C6255A",
                 "marginRight": "15%",
-                "width": "100%"
+                "width": "100%",
               }}
               onClick={onFinish}
               htmlType="submit"
