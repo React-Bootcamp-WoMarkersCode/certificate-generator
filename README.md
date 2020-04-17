@@ -26,7 +26,7 @@ Desenvolver uma plataforma capaz de gerar certificados em PDFe  realizar dowload
 
 ## Deploy da Aplicação com Netlify:
 
-https://certificate-generator-womakers-code.netlify.app/sign-in
+https://certificate-generator-womakers-code.netlify.app/
 
 ## Como rodar a aplicação
 
