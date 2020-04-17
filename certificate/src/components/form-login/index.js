@@ -83,7 +83,7 @@ const FormLogin = () => {
           }
         })
 
-        
+
       /*Se o acesso não for aprovado*/
       if(acessAproved === false) {
         message.error('E-mail ou senha estão incorretos, tente novamente!', 1)
@@ -94,8 +94,8 @@ const FormLogin = () => {
 
   const formik = useFormik({
     initialValues: {
-      email: "arantes.rbc@gmail.com",
-      password: "rebeca123"
+      email: "",
+      password: ""
     },
     validationSchema: Yup.object({
       email: Yup.string().email("Email inválido").required("Campo obrigatório"),

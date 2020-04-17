@@ -66,7 +66,10 @@ function ListOfPresents(props) {
 				    let listEmails = []
 
 				    participantes.map(itemJson => {
-				    	listEmails.push(itemJson.email)
+
+				    	if(itemJson.course === evento.course) {
+				    		listEmails.push(itemJson.email)
+				    	}
 				    })
 
 				    if(!listEmails.includes(email)) {
@@ -82,6 +85,8 @@ function ListOfPresents(props) {
 						])
 
 						message.success('Participante criado com sucesso')
+						setName('')
+						setEmail('')
 
 					} else {
 
@@ -130,7 +135,7 @@ function ListOfPresents(props) {
 
 			/*Este e-mail enviará os certificados*/
 			let from = "gelbundschwarz@gmail.com"
-			
+
 			setLoadingEmail(true)
 			const input = document.getElementsByClassName('certificate-background')[0];
 			window.scrollTo(0,0);
@@ -152,10 +157,10 @@ function ListOfPresents(props) {
 						method: 'POST',
 						body: formData,
 					})
+					.then(success =>  message.success("Email enviado com sucesso!"))
 					.then(before => setLoadingEmail(false))
-					.then(sucess =>  message.success("Email enviado com sucesso!")
-					.catch(error => setLoadingEmail(false))
-					.then(before => message.error("Não foi possível enviar seu email!"))
+					.catch(error => message.error("Não foi possível enviar seu email!")
+					.then(before => setLoadingEmail(false))
 					);
 				});
 
