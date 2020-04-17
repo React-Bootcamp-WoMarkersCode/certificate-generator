@@ -13,7 +13,7 @@
 ## Descrição do projeto :star:
 
 <p align="justify">
-Desenvolver uma plataforma capaz de gerar certificados em PDFe  realizar dowload para participantes de eventos/metups/bootcamps e cursos.
+Desenvolver uma plataforma capaz de gerar certificados de eventos e cursos e enviá-los como PDF para participantes por e-mail.
 </p>
 
 <p align="center">
