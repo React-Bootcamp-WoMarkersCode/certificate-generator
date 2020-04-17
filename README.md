@@ -102,7 +102,7 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 
 ## Paginas: 
 
-[Aqui](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/README_PAGES.md) é possível visualizar a proposta de layout do projeto.  
+[Aqui](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/README_PAGES.md) é possível visualizar a **proposta** de layout do projeto.  
 
 ## CRUD: 
 
