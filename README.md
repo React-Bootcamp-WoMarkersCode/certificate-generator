@@ -14,6 +14,10 @@
 
 Desenvolver uma plataforma capaz de gerar certificados em PDFe  realizar dowload para participantes de eventos/metups/bootcamps e cursos.
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/46378210/79620508-7f03a480-80e6-11ea-8d38-a25f23336690.png"/>
+</p>
+
 ## O que a plataforma é capaz de fazer :checkered_flag:
 
 :trophy: Cadastrar organizadores 
