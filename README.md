@@ -24,7 +24,7 @@ Desenvolver uma plataforma capaz de gerar certificados em PDFe  realizar dowload
 - Permite que o organizador do evento escreva sua assinatura digital dentro da plataforma
 - Oferece layout responsivo 
 
-## Deploy da Aplicação com Netlify:
+## Deploy da Aplicação com Netlify: :dash:
 
 https://certificate-generator-womakers-code.netlify.app/
 
@@ -108,24 +108,33 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 
 ### Usuários
 
-:heavy_check_mark: O usuário pode ser **criado** na pagina Sign-up a partir de um formulário ou com uma conta existente no Google
+:heavy_check_mark: O usuário pode ser **criado** na pagina Sign-up a partir de um formulário ou com uma conta existente no Google.
+
 :heavy_check_mark: Os dados do usuário podem ser **acessados** em Login e perfil. 
-:heavy_check_mark: Os dados do usuário podem ser **atualizados** em seu perfil a partir de um formulário
+
+:heavy_check_mark: Os dados do usuário podem ser **atualizados** em seu perfil a partir de um formulário.
+
 :heavy_check_mark: A conta do usuário pode ser **deletada** em seu perfil.
 
 ### Eventos
 
-:heavy_check_mark: Podem ser **criados** a partir de um formulário na lista de eventos 
+:heavy_check_mark: Podem ser **criados** a partir de um formulário na lista de eventos.
+
 :heavy_check_mark: Podem ser **acessados** na lista de eventos 
-:heavy_check_mark: Podem ser **atualizados**  na lista de eventos a partir de um formulário
+
+:heavy_check_mark: Podem ser **atualizados**  na lista de eventos a partir de um formulário.
+
 :heavy_check_mark: Podem ser **deletados** na lista de eventos
 
 ### Participantes
 
-:heavy_check_mark: Podem ser **criados** a partir de um formulário na lista de participantes 
-:heavy_check_mark: Podem ser **acessados** em uma lista na lista de participantes
-:heavy_check_mark: Podem ser **atualizados**, indicando se aquele participante poderá ou não receber um certificado na lista de participantes
-:heavy_check_mark: Podem ser **deletados** na lista de participantes
+:heavy_check_mark: Podem ser **criados** a partir de um formulário na lista de participantes.
+
+:heavy_check_mark: Podem ser **acessados** em uma lista na lista de participantes.
+
+:heavy_check_mark: Podem ser **atualizados**, indicando se aquele participante poderá ou não receber um certificado na lista de participantes.
+
+:heavy_check_mark: Podem ser **deletados** na lista de participantes.
 
 ## Linguagens e libs utilizadas 
 
