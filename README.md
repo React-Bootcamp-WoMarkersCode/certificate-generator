@@ -148,7 +148,7 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 - react-signature-canvas
 - React-Spinkit
 
-## Dependencias instaladas no projeto
+## Dependencias instaladas no projeto :package:
 
 Criação da base do projeto
 
