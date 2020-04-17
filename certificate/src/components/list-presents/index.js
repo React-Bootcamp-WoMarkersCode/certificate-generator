@@ -8,11 +8,12 @@ import './style-certificate.css'
 import 'antd/dist/antd.css';
 import { Checkbox, Button, Input, message } from 'antd';
 
+/*Animação de tela enquanto o e-mail é enviado*/
+import Spinner from 'react-spinkit' 
+import './style-spinkit.css'
+
 /*Importando lista de participantes*/
 import participantesData from '../../services/participantes.json'
-
-import { PDFDownloadLink } from '@react-pdf/renderer'
-import MyDocument from '../../components/my-document/index'
 
 import stars from '../../assets/stars.png'
 import logo from '../../assets/img/logo_texto_preto.png'
@@ -37,6 +38,9 @@ function ListOfPresents(props) {
 		/*Participante selecionado*/
 		const [ thisParticipante, setThisParticipante ] = useState('')
 
+		/*Variavel que mostrará uma animação enquanto o e-mail é enviado*/
+		const [ loadingEmail, setLoadingEmail] = useState(false)
+
 		/*Verifica se existem participantes cadastrados */
 		let noEvents = true
 
@@ -51,30 +55,39 @@ function ListOfPresents(props) {
 				message.error('Por favor, preencha todos os campos')
 
 			} else {
-				/*Verificando se já existe um participante cadastrado*/
-			    let listEmails = []
 
-			    participantes.map(itemJson => {
-			    	listEmails.push(itemJson.email)
-			    })
+				/*Verificando se o e-mail é valido */
+			    if( !email.includes('@') || !email.includes('.') ){
+			    	message.error('E-mail invalido!')
 
-			    if(!listEmails.includes(email)) {
-					
-					setParticipantes([
-						...participantes, {
-							name: name,
-							email: email,
-							present: true,
-							receiveCertificate: false,
-							course: evento.course
-						}
-					])
+			    } else {
+			    	
+			    	/*Verificando se já existe um participante cadastrado*/
+				    let listEmails = []
 
-					message.success('Participante criado com sucesso')
+				    participantes.map(itemJson => {
+				    	listEmails.push(itemJson.email)
+				    })
 
-				} else {
-					message.warning('Este participante já está na sua lista')
-				}
+				    if(!listEmails.includes(email)) {
+						
+						setParticipantes([
+							...participantes, {
+								name: name,
+								email: email,
+								present: true,
+								receiveCertificate: false,
+								course: evento.course
+							}
+						])
+
+						message.success('Participante criado com sucesso')
+
+					} else {
+
+						message.warning('Este participante já está na sua lista')
+					}
+			    }
 			}
 		}
 
@@ -101,12 +114,15 @@ function ListOfPresents(props) {
 				
 			}))
 		}
-    
-		const sendEmail = (e) =>{	
+    	
+    	/*Função destinada ao envio de e-mail, recebe o e-mail do participante*/
+		const sendEmail = (to) =>{	
 
+			/*Este e-mail enviará os certificados*/
 			let from = "gelbundschwarz@gmail.com"
-			let to = "dianaregina22@outlook.com.br"
-	
+			
+			
+			setLoadingEmail(true)
 			const input = document.getElementsByClassName('certificate-background')[0];
 			window.scrollTo(0,0);
 			html2canvas(input, {
@@ -127,22 +143,34 @@ function ListOfPresents(props) {
 						method: 'POST',
 						body: formData,
 					})
-					.then(success => message.success("Email enviado com sucesso!"))
+					.then(closeLoading => setLoadingEmail(false))
+					.then(success =>  message.success("Email enviado com sucesso!"))
 					.catch(error => message.error("Não foi possível enviar seu email!")
 					);
 				});
-			
+
+			setParticipantes(participantes.map(itemParticipante => {
+				
+				/*Buscando o participante que recebeu o email*/
+				if(itemParticipante.email === to) {
+
+					itemParticipante['receiveCertificate'] = true
+					return itemParticipante;
+
+				} else {
+
+					return itemParticipante;
+				}
+				
+			}))
+
 		}
 
 		return (
 			<>
-				<div className="list-participants"
-					style={{ display: visible ?  'grid' : 'none' }}
-				>
-
+				<div className="list-participants" style={{ display: visible ?  'grid' : 'none' }} >
 					<div className="input-participantes">
 						<h2>Adicione mais participantes a sua lista:</h2>
-						
 						<Input className="input-1" placeholder="Nome do participante" value={name} onChange={newName => setName(newName.target.value)}/>
 						<br/>
 						<Input className="input-2" placeholder="E-mail do participante" value={email} onChange={newEmail => setEmail(newEmail.target.value)}/>
@@ -150,44 +178,50 @@ function ListOfPresents(props) {
 						<Button className="button-parcipants" type="primary" danger onClick={() => {verificarCampos()}}>Incluir novo participante</Button>
 					</div>
 					
-					
 					<div className="participantes">
 						<h1 className="title-2">Lista de Participantes</h1>
 							
-								{
-									participantes.map(participante => {
-
-										if(participante.course === evento.course) {
-											noEvents = false
-											return (
-												<>
-													<div className="name-participant" >
-														<Checkbox 
+							{
+								participantes.map(participante => {
+									if(participante.course === evento.course) {
+										noEvents = false
+										return (
+											<>
+												<div className="name-participant" >
+													<Checkbox 
 																checked={participante.present} 
 																onChange={() => onChange(participante) }>
 																{participante.name}
-														</Checkbox>
+													</Checkbox>
 														-> &nbsp;<p style={{ textDecoration: participante.receiveCertificate ?  'line-through' : 'none' }} >{participante.email}</p> &nbsp;(e-mail)
-														<Button type="primary" disabled={!participante.present} className="buttom-ver-certificado" onClick={() => showModal(participante.name)}>
+														<Button type="primary" disabled={!participante.present} className="buttom-ver-certificado" onClick={() => showModal(participante)}>
 															Acessar certificado
 														</Button>
-														<Button className="button-email" onClick={() => sendEmail()}>Enviar certificado</Button>						
+																				
+												</div>
+												<br/>
+											</>
+										);
+									}
+								})
+							}
 
-													</div>
-													<br/>
-												</>
-											);
-										}
-									})
-								}
+							{ noEvents && <h1 className="no-data-presents">Nenhum participante cadastrado</h1> }
 					</div>
-				{ noEvents && <h1 className="no-data-presents">Nenhum participante cadastrado</h1> }
+				
+				
 				</div>
 				<div style={{ display: visible ?  'none' : 'grid' }}>
+
+					{ loadingEmail && 
+						<div className='overlay-content'> 
+							<Spinner name="ball-grid-pulse" color="white"/>
+						</div>}
+					
 					<div className="certificate-background">
 						<img src={logo} alt="Logo da empresa" className="img-logo-certificate"/>
 						<img src={stars} alt="5 estrelas" className="img-stars"/> 
-						<p className="p-certificate">A comunidade empresa confere ao participante <span className="info-certificate">{thisParticipante}</span> o presente certificado 
+						<p className="p-certificate">A comunidade empresa confere ao participante <span className="info-certificate">{thisParticipante.name}</span> o presente certificado 
 							<br/>referente a sua participação no evento <span className="info-certificate">{evento.course}</span> oferecido pela <span className="info-certificate">{evento.company}</span> realizado do 
 							<br/>dia <span className="info-certificate">{evento.startDate}</span> ao <span className="info-certificate">{evento.finishDate}</span>, com carga horaria de <span className="info-certificate">{evento.workload} horas.</span>
 							<br/>
@@ -197,7 +231,10 @@ function ListOfPresents(props) {
 						<p className="p-2-certificate">{evento.user}</p>
 					</div>
 
+
+
 					<Button className="button-voltar" onClick={ () => setVisible(true) }>Voltar para a lista de participantes</Button>
+					<Button className="button-email" type="primary" onClick={() => sendEmail(thisParticipante.email)}>Enviar certificado</Button>
 				</div>
 			</>
 		);

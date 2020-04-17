@@ -68,10 +68,14 @@
 
 /*Botão para volta a lista de eventos estando na lista de participantes*/
 .button-back-from-list {
+    display: flex;
     background-color: #616cd0;
     color: white;
     border-color: #616cd0;
-    margin-left: 3%; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40%;
+    margin-bottom: -30%;
 }
 
 .button-back-from-list:hover {

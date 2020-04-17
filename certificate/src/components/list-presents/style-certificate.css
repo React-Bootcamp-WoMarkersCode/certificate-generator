@@ -61,15 +61,19 @@ hr {
 /*Nome do organizador do evento*/
 .p-2-certificate {
 	margin-left: 32%;
-	width: 30%;
 	margin-bottom: 10%;
+
+	width: 30%;
 }
 
 /*Botão para voltar a lista de participantes*/
 .button-voltar {
 	display: flex;
-	margin-top: 10%;
-	margin-bottom: -40%;
+	margin-top: 35%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: -35%;
+
 	background-color: #00b7d2;
 	border-color: #00b7d2;
 	color: white;
@@ -79,6 +83,26 @@ hr {
 	background-color: white;
 	border-color: #00b7d2;
 	color: #00b7d2;
+	transition: 0.5s;
+}
+
+.button-email {
+
+	display: flex;
+	margin-top: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: -35%;
+
+	background-color: #50c878;
+	border-color: #50c878;
+	color: white;
+}
+
+.button-email:hover {
+	background-color: white;
+	border-color: #50c878;
+	color: #50c878;
 	transition: 0.5s;
 }
 
