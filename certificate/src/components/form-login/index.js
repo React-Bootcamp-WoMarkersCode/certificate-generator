@@ -34,7 +34,7 @@ const FormLogin = () => {
     /*Verificando campos*/
 
     if(!values.email || !values.password) {
-        message.warning('Por favor, preencha todos os campos') 
+      message.warning('Por favor, preencha todos os campos') 
     
     } else {      
 
@@ -49,6 +49,7 @@ const FormLogin = () => {
 
       if(!listEmails.includes(values.email)) {
         message.warning('Sua conta ainda não existe, crie uma com o nosso formulário ou Google')
+
       } else {
 
         /*Verificando existencia da conta*/
@@ -58,8 +59,9 @@ const FormLogin = () => {
           let passwordExistent = (itemJson.password === values.password)
 
           if( emailExistent && passwordExistent) {
-            setAproved(true)
+            
             setOrganizador(itemJson.name)
+            setAproved(true)
             message.loading('Acesso aprovado! Voce será redirecionado para a lista de eventos')
 
             /*Atualizando o token do usuário para true, registrando que ee está logado na plataforma*/
@@ -81,13 +83,12 @@ const FormLogin = () => {
           }
         })
 
-
-        /*Se o acesso não for aprovado*/
-        if(!acessAproved) {
-          message.error('E-mail ou senha estão incorretos, tente novamente!', 0.5)
-        }
-
-      }   
+        
+      /*Se o acesso não for aprovado*/
+      if(acessAproved === false) {
+        message.error('E-mail ou senha estão incorretos, tente novamente!', 1)
+      }
+      }
     }
   }
 
