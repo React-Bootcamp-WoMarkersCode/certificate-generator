@@ -181,7 +181,7 @@ $ yarn add reactjs-popup
 $ yarn add react-signature-canvas
 ```
 
-Permite mostrar uma animacao enquanto o usuario espera o email ser enviado:
+Permite mostrar uma animação enquanto o usuário espera o e-mail ser enviado:
 
 ```
 $ yarn add react-spinkit
