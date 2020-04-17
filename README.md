@@ -56,7 +56,7 @@ yarn start
 
 Pronto, agora é possível acessar a aplicação a partir da rota http://localhost:3000/ 
 
-## JSON
+## JSON :floppy_disk:
 
 A nossa simulação de banco de dados foi feita com JSON. Foram separados um para [usuarios](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/certificate/src/services/users.json), [participantes](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/certificate/src/services/participantes.json) e [eventos](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/certificate/src/services/events.json):
 
