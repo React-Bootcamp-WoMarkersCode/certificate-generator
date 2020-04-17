@@ -13,7 +13,7 @@
 ## Descrição do projeto :star:
 
 <p align="justify">
-Desenvolver uma plataforma capaz de gerar certificados de eventos e cursos e enviá-los como PDF para participantes por e-mail.
+Desenvolver uma plataforma capaz de gerar certificados em PDF de eventos e cursos para enviá-los por e-mail aos participantes.
 </p>
 
 <p align="center">
