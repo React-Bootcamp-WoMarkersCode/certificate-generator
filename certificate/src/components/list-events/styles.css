@@ -65,3 +65,18 @@
     border-color: #616cd0;
     transition: 0.5s;
 }
+
+/*Botão para volta a lista de eventos estando na lista de participantes*/
+.button-back-from-list {
+    background-color: #616cd0;
+    color: white;
+    border-color: #616cd0;
+    margin-left: 3%; 
+}
+
+.button-back-from-list:hover {
+    background-color: white;
+    color: #616cd0;
+    border-color: #616cd0;
+    transition: 0.5s;
+}

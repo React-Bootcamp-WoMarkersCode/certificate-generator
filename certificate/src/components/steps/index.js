@@ -14,29 +14,29 @@ function Steps(props) {
 			</h2>
 			<h3 className="h3-steps" >
 				<span className="span-3-steps"> 1 </span>
-					Crie uma conta para a sua empresa
+					Crie uma conta.
 			</h3>
 			<h3 className="h3-steps">
 				<span className="span-3-steps"> 2 </span> 
-					Crie um evento 
+					Crie um evento. 
 			</h3>
 				<h4 className="h4-steps">
-					Insira todas as informações necessárias no formulário. Ele ficará salvo para nós
+					Insira todas as informações necessárias no formulário. Ele ficará salvo para nós.
 				</h4>
 			<h3 className="h3-steps">
 				<span className="span-3-steps"> 3 </span> 
-					Insira um arquivo csv para gente ver quem estava nesse evento
+					Cadastre os participantes do evento em check-list.
 			</h3>
 			<h3 className="h3-steps">
 				<span className="span-3-steps"> 4</span> 
-					Quer selecionar os participantes depois? É só acessar o click-list
+					Quer selecionar os participantes depois? É só acessar o click-list!
 			</h3>
 			<h3 className="h3-steps">
 				<span className="span-3-steps"> 5 </span>
 					Está na hora de enviar os certificados?
 			</h3>
 				<h4 className="h4-steps">
-					Basta clicar em gerar certificados, nós enviaremos um e-mail para todos os participantes selecionados
+					Basta clicar em mandar e-mail para cada um dos participantes.
 			</h4>
 		</div>
 	);

@@ -2,7 +2,7 @@
     background-image: url('../../assets/wallpaper-section.jpg.png');  
 
     /*Compensando o margin-top definido para o footer*/
-    margin-bottom: -20%;
+    margin-bottom: -40%;
 }
 
 .sub-title-1 {
@@ -35,12 +35,4 @@
 .modelCertificate:hover {
 	box-shadow: 4px 4px 8px gray;
 	transition: 1s;
-}
-
-@media screen and (max-width: 600px){
-
-}
-
-@media screen and (min-width: 600px) and (max-width: 1000px){
-
 }

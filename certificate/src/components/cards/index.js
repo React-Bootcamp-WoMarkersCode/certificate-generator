@@ -20,7 +20,7 @@ function Cards(props) {
 			        </Card>
 				
 			        <Card className="card" title="Envios Ilimitados" bordered={false}>
-			          	Envie por e-mail o certificado para todos os participantes apenas com um click ou faça dowload. 
+			          	Envie por e-mail o certificado para todos os participantes apenas com um click. 
 			        </Card>
 				
 			        <Card className="card" title="Controle de participantes" bordered={false}>

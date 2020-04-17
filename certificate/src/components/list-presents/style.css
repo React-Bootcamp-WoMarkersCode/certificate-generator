@@ -25,23 +25,22 @@
 }
 
 .buttom-ver-certificado {
-	margin-left: 5%;
+	margin-left: 3%;
+	margin-right: 1%;
 }
 
 /*-------------------------------------*/
 
 /*Lista de participantes*/
 .title-2 {
-	text-align: center;
 	margin-top: 0;
 	color: #c6255a;
 	font-family: 'Raleway', sans-serif;
-	font-weight: 800;
 }
 
 /*Todos os articipantes*/
 .participantes {
-	margin-top: 10%;
+	margin-top: 5%;
 	margin-right: auto;
 	margin-left: auto;
 	width: 100%;
@@ -61,8 +60,18 @@
 	padding: 1%;
 }
 
-/*Certificado do usuário*/
+.button-email {
+	background-color: #50c878;
+	border-color: #50c878;
+	color: white;
+}
 
+.button-email:hover {
+	background-color: white;
+	border-color: #50c878;
+	color: #50c878;
+	transition: 0.5s;
+}
 
 @media screen and (max-width: 800px) {
 	.list-participants { 
@@ -70,6 +79,10 @@
 	}
 	.title-2 {
 		margin-top: 5%;
+	}
+
+	.name-participant {
+		display: block;
 	}
 }
 

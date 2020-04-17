@@ -1,17 +1,3 @@
-.course{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    margin-right: 3%;
-    font-weight: bold;
-}
-
-/*Informações do evento*/
-.span-list-event {
-    color: pink;
-}
-
 /*Lista de eventos - div*/
 .listEvents {
     margin-bottom: -30%;
@@ -28,18 +14,17 @@
     margin-bottom: 3%;
 }
 
-.h4-list-event {
-    color: pink;
+/*Nome do evento*/
+.course{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-right: 3%;
     font-weight: bold;
 }
 
-
-.button-edit{
-
-
-}
-
-.button-check{
+.button-check {
     border-color: transparent;
     color: gray;
 }
@@ -50,7 +35,19 @@
     transition: 0.2s;
 }
 
+/*Titulo do evento dentro do card de info.*/
+.h4-list-event {
+    color: pink;
+    font-weight: bold;
+}
+
+/*Informações do evento dentro do card de info.*/
+.span-list-event {
+    color: pink;
+}
+
 .button-info {
+    margin-right: 3%;
     border-color: transparent;
     color: gray;
 }
@@ -61,7 +58,7 @@
     transition: 0.2s;
 }
 .button-edit {
-    margin-right: 3%;
+    margin-right: 1%;
     background-color: #d6815b;
     border-color: #d6815b;
     color: white;
@@ -83,15 +80,89 @@
 .button-delete:hover {
     background-color: white;
     border-color: #cc0000;
-    color: white;
+    color: #cc0000;
     transition: 0.5s;
 }
 
+/*Formulário de edição do evento*/
+
+/*Form inteiro*/
+.edit-event {
+    display: flex;
+    margin: 5% auto;
+    width: 50%;
+    margin-bottom: -30%;
+}
+
+/*Titulo: edite seus dados*/
 .edit-event-title{
     display: flex;
     justify-content: center;
 }
 
+/*Inputs do formulário*/
 .edit-event-input{
-    margin: 1%;
+    width: 100%;
+    margin-bottom: 2%;
 }
+
+/*Botão para atualizar os dados*/
+.button-edit-event {
+    background-color: orange;
+    color: white;
+    border-color: orange;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 2%;
+
+    margin-left: 25%;
+}
+
+.button-edit-event:hover {
+    background-color: white;
+    color: orange;
+    border-color: orange;  
+    transition: 0.5s;
+}
+
+/*Botão para voltar do formulário de edição para a lista de eventos*/
+.back-edit-event {
+    background-color: #616cd0;
+    color: white;
+    border-color: #616cd0;  
+    width: 50%;
+    margin-left: 25%;
+}
+
+.back-edit-event:hover {
+    background-color: white;
+    color: #616cd0;
+    border-color: #616cd0;  
+    transition: 0.5s;
+}
+
+
+@media screen and (max-width: 800px) {
+    .edit-event, .back-edit-event, .button-edit-event { 
+        width: 80%;
+    }
+
+    .back-edit-event, .button-edit-event { 
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .each-event {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px){
+    .edit-event, .back-edit-event, .button-edit-event { 
+        width: 70%;
+    }
+
+    .back-edit-event, .button-edit-event { 
+        margin-left: 15%;
+    }
+}
+

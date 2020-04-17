@@ -13,6 +13,7 @@
 	margin-left: 10%;
 	margin-right: 10%;
 	margin-top: 5%;
+	margin-bottom: -30%;
 }
 
 /*Logo*/
@@ -64,39 +65,21 @@ hr {
 	margin-bottom: 10%;
 }
 
-/*Trio de botões: voltar, e-mail e PDF*/
-.div-buttons {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	margin-top: 0%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
+/*Botão para voltar a lista de participantes*/
 .button-voltar {
-	margin-top: 3%;
-}
-
-.button-email {
-	background-color: #19b2e6;
-	border-color: #19b2e6;
+	display: flex;
+	margin-top: 10%;
+	margin-bottom: -40%;
+	background-color: #00b7d2;
+	border-color: #00b7d2;
 	color: white;
-	margin-top: 3%;
 }
 
-.button-email:hover {
+.button-voltar:hover {
 	background-color: white;
-	border-color: #19b2e6;
-	color: #19b2e6;
+	border-color: #00b7d2;
+	color: #00b7d2;
 	transition: 0.5s;
-}
-
-.button-pdf {
-	color: #cc0000;
-}
-
-.button-pdf:hover {
-	color: gray;
 }
 
 @media screen and (max-width: 700px) {

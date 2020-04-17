@@ -145,7 +145,7 @@ function ListOfPresents(props) {
 						
 						<Input className="input-1" placeholder="Nome do participante" value={name} onChange={newName => setName(newName.target.value)}/>
 						<br/>
-						<Input className="input-2" placeholder="E-mail of participante" value={email} onChange={newEmail => setEmail(newEmail.target.value)}/>
+						<Input className="input-2" placeholder="E-mail do participante" value={email} onChange={newEmail => setEmail(newEmail.target.value)}/>
 						<br/>
 						<Button className="button-parcipants" type="primary" danger onClick={() => {verificarCampos()}}>Incluir novo participante</Button>
 					</div>
@@ -169,8 +169,9 @@ function ListOfPresents(props) {
 														</Checkbox>
 														-> &nbsp;<p style={{ textDecoration: participante.receiveCertificate ?  'line-through' : 'none' }} >{participante.email}</p> &nbsp;(e-mail)
 														<Button type="primary" disabled={!participante.present} className="buttom-ver-certificado" onClick={() => showModal(participante.name)}>
-															Ver certificado
-														</Button>						
+															Acessar certificado
+														</Button>
+														<Button className="button-email" onClick={() => sendEmail()}>Enviar certificado</Button>						
 
 													</div>
 													<br/>
@@ -196,37 +197,7 @@ function ListOfPresents(props) {
 						<p className="p-2-certificate">{evento.user}</p>
 					</div>
 
-					<div className="div-buttons">
-						<Button className="button-voltar" onClick={ () => setVisible(true) }>Voltar para a lista</Button>
-						<Button className="button-email" onClick={() => sendEmail()}>Mandar por e-mail</Button>
-
-						<PDFDownloadLink 
-
-							document={<MyDocument 
-								name={thisParticipante} 
-								course={evento.course}
-								company={evento.company} 
-								startDate={evento.startDate} 
-								finishDate={evento.finishDate} 
-								workload={evento.workload}
-								user={evento.user}	
-								digitalSignature={evento.digitalSignature} />}
-
-							fileName="PDF_Certificado.pdf"
-							className="button-pdf"
-
-							style={{
-								marginLeft: '10%',
-								marginTop: '5%'
-							}}
-						>
-
-						{({ blob, url, loading, error }) => (loading ? 'Carregando PDF ... ' : 'Baixar PDF (versão simples)') }
-						
-
-						</PDFDownloadLink>
-					</div>
-
+					<Button className="button-voltar" onClick={ () => setVisible(true) }>Voltar para a lista de participantes</Button>
 				</div>
 			</>
 		);
