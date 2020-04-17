@@ -84,8 +84,7 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 		"finishDate": "28/03/2020",
 		"workload": "56", 
 		"logo": "https://miro.medium.com/max/478/1*jriufqYKgJTW4DKrBizU5w.png", 
-		"digitalSignature": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Assinatura_Jos%C3%A9_Saramago.png", 
-		"token": false
+		"digitalSignature": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Assinatura_Jos%C3%A9_Saramago.png"
 	},
 ```
 
