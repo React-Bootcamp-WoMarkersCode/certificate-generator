@@ -134,6 +134,7 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 - jspdf e html2canvas
 - Reactjs-Popup
 - react-signature-canvas
+- React-Spinkit
 
 ## Dependencias instaladas no projeto
 
@@ -178,6 +179,12 @@ Para desenvolver a assinatura digital
 ```
 $ yarn add reactjs-popup
 $ yarn add react-signature-canvas
+```
+
+Permite mostrar uma animacao enquanto o usuario espera o email ser enviado:
+
+```
+$ yarn add react-spinkit
 ```
 <hr/>
 
