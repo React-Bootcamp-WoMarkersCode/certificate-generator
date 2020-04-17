@@ -16,17 +16,23 @@ Desenvolver uma plataforma capaz de gerar certificados em PDFe  realizar dowload
 
 ## O que a plataforma é capaz de fazer :checkered_flag:
 
-- Cadastrar organizadores 
-- Cadastrar eventos 
-- Cadastrar participantes para cada evento
-- Gerar PDF do certificado com as informações preenchidas no formulário para cada participantes para envio de e-mail 
-- Check-list de participantes, permitindo selecionar quem irá receber os certificados 
-- Permite que o organizador do evento escreva sua assinatura digital dentro da plataforma
-- Oferece layout responsivo 
+:trophy: Cadastrar organizadores 
+
+:trophy: Cadastrar eventos 
+
+:trophy: Cadastrar participantes para cada evento
+
+:trophy: Gerar PDF do certificado com as informações preenchidas no formulário para cada participantes para envio de e-mail 
+
+:trophy: Check-list de participantes, permitindo selecionar quem irá receber os certificados 
+
+:trophy: Permite que o organizador do evento escreva sua assinatura digital dentro da plataforma
+
+:trophy: Oferece layout responsivo 
 
 ## Deploy da Aplicação com Netlify: :dash:
 
-https://certificate-generator-womakers-code.netlify.app/
+> https://certificate-generator-womakers-code.netlify.app/
 
 ## Como rodar a aplicação :arrow_forward:
 
