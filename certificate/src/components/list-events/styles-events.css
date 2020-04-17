@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     margin: 0;
+    margin-right: 3%;
     font-weight: bold;
 }
 
@@ -11,45 +12,79 @@
     color: pink;
 }
 
+/*Lista de eventos - div*/
+.listEvents {
+    margin-bottom: -30%;
+    margin-right: auto;
+    margin-left: 5%;
+}
+
+/*Para cada um dos eventos*/
+.each-event {
+
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
 .h4-list-event {
     color: pink;
     font-weight: bold;
 }
 
-.button-delete{
-    margin: 5%;
-    border-width: 0.2em;
-    font-weight: bold;
-}
 
 .button-edit{
-    margin: 5%;
-    margin-left: -4%;
-    border-color: rgb(255, 102, 0);
-    color: rgb(255, 102, 0);
-    border-width: 0.2em;
-    font-weight: bold;
+
+
 }
 
 .button-check{
-    margin: 5%;
-    border-color: #C6255A;
+    border-color: transparent;
+    color: gray;
+}
+
+.button-check:hover{
+    border-color: transparent;
     color: #C6255A;
-    border-width: 0.2em;
+    transition: 0.2s;
 }
 
 .button-info {
-    margin: 5%;
-    margin-left: -4%;
-    border-color: gray;
+    border-color: transparent;
     color: gray;
-    border-width: 0.2em;
 }
 
-.edit-event{
-    display: flex;
-	margin: 5% auto;
-	width: 30%;
+.button-info:hover {
+    border-color: pink;
+    color: pink;
+    transition: 0.2s;
+}
+.button-edit {
+    margin-right: 3%;
+    background-color: #d6815b;
+    border-color: #d6815b;
+    color: white;
+}
+
+.button-edit:hover {
+    background-color: white;
+    border-color: #d6815b;
+    color: #d6815b;
+    transition: 0.5s;
+}
+
+.button-delete {
+    background-color: #cc0000;
+    border-color: #cc0000;
+    color: white;
+}
+
+.button-delete:hover {
+    background-color: white;
+    border-color: #cc0000;
+    color: white;
+    transition: 0.5s;
 }
 
 .edit-event-title{
@@ -59,9 +94,4 @@
 
 .edit-event-input{
     margin: 1%;
-}
-
-.button-edit-event{
-    margin-top: 3%;
-    width: 100%;
 }

@@ -1,5 +1,4 @@
 .h1-form-event {
-	margin-left: 18%;
 	color: orange;
 }
 .h3-form-event {
@@ -9,29 +8,37 @@
 	font-size: 15px;
 }
 
-/*Inputs*/
+/*Fomulário para criar eventos*/
 .inputs-event {
 	margin-left: 20%;
-	margin-right: auto;
 	padding: 2%;
 }
 
 /*Carga horária e Datas*/
 .input-3-event, .input-4-event {
-	margin-left: -25%;
+	display: block;
+}
+
+.input-1-event {
+	display: block;
+}
+
+.input-2-event {
+	display: block;
 }
 
 .input-2-event {
 	width: 100%;
 }
 
-.upload-button {
-	display: inline-flex;
-	width: 100%;
+/*Div em volta do pad da assinatura digital*/
+.upload-assinature {
+	display: block;
 }
 
+/*Botão para criar novo evento*/
 .button-events {
-	margin-left: 25%;
+	margin-left: 0%;
 	margin-top: 3%;
 	background-color: orange;
 	border-color: orange;
@@ -44,7 +51,26 @@
 	transition: 1s;
 }
 
-@media screen and (max-width: 500px){
+/*Botão para voltar a lista de eventos dentro do form. para criar eventos*/
+.button-back-from-create {
+	display: flex;
+	margin-left: 22%;
+	margin-bottom: -30%;
+
+	background-color: #616cd0;
+    color: white;
+    border-color: #616cd0;
+}
+
+.button-back-from-create:hover {
+	background-color: white;
+    color: #616cd0;
+    border-color: #616cd0;
+    transition: 0.5s;
+}
+
+
+@media screen and (max-width: 600px){
 	/*Carga horária e Datas*/
 	.input-3-event, .input-4-event {
 		margin-left: 0%;
@@ -53,4 +79,17 @@
 		margin-left: 0;
 	}
 
+	.button-back-from-create { 
+		margin-left: 2.5%;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px){
+	.inputs-event {
+		margin-left: 3%;
+	}
+
+	.button-back-from-create { 
+		margin-left: 5%;
+	}
 }

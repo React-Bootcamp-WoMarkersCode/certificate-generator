@@ -1,19 +1,22 @@
+
+/*Pad para assinar*/
 .signatureCanvas {
   border: 1px solid black;
   width: 100%;
   min-height: 500px;
 }
 
+
+/*Assinatura gerada*/
 .buttons-pad {
 	display: block;
 	margin: 0 auto;
+	margin-left: 0%;
 	border: 1px slid black;
 	width: 150px;
 }
 
 .button-open-pad {
-	display: flex;
-	margin-left: 24%;
 	color: orange;
 	border-color: orange;
 }

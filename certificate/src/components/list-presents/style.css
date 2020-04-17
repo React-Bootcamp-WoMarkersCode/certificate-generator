@@ -45,9 +45,14 @@
 	margin-right: auto;
 	margin-left: auto;
 	width: 100%;
-	background-color: pink;
 }
 
+/*Mensagem: sem participantes cadastrados*/
+.no-data-presents {
+	color: red;
+	text-align: center;
+	font-size: 15px;
+}
 /*Para cada nome dos participantes*/
 .name-participant {
 	display: inline-flex;

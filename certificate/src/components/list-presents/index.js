@@ -117,7 +117,7 @@ function ListOfPresents(props) {
 					const imgData = canvas.toDataURL('image/png');
 					const pdf = new jsPDF('l', 'mm', 'a4', true);
 
-					pdf.addImage(imgData, 'JPEG', 0, 0, 410, 280, '', 'FAST');
+					pdf.addImage(imgData, 'JPEG', 3, 3, 400, 280, '', 'FAST');
 					var formData = new FormData();
 					formData.append('file', new Blob([pdf.output('blob')], {type: 'application/pdf'}), "certificado.pdf");
 					formData.append('from', from);
@@ -180,7 +180,7 @@ function ListOfPresents(props) {
 									})
 								}
 					</div>
-				{ noEvents && <h1>Nenhum participante cadastradoo</h1> }
+				{ noEvents && <h1 className="no-data-presents">Nenhum participante cadastrado</h1> }
 				</div>
 				<div style={{ display: visible ?  'none' : 'grid' }}>
 					<div className="certificate-background">
@@ -213,9 +213,15 @@ function ListOfPresents(props) {
 								digitalSignature={evento.digitalSignature} />}
 
 							fileName="PDF_Certificado.pdf"
+							className="button-pdf"
+
+							style={{
+								marginLeft: '10%',
+								marginTop: '5%'
+							}}
 						>
 
-						{({ blob, url, loading, error }) => (loading ? 'Carregando PDF ... ' : 'Baixar PDF') }
+						{({ blob, url, loading, error }) => (loading ? 'Carregando PDF ... ' : 'Baixar PDF (versão simples)') }
 						
 
 						</PDFDownloadLink>
