@@ -210,6 +210,10 @@ Permite mostrar uma animação enquanto o usuário espera o e-mail ser enviado:
 ```
 $ yarn add react-spinkit
 ```
+
+## Dependência externa :incoming_envelope:
+[Server Mailjet](https://github.com/beebones/server-mailjet) - Back-end feito em **Golang** utiizado para consumir api **mailjet** e enviar os emails com o certificado.
+
 <hr/>
 
 ## Licença :trident:
