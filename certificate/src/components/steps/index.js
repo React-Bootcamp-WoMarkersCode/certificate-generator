@@ -28,7 +28,7 @@ function Steps(props) {
 					Cadastre os participantes do evento em check-list.
 			</h3>
 			<h3 className="h3-steps">
-				<span className="span-3-steps"> 4</span> 
+				<span className="span-3-steps"> 4 </span> 
 					Quer selecionar os participantes depois? É só acessar o click-list!
 			</h3>
 			<h3 className="h3-steps">
