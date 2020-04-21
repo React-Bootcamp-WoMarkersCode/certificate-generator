@@ -8,26 +8,27 @@ function Section(props) {
 		<div className="div-section">
 			<h1 className="h1-section">
 				<span className="span-3">
-				Suas alunas </span> e participantes <br/> 
+				Suas alunas </span> e participantes
 				precisam de um 
 				&nbsp;
-				<span className="span-1">
+				
+				<span className="span-1-home">
 					certificado
 				</span>? 
 			</h1>
 			<h2 className="h2-section">
 				Siga nosso 
 				&nbsp;
-				<span className="span-2">
+				<span className="span-4">
 					passo a passo
-				</span>. 
-					<br/> é 
+				</span>,
+					 é 
 					&nbsp;
-						<span className="span-2" >
+						<span className="span-4" >
 							rápido
 						</span>
 					&nbsp;
-					é <span className="span-2"> 
+					é <span className="span-4"> 
 						prático!
 					</span>
 			</h2>

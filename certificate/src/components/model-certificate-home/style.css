@@ -1,38 +1,45 @@
-.model{
-    background-image: url('../../assets/wallpaper-section.jpg.png');  
+.model {
+  background-image: url('../../assets/wallpaper-section.jpg.png');
 
-    /*Compensando o margin-top definido para o footer*/
-    margin-bottom: -40%;
+  /*Compensando o margin-top definido para o footer*/
+  margin-bottom: -40%;
 }
 
 .sub-title-1 {
-	border-color:  #c6255a;
-	border-top-style: solid;
-	border-top-width: 7px;
-	color: black;
+  border-color: #c6255a;
+  border-top-style: solid;
+  border-top-width: 7px;
+  color: black;
 }
 
-.h1-model{
-    margin-left: 3%;
-	margin-top: 3%;
-    font-family: 'Raleway', sans-serif;
-    padding-top: 3%;
+.h1-model {
+  margin-left: 3%;
+  margin-top: 3%;
+  font-family: 'Raleway', sans-serif;
+  padding-top: 3%;
 }
 
-.model-color{
-    color: #c6255a;
-	font-weight: bold;
+.model-color {
+  color: #c6255a;
+  font-weight: bold;
 }
 
 .modelCertificate {
-	width: 50%;
-	height: 50%;
-	margin-top: 3%;
-	margin-left: 25%;
-	margin-bottom: 15%;
+  width: 50%;
+  height: 50%;
+  margin-top: 3%;
+  margin-left: 25%;
+  margin-bottom: 15%;
 }
 
 .modelCertificate:hover {
-	box-shadow: 4px 4px 8px gray;
-	transition: 1s;
+  box-shadow: 4px 4px 8px gray;
+  transition: 1s;
+}
+
+@media screen and (max-width: 1280px) {
+  .h1-model {
+    margin-top: 6%;
+    padding-top: 6%;
+  }
 }
