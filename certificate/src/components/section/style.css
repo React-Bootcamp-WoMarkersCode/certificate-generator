@@ -6,13 +6,17 @@
 
 .h1-section {
   font-family: 'Releway', sans-serif;
+
   font-size: 40px;
+
   font-weight: bold;
 }
 
 .h2-section {
   font-family: 'Releway', sans-serif;
+
   font-size: 30px;
+
 }
 
 .span-1-home {
@@ -43,13 +47,17 @@
   font-size: 20px;
   font-weight: bold;
   background-color: #c6255a;
+
   border-color: transparent;
+
   border-radius: 20px;
   color: #fff;
 }
 
 .button-section:hover {
+
   box-shadow: 4px 4px 8px gray;
+
   transition: 1s;
 }
 

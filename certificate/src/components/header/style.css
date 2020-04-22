@@ -14,12 +14,16 @@
   margin-top: 0%;
   padding-top: 20%;
   padding-left: 10%;
+
   font-size: 5rem;
   font-family: 'Releway', sans-serif;
   font-weight: 790;
+
   word-spacing: 1rem;
   letter-spacing: 0.2rem;
 }
+
+
 
 @media screen and (max-width: 800px) {
   .h2-header {
@@ -29,9 +33,10 @@
     padding-top: 15%;
   }
 
+
   .div-header {
     padding-bottom: 30%;
-   
+ 
     margin-bottom: -13%;
   }
 }
