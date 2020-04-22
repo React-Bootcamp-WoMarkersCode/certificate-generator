@@ -2,7 +2,9 @@ import React, { useState, useRef } from 'react';
 
 /*Estilos*/
 import 'antd/dist/antd.css';
-import { Button, Form, message, DatePicker, Input, Popover, Empty, InputNumber } from 'antd';
+import { Button, Form, Card, Avatar, message, DatePicker, Input, Popover, Empty, InputNumber } from 'antd';
+import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
+
 import './styles.css';
 import './styles-events.css';
 import './style-form-event.css'
@@ -21,6 +23,7 @@ import Popup from 'reactjs-popup'
 
 function ListEvents(props) {
 
+const { Meta } = Card;
 	/*Recebe o organizador e o JSON de organizadores*/
 	const { organizador, users } = props
 
@@ -237,6 +240,29 @@ function ListEvents(props) {
 		<>
 		
 		<div style={{ display: ( toEditFormEvent || toCreateFormEvent || toProfile || toList )?  'none' : null }}>
+
+		<Card
+		    style={{ width: 300 }}
+		    cover={
+		      <img
+		        alt="example"
+		        src="https://jaquelinecramos.files.wordpress.com/2018/03/dyfqkqaw0aad5xm.jpg?w=776"
+		      />
+		    }
+		    actions={[
+		    
+		      <Button onClick={() => alert('Ola')}><SettingOutlined key="setting" />Editar</Button> ,
+		      <EditOutlined key="edit" />,
+		      <EllipsisOutlined key="ellipsis" />,
+		    ]}
+		  >
+		    <Meta
+		      avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+		      title="Card title"
+		      description="This is the description"
+		    />
+		  </Card>
+
 			<h1 className="title-2-list-events">Olá, {organizador}</h1>
 			<Button className="button-add" onClick={() => setToCreateFormEvent(true)}>+ Cadastrar mais um evento</Button>
 			<Button className="button-profile" onClick={() => setProfile(true)}>Meu Perfil</Button>
