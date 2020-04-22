@@ -143,7 +143,7 @@ const FormLogin = () => {
 
   //O article está sendo utilizado do tachyons para colocar na formatação dos campos e a centralização na tela e a sombra
   return (
-    <>
+    <div style={{ marginTop: '10%'}}>
       <div className="article" style={{ display: acessAproved ?  'none' : 'block' }} >
         <div className="button-google" style={{ marginLeft: '-22%'}}>
             <GoogleLogin 
@@ -209,7 +209,7 @@ const FormLogin = () => {
 
       {/*Renderizando a pagina de lista de eventos*/}
       { acessAproved && <ListEvents users={user} organizador={organizador} />}
-    </>
+    </div>
   );
 };
 

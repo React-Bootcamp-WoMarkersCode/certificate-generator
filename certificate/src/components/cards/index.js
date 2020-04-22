@@ -31,7 +31,7 @@ function Cards(props) {
 			        </Card>
 				
 			        <Card className="card" title="Uso empresarial" bordered={false}>
-			          	Crie uma conta para você ou sua empresa e gere certificados para seus eventos e cursos.
+			          	Crie uma conta para você ou sua comunidade e gere certificados para seus eventos e cursos.
 			        </Card>
 					<Card className="card" title="Praticidade" bordered={false}>
 			          	Registre seus eventos/cursos e gere os certificados quando for melhor para você e envie a hora que quiser. 

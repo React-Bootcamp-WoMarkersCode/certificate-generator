@@ -9,49 +9,29 @@
 
 /* Espaçamento do começo do texto em relação ao topo, tamanho e espaçamento das letras  */
 .h2-header {
-  margin-top: 10%;
+  width: 70%;
+  color: orange;
+  margin-top: 0%;
   padding-top: 20%;
   padding-left: 10%;
-  font-size: 3rem;
+  font-size: 5rem;
   font-family: 'Releway', sans-serif;
-  font-weight: bold;
+  font-weight: 790;
   word-spacing: 1rem;
   letter-spacing: 0.2rem;
 }
 
-.h1-header {
-  margin-bottom: 3.5%;
-  padding-bottom: 5%;
-  padding-left: 10%;
-  font-size: 5rem;
-  line-height: 0rem;
-  font-family: 'Releway', sans-serif;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-}
-
-span.span-2 {
-  color: #fff;
-}
-
-span.span-1 {
-  color: #ffa900;
-}
-
 @media screen and (max-width: 800px) {
   .h2-header {
-    font-size: 1.5rem;
-    margin-top: 25%;
+    width: 100%;
+    font-size: 3.8rem;
+    margin-top: 20%;
     padding-top: 15%;
   }
 
-  .h1-header {
-    font-size: 2rem;
-  }
-
   .div-header {
-    padding-bottom: 11%;
-    background-size: contain;
+    padding-bottom: 30%;
+   
     margin-bottom: -13%;
   }
 }

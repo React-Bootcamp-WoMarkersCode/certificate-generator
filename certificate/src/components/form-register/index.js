@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { useFormik, FormikProvider, Field, Form, ErrorMessage } from 'formik';
-import { message, Button } from 'antd';
+import { useFormik, FormikProvider, Form, ErrorMessage } from 'formik';
+import { message, Button, Input } from 'antd';
 import GoogleLogin from 'react-google-login';
 import * as Yup from 'yup';
 import './styles.css';
@@ -120,20 +120,20 @@ const FormRegister = (props) => {
 
 				<FormikProvider value={formik}>
 					<Form onSubmit={handleSubmit}>
-						<label htmlFor="name" className="form-label">Nome</label>
-						<Field name="name" type="text" className="form-field"/>
+						
+						<Input name="name" type="text" className="form-field"/>
 						<ErrorMessage 
 							render={msg => <p className="msg-error" >{msg}</p>}
 							name="name" />
 						
-						<label htmlFor="email" className="form-label">E-mail</label>
-						<Field name="email" type="text" className="form-field"/>
+						
+						<Input name="email" type="text" className="form-field"/>
 						<ErrorMessage 
 							render={msg => <p className="msg-error" >{msg}</p>} 
 							name="email" />
 						
-						<label htmlFor="password" className="form-label">Senha</label>
-						<Field name="password" type="password" className="form-field"/>
+						
+						<Input name="password" type="password" className="form-field"/>
 						<ErrorMessage 
 							render={msg => <p className="msg-error" >{msg}</p>} 
 							name="password" />
