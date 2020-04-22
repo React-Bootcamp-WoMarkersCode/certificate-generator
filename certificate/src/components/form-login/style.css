@@ -4,10 +4,16 @@
     margin-right: 15%;
 }
 
+
 .article {
 	width: 40%;
 	margin-right: auto;
 	margin-left: auto;
+}
+
+.title-login {
+    color: #c6255a;
+    text-align: center;
 }
 
 .login-form {
@@ -16,13 +22,17 @@
 
 @media screen and (max-width: 900px) {
 	.article { 
-		width: 90%;
+		width: 70%;
+	}
+
+	.loginBtn.loginBtn-google {
+		margin-left: 10%;
 	}
 }
 
 @media screen and (max-width: 700px) {
 	.article { 
-		width: 80%;
+		width: 70%;
 	}
 }
 

@@ -143,14 +143,15 @@ const FormLogin = () => {
 
   //O article está sendo utilizado do tachyons para colocar na formatação dos campos e a centralização na tela e a sombra
   return (
-    <>
+    <div style={{ marginTop: '10%'}}>
       <div className="article" style={{ display: acessAproved ?  'none' : 'block' }} >
+      <h1 className="title-login">Digite seus dados e acesse sua conta</h1>
         <div className="button-google" style={{ marginLeft: '-22%'}}>
             <GoogleLogin 
               clientId="78039332386-46h93ebkr1bb708hqv47h410pdd89mj9.apps.googleusercontent.com"
               render={renderProps => (
               <button   
-                onClick={renderProps.onClick} disabled={renderProps.disabled} className="loginBtn loginBtn-google"> 
+                onClick={renderProps.onClick} disabled={renderProps.disabled} className="loginBtn loginBtn-google" style={{ marginLeft:"0%"}}> 
                 Cadastrar com o Google </button>
               )}
               buttonText="Cadastrar com o Google"
@@ -209,7 +210,7 @@ const FormLogin = () => {
 
       {/*Renderizando a pagina de lista de eventos*/}
       { acessAproved && <ListEvents users={user} organizador={organizador} />}
-    </>
+    </div>
   );
 };
 

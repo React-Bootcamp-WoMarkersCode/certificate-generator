@@ -5,64 +5,63 @@
 
 .footer {
   background-color: rgb(17, 17, 17);
-  height: 44vh;
+
   margin-top: 35%;
+  width: 100%;
 }
 
-.container {
-  display: flex;
-  list-style: none;
+/*Lista de desenvolvedoras*/
+.footer-1 {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  padding: 2%;
 }
 
-h3 {
+.footer-1 h3 { 
+  font-size: 1.3rem;
   font-weight: bold;
   color: white;
-  font-size: 1.2rem;
-  margin-bottom: 0px;
 }
 
-ol,
-li {
+/*Licença*/
+.footer-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #16181b;
+  width: 100%;
+  height: 10vh;
+}
+
+.footer-2 h4 {
+  color: white;
+}
+
+ol, li {
   list-style: none;
+}
+
+a:hover {
+  color: #c6255a;
 }
 
 .footer-link {
   color: white;
-  line-height: 2;
+  line-height: 1.5;
   text-decoration: none;
   font-size: 1.2rem;
 }
 
-.col {
-  display: flex;
-  margin-top: 2%;
-}
-
-@media screen and (max-width: 600px) {
-  .footer {
-    grid-template-columns: repeat(1, 1fr);
-    height: 30vh;
+@media screen and (max-width: 660px) {
+  .footer-1 {
+    grid-template-columns: repeat(1, 300px);
   }
 
-  .footer-link {
-    font-size: 0.6rem;
-  }
-
-  h3 {
-    font-size: 0.5rem;
-  }
-}
-
-@media screen and (min-width: 600px) and (max-width: 1000px) {
-  .footer {
-    grid-template-columns: repeat(1, 1fr);
-    height: 40vh;
-  }
   .footer-link {
     font-size: 1rem;
   }
 
-  h3 {
+  .footer-1 h3 { 
     font-size: 1rem;
   }
 }

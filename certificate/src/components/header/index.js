@@ -8,11 +8,9 @@ function Header() {
       <Menu1Header />
 
       <h2 className="h2-header">
-        <span className="span-2">Gerador de</span>
+        Gerador de 
+        Certificados
       </h2>
-      <h1 className="h1-header">
-        <span className="span-1">Certificados</span>
-      </h1>
     </div>
   );
 }

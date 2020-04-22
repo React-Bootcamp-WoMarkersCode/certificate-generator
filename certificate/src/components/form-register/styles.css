@@ -3,13 +3,15 @@
     font-weight: "200", "400", ou "800" (light, regular, bold)
 }
 
-.form{
-    width: 60%;
+.form {
+    width: 70%;
     height: 50vh;
     display: block;
     padding: 1em;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: -10%;
+    margin-top: 5%;
 }
 
 /*Inputs - Label*/
@@ -20,23 +22,27 @@
     font-weight: bold;
     display: flex;
     justify-content: center;
-    padding: 0.5em;;
+    padding: 0.5em;
 
 }
 
+.title-cadastre {
+    color: orange;
+    text-align: center;
+}
+
 /*Inputs - Field*/
-.form-field{
+.form-field {
     display: block;
     margin-left: auto;
     margin-right: auto;
     font-size: 15px;
     width: 60%;
-
-    border-color: transparent;
-    border-bottom-color: black;
-    border-bottom-width: 1px;
-
     margin-bottom: 2%;
+    padding: 1%;
+    border-color: transparent;
+    border-bottom-color: #d3d3d3;
+    border-width: 0.5px;
     
 }
 
@@ -45,23 +51,18 @@
     margin-left: 28%;
     margin-right: auto;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     border-color: rgb(255, 102, 0);
     color: rgb(255, 102, 0);
     font-weight: bold;
 }
 
-.button{
-    background-color: rgb(255, 102, 0);
+.button {
+    background-color: orange;
     border-color: transparent;
+    margin-left: 20%;
     color: #ffffff;
-    font-weight: bold;
-    display: block;
-    margin-top: 10%;
-    margin-left: auto;
-    margin-right: auto;
     width: 60%;
-    height: 6vh;
 }
 
 .button:hover {
@@ -89,18 +90,20 @@
     }
 
     .button{
-        height: 6vh;
         width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .form-field {
         width: 100%;
+        margin-bottom: 5%;
     }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1000px){
     .form{
-        width: 60%;
+        width: 65%;
         height: 60vh;
     }
 
@@ -110,9 +113,12 @@
 
     .button{
         width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .form-field {
         width: 100%;
+        margin-bottom: 5%;
     }
 }
