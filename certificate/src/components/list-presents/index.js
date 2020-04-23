@@ -6,7 +6,7 @@ import html2canvas from 'html2canvas';
 import './style.css'
 import './style-certificate.css'
 import 'antd/dist/antd.css';
-import { Checkbox, Button, Input, message } from 'antd';
+import { Checkbox, Button, Input, message, Table, Tag } from 'antd';
 
 /*Animação de tela enquanto o e-mail é enviado*/
 import Spinner from 'react-spinkit' 
@@ -41,8 +41,10 @@ function ListOfPresents(props) {
 		/*Variavel que mostrará uma animação enquanto o e-mail é enviado*/
 		const [ loadingEmail, setLoadingEmail] = useState(false)
 
-		/*Verifica se existem participantes cadastrados */
-		let noEvents = true
+		/*------- Informações adicionais sobre o evento ------*/
+		let numeroDeParticipantes = 0
+		let certificadosEvenviados = 0
+		let participantesConfirmados = 0
 
 		const showModal = (participante) => {
 			setVisible(false)
@@ -183,6 +185,99 @@ function ListOfPresents(props) {
 
 		}
 
+		const dataSource = []
+
+		/*Preenchendo lista de participantes*/
+		participantes.map((participante, key) => {
+			if(participante.course === evento.course) {
+
+				let statusCertificate = ''
+				let statusPresense = ''
+				let colorCertificate = ''
+				let colorPresense = ''
+
+				/*Verifica se o participante recebeu certificado*/
+				statusCertificate = (participante.receiveCertificate) ? 'Enviado' : 'Pendente'
+				colorCertificate = (participante.receiveCertificate) ? 'green' : 'orange'
+
+				/*Verifica se o participante está confirmado no evento*/
+				statusPresense = (participante.present) ? 'Confirmada' : 'Pendente'
+				colorPresense = (participante.present) ? 'green' : 'red'
+
+				dataSource.push({
+					key: key,
+					checkbox: <Checkbox 
+									checked={participante.present} 
+									onChange={() => onChange(participante) }>
+							   </Checkbox>,
+
+    				participante: participante.name,
+
+    				email: participante.email,
+
+   					status: <Tag color={colorCertificate}>{statusCertificate}</Tag>,
+
+   					presense: <Tag color={colorPresense}>{statusPresense}</Tag>,
+
+   					certificado: <Button 
+   									type="primary" 
+   									disabled={!participante.present} 
+   									className="buttom-ver-certificado" 
+   									onClick={() => showModal(participante)}>
+									Acessar 
+								</Button>,
+
+					delete: <Button danger 
+								className="button-delete" 
+								onClick={ () => deleteParticipant(participante.name) } > X 
+							</Button>
+    			})
+			}
+
+		})
+
+		const columns = [
+		  {
+		  	title: 'Atualizar Presença',
+		  	dataIndex: 'checkbox',
+		  	key: 'checkbox'
+		  },
+		  {
+		    title: 'Participante',
+		    dataIndex: 'participante',
+		    key: 'participante',
+		  },
+		  {
+		    title: 'E-mail',
+		    dataIndex: 'email',
+		    key: 'email',
+		  },
+		  {
+		    title: 'Status',
+		    dataIndex: 'status',
+		    key: 'status',
+		  },
+		  {
+		    title: 'Presença',
+		    dataIndex: 'presense',
+		    key: 'presense',
+		  },
+		  ,
+		  {
+		    title: 'Certificado',
+		    dataIndex: 'certificado',
+		    key: 'certificado',
+		  }
+		  ,
+		  {
+		    title: 'Excluir da lista',
+		    dataIndex: 'delete',
+		    key: 'delete',
+		  }
+		];
+
+
+
 		return (
 			<>
 				<div className="list-participants" style={{ display: visible ?  'grid' : 'none' }} >
@@ -194,42 +289,9 @@ function ListOfPresents(props) {
 						<br/>
 						<Button className="button-parcipants" type="primary" danger onClick={() => {verificarCampos()}}>Incluir novo participante</Button>
 					</div>
-					
-					<div className="participantes">
-						<h1 className="title-2">Lista de Participantes</h1>
-							
-							{
-								participantes.map(participante => {
-									if(participante.course === evento.course) {
-										noEvents = false
-										return (
-											<>
-												<div className="name-participant" >
-													<Checkbox 
-																checked={participante.present} 
-																onChange={() => onChange(participante) }>
-																{participante.name}
-													</Checkbox>
-														-> &nbsp;<p style={{ textDecoration: participante.receiveCertificate ?  'line-through' : 'none' }} >{participante.email}</p> &nbsp;(e-mail)
-													<Button type="primary" disabled={!participante.present} className="buttom-ver-certificado" onClick={() => showModal(participante)}>
-														Acessar certificado
-													</Button>
 
-													<Button danger className="button-delete" 
-														onClick={ () => deleteParticipant(participante.name) } > X 
-													</Button>
-																				
-												</div>
-												<br/>
-											</>
-										);
-									}
-								})
-							}
-
-							{ noEvents && <h1 className="no-data-presents">Nenhum participante cadastrado</h1> }
-					</div>
-				
+					<h1 className="title-2">Lista de Participantes</h1>
+					<Table dataSource={dataSource} columns={columns} />;				
 				
 				</div>
 				<div style={{ display: visible ?  'none' : 'grid' }}>

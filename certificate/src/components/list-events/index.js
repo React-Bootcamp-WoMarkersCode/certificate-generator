@@ -21,6 +21,7 @@ import eventosData from '../../services/events.json';
 /*Componentes*/
 import ProfileCard from '../../components/profile-card/index'
 import ListOfPresents from '../../components/list-presents/index'
+import InfoEvent from '../../components/info-event/index'
 
 /*Assinatura digital*/
 import SignaturePad from 'react-signature-canvas'
@@ -37,6 +38,7 @@ const { Meta } = Card;
 	const [ toCreateFormEvent, setToCreateFormEvent] = useState(false);
 	const [ toProfile, setProfile] = useState(false);
 	const [ toList, setList] = useState(false);
+	const [ toSeeEvents, setSeeEvents] = useState(false);
 
 	/*Esta variavel guarda o evento referente quando o botão check participantes for acionado*/
 	const [ eventChecked, setEventChecked] = useState('');
@@ -241,10 +243,16 @@ const { Meta } = Card;
 		setEventChecked(eventToList)
 	}
 
+	/*Esta função é acionada quando o botão para mais infomações do evento*/
+	const seeEvents = (eventToList) => {
+		setSeeEvents(true)
+		setEventChecked(eventToList)
+	}
+
 	return(
 		<>
 		
-		<div style={{ display: ( toEditFormEvent || toCreateFormEvent || toProfile || toList )?  'none' : null }}>
+		<div style={{ display: ( toEditFormEvent || toCreateFormEvent || toProfile || toList || toSeeEvents )?  'none' : null }}>
 
 			<h1 className="title-2-list-events"><UserOutlined onClick={() => setProfile(true)}/> {organizador}</h1>
 
@@ -270,7 +278,7 @@ const { Meta } = Card;
 								    actions={[
 								    	<>
 								    	<Popover content={<h5>Ver mais info. do evento</h5>}>
-								     		<Button style={{ borderColor: 'transparent'}} onClick={() => alert('ver evento')}><HeartOutlined key="edit" /></Button>,
+								     		<Button style={{ borderColor: 'transparent'}} onClick={() => seeEvents(eventoJson) }><HeartOutlined key="edit" /></Button>,
 								     	</Popover>
 
 								     	<Popover content={<h5>Editar evento</h5>}>
@@ -489,6 +497,21 @@ const { Meta } = Card;
 					<Button onClick={() => setList(false)} className="button-back-from-list" style={{ marginButtom: '-20%'}}>
 	                	Voltar para a lista de Eventos
 	            	</Button>
+	            </>
+		}
+
+		{
+			toSeeEvents && 
+				<>
+
+					<InfoEvent evento={eventChecked}/>
+					<Button 
+						onClick={() => setSeeEvents(false)}
+						className="button-back-of-profile" 
+						>
+	                	Voltar para a lista de Eventos
+	            	</Button>
+					
 	            </>
 		}
 		</>		
