@@ -204,11 +204,11 @@ function ListOfPresents(props) {
 				let colorPresense = ''
 
 				/*Verifica se o participante recebeu certificado*/
-				statusCertificate = (participante.receiveCertificate) ? 'Enviado' : 'Pendente'
+				statusCertificate = (participante.receiveCertificate) ? 'Enviado' : 'Não Enviado'
 				colorCertificate = (participante.receiveCertificate) ? 'green' : 'orange'
 
 				/*Verifica se o participante está confirmado no evento*/
-				statusPresense = (participante.present) ? 'Confirmada' : 'Pendente'
+				statusPresense = (participante.present) ? 'Confirmada' : 'Não Confirmado'
 				colorPresense = (participante.present) ? 'green' : 'red'
 
 				dataSource.push({
@@ -315,7 +315,7 @@ function ListOfPresents(props) {
 						<Popover content={<h5>Click para cancelar a presença de todos os participantes</h5>}>
 							<Button className="buttom-cancel">Cancelar todos</Button>
 						</Popover>
-						<Table dataSource={dataSource} columns={columns} />;
+						<Table dataSource={dataSource} columns={columns} />
 					</div>				
 				
 				</div>
@@ -329,8 +329,8 @@ function ListOfPresents(props) {
 					<div className="certificate-background">
 						<img src={logo} alt="Logo da empresa" className="img-logo-certificate"/>
 						<img src={stars} alt="5 estrelas" className="img-stars"/> 
-						<p className="p-certificate">A comunidade empresa confere ao participante <span className="info-certificate">{thisParticipante.name}</span> o presente certificado 
-							<br/>referente a sua participação no evento <span className="info-certificate">{evento.course}</span> oferecido pela <span className="info-certificate">{evento.company}</span> realizado do 
+						<p className="p-certificate">A comunidade <span className="info-certificate">{evento.company}</span> confere ao participante <span className="info-certificate">{thisParticipante.name}</span> o presente certificado 
+							<br/>referente a sua participação no evento <span className="info-certificate">{evento.course}</span> realizado do 
 							<br/>dia <span className="info-certificate">{evento.startDate}</span> ao <span className="info-certificate">{evento.finishDate}</span>, com carga horaria de <span className="info-certificate">{evento.workload} horas.</span>
 							<br/>
 						</p>

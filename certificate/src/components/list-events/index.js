@@ -280,15 +280,15 @@ const { Meta } = Card;
 								    actions={[
 								    	<>
 								    	<Popover content={<h5>Ver mais info. do evento</h5>}>
-								     		<Button style={{ borderColor: 'transparent'}} onClick={() => seeEvents(eventoJson) }><HeartOutlined key="edit" /></Button>,
+								     		<Button style={{ borderColor: 'transparent'}} onClick={() => seeEvents(eventoJson) }><HeartOutlined key="edit" /></Button>
 								     	</Popover>
 
 								     	<Popover content={<h5>Editar evento</h5>}>
-								     		<Button style={{ borderColor: 'transparent'}} onClick={() =>  clickEditFormEvent(eventoJson) } ><FormOutlined key="edit" /></Button>,
+								     		<Button style={{ borderColor: 'transparent'}} onClick={() =>  clickEditFormEvent(eventoJson) } ><FormOutlined key="edit" /></Button>
 								     	</Popover>
 
 								     	<Popover content={<h5>Participantes</h5>}>
-								     		<Button style={{ borderColor: 'transparent'}} onClick={() =>  saveEventToList(eventoJson)}><TeamOutlined key="ellipsis" /></Button>,
+								     		<Button style={{ borderColor: 'transparent'}} onClick={() =>  saveEventToList(eventoJson)}><TeamOutlined key="ellipsis" /></Button>
 								    	</Popover>
 
 								     	<Popconfirm 
@@ -297,7 +297,7 @@ const { Meta } = Card;
 								     		okText="Sim"
 								     		cancelText="Não"
 								     	>
-								    		<Button style={{ borderColor: 'transparent'}} ><CloseOutlined key="edit" /></Button>,
+								    		<Button style={{ borderColor: 'transparent'}} ><CloseOutlined key="edit" /></Button>
 								    	</Popconfirm>
 								    	</>
 								    ]}
