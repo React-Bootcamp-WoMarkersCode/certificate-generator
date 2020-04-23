@@ -38,7 +38,7 @@ Desenvolver uma plataforma capaz de gerar certificados em PDF de eventos e curso
 
 ## Deploy da Aplicação com Netlify: :dash:
 
-> https://certificate-generator-womakers-code.netlify.app/
+> https://certificate-for-everyone-womakerscode.netlify.app/
 
 ## Como rodar a aplicação :arrow_forward:
 
@@ -220,4 +220,4 @@ $ yarn add react-spinkit
 
 The MIT License (MIT)
 
-Copyright :copyright: 2020 Certificate Generator
+Copyright :copyright: 2020 Certificate for Everyone

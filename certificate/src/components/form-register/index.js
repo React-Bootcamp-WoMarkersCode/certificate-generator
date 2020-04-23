@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { useFormik, FormikProvider, Field, Form, ErrorMessage } from 'formik';
-import { message, Button } from 'antd';
+import { useFormik, FormikProvider, Form, Field, ErrorMessage } from 'formik';
+import { message, Button, Input } from 'antd';
+import { UserOutlined, LockOutlined, ScheduleOutlined } from "@ant-design/icons";
 import GoogleLogin from 'react-google-login';
 import * as Yup from 'yup';
 import './styles.css';
@@ -102,6 +103,7 @@ const FormRegister = (props) => {
 	return (
 		<>
 			<div className="form" style={{ display: acessAproved ?  'none' : 'block' }}>	
+				<h1 className="title-cadastre">Cadastre uma conta já, é simples e rápido</h1>
 				<div className="button-google" >
 					<GoogleLogin 
 						clientId="78039332386-46h93ebkr1bb708hqv47h410pdd89mj9.apps.googleusercontent.com"
@@ -120,25 +122,49 @@ const FormRegister = (props) => {
 
 				<FormikProvider value={formik}>
 					<Form onSubmit={handleSubmit}>
-						<label htmlFor="name" className="form-label">Nome</label>
-						<Field name="name" type="text" className="form-field"/>
+						
+						<Field 
+							name="name" 
+							type="text" 
+							className="form-field"
+							prefix={<UserOutlined className="site-form-item-icon" />}
+							placeholder="Digite seu nome"
+						/>
 						<ErrorMessage 
 							render={msg => <p className="msg-error" >{msg}</p>}
 							name="name" />
 						
-						<label htmlFor="email" className="form-label">E-mail</label>
-						<Field name="email" type="text" className="form-field"/>
+						
+						<Field 
+							name="email" 
+							type="text" 
+							className="form-field" 
+							prefix={<ScheduleOutlined className="site-form-item-icon" />}
+							placeholder="Digite seu e-mail"
+							
+						/>
 						<ErrorMessage 
 							render={msg => <p className="msg-error" >{msg}</p>} 
 							name="email" />
 						
-						<label htmlFor="password" className="form-label">Senha</label>
-						<Field name="password" type="password" className="form-field"/>
+						
+						<Field 
+							name="password"
+							type="password" 
+							className="form-field" 
+							placeholder="Digite uma senha"
+							prefix={<LockOutlined className="site-form-item-icon" />}
+						/>
 						<ErrorMessage 
 							render={msg => <p className="msg-error" >{msg}</p>} 
 							name="password" />
 
-						<Button type="submit" onClick={actionButton} className="button">Criar conta</Button>
+						<Button 
+							type="submit" 
+							onClick={actionButton} 
+							className="button"
+							
+						>Criar conta</Button>
 					</Form>
 				</FormikProvider>
 			</div>

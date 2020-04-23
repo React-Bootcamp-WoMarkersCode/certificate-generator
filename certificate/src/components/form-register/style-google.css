@@ -1,6 +1,5 @@
-.button-google {
-	margin-left: -10%;
-	margin-top: 8%;
+.loginBtn.loginBtn-google {
+	margin-left: -5%;
 }
 
 .ou {
@@ -9,15 +8,9 @@
 	margin-top: 3%;
 }
 
-@media screen and (max-width: 900px) {
-	.button-google { 
-		margin-left: -30%;
-	}
-}
 
-@media screen and (max-width: 700px) {
-	.button-google { 
-		width: 100%;
+@media screen and (max-width: 700px){ 
+	.loginBtn.loginBtn-google {
 		margin-left: -10%;
 	}
 }

@@ -25,11 +25,13 @@ function Steps(props) {
 				</h4>
 			<h3 className="h3-steps">
 				<span className="span-3-steps"> 3 </span> 
-					Cadastre os participantes do evento em check-list.
+					Cadastre os participantes do evento.
 			</h3>
 			<h3 className="h3-steps">
-				<span className="span-3-steps"> 4</span> 
-					Quer selecionar os participantes depois? É só acessar o click-list!
+				<span className="span-3-steps"> 4 </span> 
+
+					Quer selecionar os participantes depois? É só usar o check-list!
+
 			</h3>
 			<h3 className="h3-steps">
 				<span className="span-3-steps"> 5 </span>

@@ -2,7 +2,14 @@ import React, { useState, useRef } from 'react';
 
 /*Estilos*/
 import 'antd/dist/antd.css';
-import { Button, Form, message, DatePicker, Input, Popover, Empty, InputNumber } from 'antd';
+import { Button, Form, Card, 
+		Avatar, message, DatePicker, 
+		Input, Popover, Empty, InputNumber, Popconfirm } from 'antd';
+
+import { LeftOutlined, HeartOutlined, 
+		FormOutlined, TeamOutlined, CloseOutlined,
+		UsergroupAddOutlined, UserOutlined } from '@ant-design/icons';
+
 import './styles.css';
 import './styles-events.css';
 import './style-form-event.css'
@@ -14,6 +21,7 @@ import eventosData from '../../services/events.json';
 /*Componentes*/
 import ProfileCard from '../../components/profile-card/index'
 import ListOfPresents from '../../components/list-presents/index'
+import InfoEvent from '../../components/info-event/index'
 
 /*Assinatura digital*/
 import SignaturePad from 'react-signature-canvas'
@@ -21,6 +29,7 @@ import Popup from 'reactjs-popup'
 
 function ListEvents(props) {
 
+const { Meta } = Card;
 	/*Recebe o organizador e o JSON de organizadores*/
 	const { organizador, users } = props
 
@@ -29,6 +38,7 @@ function ListEvents(props) {
 	const [ toCreateFormEvent, setToCreateFormEvent] = useState(false);
 	const [ toProfile, setProfile] = useState(false);
 	const [ toList, setList] = useState(false);
+	const [ toSeeEvents, setSeeEvents] = useState(false);
 
 	/*Esta variavel guarda o evento referente quando o botão check participantes for acionado*/
 	const [ eventChecked, setEventChecked] = useState('');
@@ -158,6 +168,8 @@ function ListEvents(props) {
 	/* ------------- Deletando Eventos ---------------*/
 	const deleteEvent = (eventToBeDeleted) => {
 
+		message.success('O evento foi excluido')
+
 		setEventos( eventsOfOrganizer.filter(evento => {
 			if(evento.course !== eventToBeDeleted) {
 				return evento
@@ -233,13 +245,21 @@ function ListEvents(props) {
 		setEventChecked(eventToList)
 	}
 
+	/*Esta função é acionada quando o botão para mais infomações do evento*/
+	const seeEvents = (eventToList) => {
+		setSeeEvents(true)
+		setEventChecked(eventToList)
+	}
+
 	return(
 		<>
 		
-		<div style={{ display: ( toEditFormEvent || toCreateFormEvent || toProfile || toList )?  'none' : null }}>
-			<h1 className="title-2-list-events">Olá, {organizador}</h1>
-			<Button className="button-add" onClick={() => setToCreateFormEvent(true)}>+ Cadastrar mais um evento</Button>
-			<Button className="button-profile" onClick={() => setProfile(true)}>Meu Perfil</Button>
+		<div style={{ display: ( toEditFormEvent || toCreateFormEvent || toProfile || toList || toSeeEvents )?  'none' : null }}>
+
+			<h1 className="title-2-list-events"><UserOutlined onClick={() => setProfile(true)}/> {organizador}</h1>
+
+			<Button className="button-add" onClick={() => setToCreateFormEvent(true)}><UsergroupAddOutlined/> Cadastrar mais um evento</Button>
+			
 			<br/>
 			<h1 className="title">Eventos Cadastrados</h1>
 			<div className="listEvents">
@@ -249,48 +269,51 @@ function ListEvents(props) {
 					if(eventoJson.user === organizador ){
 						noEvents = false
 						return(
-							<div className="each-event">
+							<Card 
+								style={{ width: 300 }}
+								    cover={
+								     	<img
+								   			alt="Poster do evento"
+								    		src="https://jaquelinecramos.files.wordpress.com/2018/03/dyfqkqaw0aad5xm.jpg?w=776"
+								      />
+								    }
+								    actions={[
+								    	<>
+								    	<Popover content={<h5>Ver mais info. do evento</h5>}>
+								     		<Button style={{ borderColor: 'transparent'}} onClick={() => seeEvents(eventoJson) }><HeartOutlined key="edit" /></Button>,
+								     	</Popover>
 
-								<p className="course">{eventoJson.course}</p>								
+								     	<Popover content={<h5>Editar evento</h5>}>
+								     		<Button style={{ borderColor: 'transparent'}} onClick={() =>  clickEditFormEvent(eventoJson) } ><FormOutlined key="edit" /></Button>,
+								     	</Popover>
 
-								<Button className="button-check" onClick={() => saveEventToList(eventoJson)}>
-									Check-List de Participantes 
-								</Button>
+								     	<Popover content={<h5>Participantes</h5>}>
+								     		<Button style={{ borderColor: 'transparent'}} onClick={() =>  saveEventToList(eventoJson)}><TeamOutlined key="ellipsis" /></Button>,
+								    	</Popover>
 
-								<Popover 
-									title={<h4 className="h4-list-event">{eventoJson.course}</h4>}
-									content={
-										<>
-											<p><span className="span-list-event">Empresa:</span> {eventoJson.company}</p>
-											<p><span className="span-list-event">Inicio do Evento:</span> {eventoJson.startDate}</p>
-											<p><span className="span-list-event">Final do Evento:</span> {eventoJson.finishDate}</p>
-											<p><span className="span-list-event">Carga Horária:</span> {eventoJson.workload}</p>
-											
-											<span className="span-list-event">Assinatura Digital</span>
-											{ imageURL ? (
-													<img
-														src={imageURL}
-														alt="Minha assinatura Digital"
-														className="buttons-pad"
-
-													/>
-												) : <h4 style={{ color: 'red'}}>Sem assinatura</h4> }
-										</>
-									} 
-								>
-								    <Button className="button-info" >Informações do Evento</Button>
-								</Popover>
-
-								<Button className="button-edit" 
-									onClick={() => clickEditFormEvent(eventoJson)} > Editar 
-								</Button>
-
-
-								<Button danger className="button-delete" 
-									onClick={ () => deleteEvent(eventoJson.course) } > X 
-								</Button>
-	
-							</div>
+								     	<Popconfirm 
+								     		title="Você tem certeza de que quer excluir este evento?"
+								     		onConfirm={() => deleteEvent(eventoJson.course) }
+								     		okText="Sim"
+								     		cancelText="Não"
+								     	>
+								    		<Button style={{ borderColor: 'transparent'}} ><CloseOutlined key="edit" /></Button>,
+								    	</Popconfirm>
+								    	</>
+								    ]}
+								  >
+								    <Meta
+								      avatar={<Avatar src="https://cdn-images-1.medium.com/max/1200/1*B8rGvo7fJ7qL4uFJ_II_-w.png" />}
+								      title={<h4 style={{ color: '#C6255A'}}>{eventoJson.course}</h4>}
+								      description={
+								      		<>
+								      			<h5 style={{ fontSize: '12px'}}>Inicio: &nbsp;{eventoJson.startDate}</h5>
+								      			
+								      			<h5 style={{ fontSize: '12px'}}>Encerramento: &nbsp;{eventoJson.finishDate}</h5>
+								      		</>
+								      	}
+								    />
+							</Card>
 						)
 					}
 				})
@@ -307,10 +330,10 @@ function ListEvents(props) {
 				style={{ display: toEditFormEvent ?  'block' : 'none' }} >
 
 				<h2 className="edit-event-title">Edite os dados do seu evento:</h2>
-				<h4>Organização:</h4>
+				<h4>Comunidade:</h4>
 				<Input 
 					className="edit-event-input" 
-					placeholder="Organização" 
+					placeholder="Comunidade" 
 					value={company} 
 					onChange={ newValue => setCompany(newValue.target.value) } />
 				<br/>
@@ -390,9 +413,9 @@ function ListEvents(props) {
 				        {...rangeInputs}
 			          className="input-1-event"
 				        name="company"
-				        label="Empresa" >
+				        label="Comunidade" >
 
-			          <Input placeholder="Digite a empresa responsável pelo evento" />
+			          <Input placeholder="Digite a comunidade responsável pelo evento" />
 			        </Form.Item>
 
 			        <Form.Item
@@ -482,9 +505,22 @@ function ListEvents(props) {
 		}
 
 		{ toList &&
+			<>
+				<ListOfPresents evento={eventChecked}/>
+				<Button onClick={() => setList(false)} className="button-back-from-list" style={{ marginButtom: '-20%'}}>
+	                Voltar para a lista de Eventos
+	            </Button>
+	        </>
+		}
+
+		{
+			toSeeEvents && 
 				<>
-					<ListOfPresents evento={eventChecked}/>
-					<Button onClick={() => setList(false)} className="button-back-from-list" style={{ marginButtom: '-20%'}}>
+					<InfoEvent evento={eventChecked}/>
+					<Button 
+						onClick={() => setSeeEvents(false)}
+						className="button-back-of-profile" 
+						>
 	                	Voltar para a lista de Eventos
 	            	</Button>
 	            </>

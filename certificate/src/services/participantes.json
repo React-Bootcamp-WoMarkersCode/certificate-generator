@@ -3,13 +3,13 @@
 		"name": "Diana Regina",
 		"email": "dianaregina22@outlook.com.br",
 		"present": true,
-		"receiveCertificate": false,
+		"receiveCertificate": true,
 		"course": "Bootcamp React"
 	}, 
 	{
 		"name": "Chaiana Hermes",
 		"email": "chaiana_hermes@yahoo.com.br",
-		"present": true,
+		"present": false,
 		"receiveCertificate": false,
 		"course": "Bootcamp React"
 	}, 
@@ -39,7 +39,7 @@
 		"email": "coelhodiana04@gmail.com",
 		"present": true,
 		"receiveCertificate": false,
-		"course": "React Navite"
+		"course": "Bootcamp React"
 	}
 	, 
 	{
@@ -47,7 +47,7 @@
 		"email": "larioli.me@gmail.com",
 		"present": true,
 		"receiveCertificate": false,
-		"course": "React Navite"
+		"course": "Bootcamp React"
 	}
 	, 
 	{
@@ -55,7 +55,7 @@
 		"email": "ariane.sousa011@gmail.com",
 		"present": true,
 		"receiveCertificate": false,
-		"course": "React Navite"
+		"course": "Bootcamp React"
 	}
 	, 
 	{
@@ -63,7 +63,7 @@
 		"email": "anna.inhasz@gmail.com",
 		"present": true,
 		"receiveCertificate": true,
-		"course": "Angular"
+		"course": "Bootcamp React"
 	}
 	, 
 	{
@@ -71,7 +71,7 @@
 		"email": "alessandra.nastassja@hotmail.com",
 		"present": true,
 		"receiveCertificate": true,
-		"course": "Angular"
+		"course": "Bootcamp React"
 	}
 	, 
 	{
@@ -79,21 +79,21 @@
 		"email": "isabella.soares.28@gmail.com",
 		"present": true,
 		"receiveCertificate": false,
-		"course": "Angular"
+		"course": "Bootcamp React"
 	}, 
 	{
 		"name": "Mariana Tancredi",
 		"email": "matancredi@hotmail.com",
 		"present": true,
 		"receiveCertificate": false,
-		"course": "Angular"
+		"course": "Bootcamp React"
 	}, 
 	{
 		"name": "Ana Paula Mak",
 		"email": "anapaulamak@gmail.com",
 		"present": true,
 		"receiveCertificate": false,
-		"course": "Metodologias Ageis"
+		"course": "Bootcamp React"
 	}
 	, 
 	{
@@ -101,42 +101,42 @@
 		"email": "alicia@outlook.com.br",
 		"present": true,
 		"receiveCertificate": false,
-		"course": "Metodologias Ageis"
+		"course": "Bootcamp React"
 	}, 
 	{
 		"name": "Leticia Campos",
 		"email": "leehcamposs@gmail.com",
 		"present": true,
 		"receiveCertificate": false,
-		"course": "Metodologias Ageis"
+		"course": "Bootcamp React"
 	}, 
 	{
 		"name": "Fernanda R. A.",
 		"email": "fernandaramos.a@outlook.com",
 		"present": true,
 		"receiveCertificate": false,
-		"course": "Metodologias Ageis"
+		"course": "Bootcamp React"
 	}, 
 	{
 		"name": "Angela Mutsumi",
 		"email": "angelamutsumi@gmail.com",
 		"present": true,
 		"receiveCertificate": false,
-		"course": "Python Avançado"
+		"course": "Bootcamp React"
 	}, 
 	{
 		"name": "Olívia Resende",
 		"email": "olivinharesende@hotmail.com",
 		"present": true,
 		"receiveCertificate": false,
-		"course": "Python Avançado"
+		"course": "Bootcamp React"
 	},
 	{
 		"name": "Dayana Maia",
 		"email": "dayrmaia@gmail.com",
 		"present": true,
 		"receiveCertificate": false,
-		"course": "Python Avançado"
+		"course": "Bootcamp React"
 	}
 ]
 

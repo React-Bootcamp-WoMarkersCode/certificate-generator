@@ -6,22 +6,28 @@
 
 .h2-steps {
 	font-size: 30px;
+	letter-spacing: 1px;
+	
 }
 
 .h3-steps {
 	color: #c6255a;
 	font-weight: bold;
 	font-size: 25px;
+	letter-spacing: 2px;
+
 }
 
 .h4-steps {
 	font-size: 20px;
+	letter-spacing: 2px;
 }
 
 .span-1-steps {
 	border-color: #c6255a;
 	border-top-style: solid;
 	border-top-width: 7px; 
+	padding-top: 10px;
 }
 
 .span-2-steps {
@@ -31,3 +37,13 @@
 .span-3-steps {
 	color: black;
 }
+
+@media screen and (max-width: 1280px) {
+	.div-steps {
+		margin-left: 6%;
+		margin-right: 3%;
+		margin-top: 6%;
+	}
+	
+  }
+  
