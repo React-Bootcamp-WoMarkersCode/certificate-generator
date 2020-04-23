@@ -220,4 +220,4 @@ $ yarn add react-spinkit
 
 The MIT License (MIT)
 
-Copyright :copyright: 2020 Certificate Generator
+Copyright :copyright: 2020 Certificate for Everyone

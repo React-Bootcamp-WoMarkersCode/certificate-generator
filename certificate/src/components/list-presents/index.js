@@ -6,7 +6,7 @@ import html2canvas from 'html2canvas';
 import './style.css'
 import './style-certificate.css'
 import 'antd/dist/antd.css';
-import { Checkbox, Button, Input, message, Table, Tag, Popover } from 'antd';
+import { Checkbox, Button, Input, message, Table, Tag, Popover, Popconfirm } from 'antd';
 
 import { UserAddOutlined } from '@ant-design/icons';
 
@@ -234,10 +234,18 @@ function ListOfPresents(props) {
 									Acessar 
 								</Button>,
 
-					delete: <Button danger 
-								className="button-delete" 
-								onClick={ () => deleteParticipant(participante.name) } > X 
-							</Button>
+					delete:
+							<Popconfirm 
+								title="Você tem certeza de que quer excluir este participante?"
+								onConfirm={() => deleteParticipant(participante.name) }
+								okText="Sim"
+								cancelText="Não"
+							>
+								<Button danger 
+									className="button-delete" 
+								> X 
+								</Button>
+							</Popconfirm>
     			})
 			}
 
@@ -293,7 +301,7 @@ function ListOfPresents(props) {
 						<Input className="input-2" placeholder="E-mail do participante" value={email} onChange={newEmail => setEmail(newEmail.target.value)}/>
 						<br/>
 						<Button className="button-parcipants" type="primary" danger onClick={() => {verificarCampos()}}>Incluir novo participante</Button>
-						<Button onClick={ () => setVisibleForm(false) }>Voltar</Button>
+						<Button className="buttom-voltar-participants" onClick={ () => setVisibleForm(false) }>Voltar para a lista</Button>
 					</div>
 
 					<div style={{ display: visibleForm ?  'none' : 'block' }}>
@@ -331,10 +339,8 @@ function ListOfPresents(props) {
 						<p className="p-2-certificate">{evento.user}</p>
 					</div>
 
-
-
-					<Button className="button-voltar" onClick={ () => setVisible(true) }>Voltar para a lista de participantes</Button>
 					<Button className="button-email" type="primary" onClick={() => sendEmail(thisParticipante.email)}>Enviar certificado</Button>
+					<Button className="button-voltar" onClick={ () => setVisible(true) }>Voltar para a lista de participantes</Button>
 				</div>
 			</>
 		);

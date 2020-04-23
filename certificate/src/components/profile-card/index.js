@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 /*Estilos*/
 import 'antd/dist/antd.css';
-import { Avatar, message, Button, Input } from 'antd';
+import { Avatar, message, Button, Input, Popconfirm } from 'antd';
 import './style.css'
 
 /*Rotas*/
@@ -135,7 +135,14 @@ function ProfileCard(props) {
 				}
 				
 				<Button type="primary" primary onClick={beforeEditForm}>Editar minha conta</Button>
-				<Button type="primary" danger onClick={deleteAccount}>Deletar minha conta</Button>
+				<Popconfirm 
+								title="Você tem certeza de que quer excluir a sua conta?"
+								onConfirm={deleteAccount} 
+								okText="Sim"
+								cancelText="Não"
+							>
+					<Button type="primary" danger >Deletar minha conta</Button>
+				</Popconfirm>
 				<h4 style={{ marginTop: '3%'}}>Sua assinatura</h4>
 				<hr style={{ marginLeft: '0%'}} />
 				<br/>

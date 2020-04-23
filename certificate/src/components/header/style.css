@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 /* Inserido a foto como imagem de fundo */
 .div-header {
   margin-top: 0;
@@ -9,17 +13,19 @@
 
 /* Espaçamento do começo do texto em relação ao topo, tamanho e espaçamento das letras  */
 .h2-header {
-  width: 70%;
-  color: orange;
+  width: 100%;
+  color: #ff1493;
   margin-top: 0%;
-  padding-top: 20%;
-  padding-left: 10%;
+  padding-top: 10%;
+  padding-left: 20%;
 
-  font-size: 5rem;
-  font-family: 'Releway', sans-serif;
+  font-size: 4rem;
+  /*font-family: 'Gochi Hand', cursive;*/
+  /*font-family: 'Homemade Apple', cursive;*/
+  font-family: 'Pacifico', cursive;
   font-weight: 790;
 
-  word-spacing: 1rem;
+  word-spacing: 1.5rem;
   letter-spacing: 0.2rem;
 }
 
@@ -30,7 +36,10 @@
     width: 100%;
     font-size: 3.8rem;
     margin-top: 20%;
-    padding-top: 15%;
+    padding-top: 5%;
+    text-align: center;
+    padding-left: 0%;
+    
   }
 
 
@@ -39,4 +48,16 @@
  
     margin-bottom: -13%;
   }
+}
+
+
+@media screen and (min-width: 800px) and (max-width: 1200px){
+  .h2-header {
+    width: 100%;
+    font-size: 3.8rem;
+    margin-top: 20%;
+    padding-top: 5%;
+    text-align: center;
+    padding-left: 10%;
+  } 
 }

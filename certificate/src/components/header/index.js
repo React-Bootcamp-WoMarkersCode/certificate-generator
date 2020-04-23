@@ -8,8 +8,7 @@ function Header() {
       <Menu1Header />
 
       <h2 className="h2-header">
-        Gerador de 
-        Certificados
+        Certificate for Everyone
       </h2>
     </div>
   );

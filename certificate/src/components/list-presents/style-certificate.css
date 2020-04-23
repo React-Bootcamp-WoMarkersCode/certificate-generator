@@ -13,7 +13,7 @@
 	margin-left: 10%;
 	margin-right: 10%;
 	margin-top: 5%;
-	margin-bottom: -30%;
+	margin-bottom: 10%;
 }
 
 /*Logo*/
@@ -21,6 +21,7 @@
 	display: flex;
 	margin-left: 40%;
 	margin-top: 10%;
+	width: 15%;
 }
 
 /*Estrelas*/
@@ -69,10 +70,9 @@ hr {
 /*Botão para voltar a lista de participantes*/
 .button-voltar {
 	display: flex;
-	margin-top: 35%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: -35%;
+	margin-bottom: 3%;
 
 	background-color: #00b7d2;
 	border-color: #00b7d2;
@@ -89,10 +89,10 @@ hr {
 .button-email {
 
 	display: flex;
-	margin-top: 40%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: -35%;
+	margin-top: -5%;
+	margin-bottom: 3%;
 
 	background-color: #50c878;
 	border-color: #50c878;
