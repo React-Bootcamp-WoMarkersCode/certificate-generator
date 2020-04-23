@@ -6,7 +6,7 @@ import { Button, Form, Card,
 		Avatar, message, DatePicker, 
 		Input, Popover, Empty, InputNumber } from 'antd';
 
-import { UserAddOutlined, LeftOutlined, HeartOutlined, 
+import { LeftOutlined, HeartOutlined, 
 		FormOutlined, TeamOutlined, CloseOutlined,
 		UsergroupAddOutlined, UserOutlined } from '@ant-design/icons';
 
@@ -297,8 +297,14 @@ const { Meta } = Card;
 								  >
 								    <Meta
 								      avatar={<Avatar src="https://cdn-images-1.medium.com/max/1200/1*B8rGvo7fJ7qL4uFJ_II_-w.png" />}
-								      title={<h4>{eventoJson.course}</h4>}
-								      description={<h5>{eventoJson.company}</h5>}
+								      title={<h4 style={{ color: '#C6255A'}}>{eventoJson.course}</h4>}
+								      description={
+								      		<>
+								      			<h5 style={{ fontSize: '12px'}}>Inicio: &nbsp;{eventoJson.startDate}</h5>
+								      			
+								      			<h5 style={{ fontSize: '12px'}}>Encerramento: &nbsp;{eventoJson.finishDate}</h5>
+								      		</>
+								      	}
 								    />
 							</Card>
 						)
@@ -492,18 +498,17 @@ const { Meta } = Card;
 		}
 
 		{ toList &&
-				<>
-					<ListOfPresents evento={eventChecked}/>
-					<Button onClick={() => setList(false)} className="button-back-from-list" style={{ marginButtom: '-20%'}}>
-	                	Voltar para a lista de Eventos
-	            	</Button>
-	            </>
+			<>
+				<ListOfPresents evento={eventChecked}/>
+				<Button onClick={() => setList(false)} className="button-back-from-list" style={{ marginButtom: '-20%'}}>
+	                Voltar para a lista de Eventos
+	            </Button>
+	        </>
 		}
 
 		{
 			toSeeEvents && 
 				<>
-
 					<InfoEvent evento={eventChecked}/>
 					<Button 
 						onClick={() => setSeeEvents(false)}
@@ -511,7 +516,6 @@ const { Meta } = Card;
 						>
 	                	Voltar para a lista de Eventos
 	            	</Button>
-					
 	            </>
 		}
 		</>		

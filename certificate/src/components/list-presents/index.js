@@ -6,7 +6,9 @@ import html2canvas from 'html2canvas';
 import './style.css'
 import './style-certificate.css'
 import 'antd/dist/antd.css';
-import { Checkbox, Button, Input, message, Table, Tag } from 'antd';
+import { Checkbox, Button, Input, message, Table, Tag, Popover } from 'antd';
+
+import { UserAddOutlined } from '@ant-design/icons';
 
 /*Animação de tela enquanto o e-mail é enviado*/
 import Spinner from 'react-spinkit' 
@@ -34,6 +36,9 @@ function ListOfPresents(props) {
 
 		/*Variavel que troca a lista de participants pelos certificados*/
 		const [ visible, setVisible ] = useState(true)
+
+		/*Variavel que troca a lista de participants pelos formulário*/
+		const [ visibleForm, setVisibleForm ] = useState(false)
 
 		/*Participante selecionado*/
 		const [ thisParticipante, setThisParticipante ] = useState('')
@@ -86,6 +91,8 @@ function ListOfPresents(props) {
 							}
 						])
 
+						/*Volta para a lista de participntes*/
+						setVisibleForm(false)
 						message.success('Participante criado com sucesso')
 						setName('')
 						setEmail('')
@@ -276,22 +283,32 @@ function ListOfPresents(props) {
 		  }
 		];
 
-
-
 		return (
 			<>
 				<div className="list-participants" style={{ display: visible ?  'grid' : 'none' }} >
-					<div className="input-participantes">
+					<div className="input-participantes" style={{ display: visibleForm ?  'grid' : 'none' }}>
 						<h2>Adicione mais participantes a sua lista:</h2>
 						<Input className="input-1" placeholder="Nome do participante" value={name} onChange={newName => setName(newName.target.value)}/>
 						<br/>
 						<Input className="input-2" placeholder="E-mail do participante" value={email} onChange={newEmail => setEmail(newEmail.target.value)}/>
 						<br/>
 						<Button className="button-parcipants" type="primary" danger onClick={() => {verificarCampos()}}>Incluir novo participante</Button>
+						<Button onClick={ () => setVisibleForm(false) }>Voltar</Button>
 					</div>
 
-					<h1 className="title-2">Lista de Participantes</h1>
-					<Table dataSource={dataSource} columns={columns} />;				
+					<div style={{ display: visibleForm ?  'none' : 'block' }}>
+						<Button className="button-add-participant" onClick={ () => setVisibleForm(true) }><UserAddOutlined/>Incluir participante</Button>
+
+						<h1 className="title-2">Lista de Participantes</h1>
+						<Popover content={<h5>Click para enviar certificados para todos os participantes</h5>}>
+							<Button className="buttom-send-to-all">Enviar para todos</Button>
+						</Popover>
+
+						<Popover content={<h5>Click para cancelar a presença de todos os participantes</h5>}>
+							<Button className="buttom-cancel">Cancelar todos</Button>
+						</Popover>
+						<Table dataSource={dataSource} columns={columns} />;
+					</div>				
 				
 				</div>
 				<div style={{ display: visible ?  'none' : 'grid' }}>

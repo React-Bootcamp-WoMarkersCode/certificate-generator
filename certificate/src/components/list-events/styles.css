@@ -26,6 +26,7 @@
 }
 
 .button-add:hover {
+    border-color: rgb(0, 176, 240);
     color:  rgb(0, 176, 240);
     transition: 0.3s;
 }
@@ -75,7 +76,6 @@
     border-color: #616cd0;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 40%;
     margin-bottom: -30%;
 }
 
@@ -84,4 +84,10 @@
     color: #616cd0;
     border-color: #616cd0;
     transition: 0.5s;
+}
+
+/*Botão para voltar para a lista de eventos*/
+.button-back-of-event {
+    background-color: pink;
+    margin-top: -20%;
 }

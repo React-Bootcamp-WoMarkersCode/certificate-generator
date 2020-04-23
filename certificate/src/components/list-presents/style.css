@@ -12,6 +12,62 @@
 	text-align: center;
 }
 
+/*Botão para adicionar participante*/
+.button-add-participant {
+	border-color: orange;
+    background-color: orange;
+    color: #ffffff;
+    border-radius: 5px;
+    border-width: 0.2em;
+    font-size: 15px;
+    height: 50px;
+    margin-left: 0%;
+    margin-bottom: 2%;
+    margin-top: -10%;
+    width: 20%;
+}
+
+.button-add-participant:hover {
+	background-color: white;
+	border-color: orange;
+    color: orange;
+    transition: 0.3s;
+}
+
+/*Botão para cancelar a presença de todos*/
+.buttom-send-to-all {
+	border-color: #50c878;
+    background-color: #50c878;
+    color: #ffffff;
+    width: 15%;
+    margin-left: 0%;
+    margin-bottom: 2%;
+}
+
+.buttom-send-to-all:hover {
+	border-color: #50c878;
+    background-color: #50c878;
+    color: #ffffff;
+	box-shadow: 4px 4px 8px gray;
+}
+
+/*Botão para enviar e-mail a todos*/
+.buttom-cancel {
+	border-color: brown;
+    background-color: brown;
+    color: #ffffff;
+    width: 15%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+
+.buttom-cancel:hover {
+	border-color: brown;
+    background-color: brown;
+    color: #ffffff;
+	box-shadow: 4px 4px 8px gray;
+}
+
 /*---------------------------------*/
 
 /*Inputs*/
