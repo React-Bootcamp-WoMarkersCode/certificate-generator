@@ -94,8 +94,8 @@ const FormLogin = () => {
 
   const formik = useFormik({
     initialValues: {
-      email: "",
-      password: ""
+      email: "certificadowomakerscode@gmail.com",
+      password: "certificado123"
     },
     validationSchema: Yup.object({
       email: Yup.string().email("Email inválido").required("Campo obrigatório"),

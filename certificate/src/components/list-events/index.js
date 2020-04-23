@@ -2,8 +2,13 @@ import React, { useState, useRef } from 'react';
 
 /*Estilos*/
 import 'antd/dist/antd.css';
-import { Button, Form, Card, Avatar, message, DatePicker, Input, Popover, Empty, InputNumber } from 'antd';
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
+import { Button, Form, Card, 
+		Avatar, message, DatePicker, 
+		Input, Popover, Empty, InputNumber } from 'antd';
+
+import { LeftOutlined, HeartOutlined, 
+		FormOutlined, TeamOutlined, CloseOutlined,
+		UsergroupAddOutlined, UserOutlined } from '@ant-design/icons';
 
 import './styles.css';
 import './styles-events.css';
@@ -16,6 +21,7 @@ import eventosData from '../../services/events.json';
 /*Componentes*/
 import ProfileCard from '../../components/profile-card/index'
 import ListOfPresents from '../../components/list-presents/index'
+import InfoEvent from '../../components/info-event/index'
 
 /*Assinatura digital*/
 import SignaturePad from 'react-signature-canvas'
@@ -32,6 +38,7 @@ const { Meta } = Card;
 	const [ toCreateFormEvent, setToCreateFormEvent] = useState(false);
 	const [ toProfile, setProfile] = useState(false);
 	const [ toList, setList] = useState(false);
+	const [ toSeeEvents, setSeeEvents] = useState(false);
 
 	/*Esta variavel guarda o evento referente quando o botão check participantes for acionado*/
 	const [ eventChecked, setEventChecked] = useState('');
@@ -236,36 +243,21 @@ const { Meta } = Card;
 		setEventChecked(eventToList)
 	}
 
+	/*Esta função é acionada quando o botão para mais infomações do evento*/
+	const seeEvents = (eventToList) => {
+		setSeeEvents(true)
+		setEventChecked(eventToList)
+	}
+
 	return(
 		<>
 		
-		<div style={{ display: ( toEditFormEvent || toCreateFormEvent || toProfile || toList )?  'none' : null }}>
+		<div style={{ display: ( toEditFormEvent || toCreateFormEvent || toProfile || toList || toSeeEvents )?  'none' : null }}>
 
-		<Card
-		    style={{ width: 300 }}
-		    cover={
-		      <img
-		        alt="example"
-		        src="https://jaquelinecramos.files.wordpress.com/2018/03/dyfqkqaw0aad5xm.jpg?w=776"
-		      />
-		    }
-		    actions={[
-		    
-		      <Button onClick={() => alert('Ola')}><SettingOutlined key="setting" />Editar</Button> ,
-		      <EditOutlined key="edit" />,
-		      <EllipsisOutlined key="ellipsis" />,
-		    ]}
-		  >
-		    <Meta
-		      avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-		      title="Card title"
-		      description="This is the description"
-		    />
-		  </Card>
+			<h1 className="title-2-list-events"><UserOutlined onClick={() => setProfile(true)}/> {organizador}</h1>
 
-			<h1 className="title-2-list-events">Olá, {organizador}</h1>
-			<Button className="button-add" onClick={() => setToCreateFormEvent(true)}>+ Cadastrar mais um evento</Button>
-			<Button className="button-profile" onClick={() => setProfile(true)}>Meu Perfil</Button>
+			<Button className="button-add" onClick={() => setToCreateFormEvent(true)}><UsergroupAddOutlined/> Cadastrar mais um evento</Button>
+			
 			<br/>
 			<h1 className="title">Eventos Cadastrados</h1>
 			<div className="listEvents">
@@ -275,48 +267,46 @@ const { Meta } = Card;
 					if(eventoJson.user === organizador ){
 						noEvents = false
 						return(
-							<div className="each-event">
+							<Card 
+								style={{ width: 300 }}
+								    cover={
+								     	<img
+								   			alt="Poster do evento"
+								    		src="https://jaquelinecramos.files.wordpress.com/2018/03/dyfqkqaw0aad5xm.jpg?w=776"
+								      />
+								    }
+								    actions={[
+								    	<>
+								    	<Popover content={<h5>Ver mais info. do evento</h5>}>
+								     		<Button style={{ borderColor: 'transparent'}} onClick={() => seeEvents(eventoJson) }><HeartOutlined key="edit" /></Button>,
+								     	</Popover>
 
-								<p className="course">{eventoJson.course}</p>								
+								     	<Popover content={<h5>Editar evento</h5>}>
+								     		<Button style={{ borderColor: 'transparent'}} onClick={() =>  clickEditFormEvent(eventoJson) } ><FormOutlined key="edit" /></Button>,
+								     	</Popover>
 
-								<Button className="button-check" onClick={() => saveEventToList(eventoJson)}>
-									Check-List de Participantes 
-								</Button>
+								     	<Popover content={<h5>Participantes</h5>}>
+								     		<Button style={{ borderColor: 'transparent'}} onClick={() =>  saveEventToList(eventoJson)}><TeamOutlined key="ellipsis" /></Button>,
+								    	</Popover>
 
-								<Popover 
-									title={<h4 className="h4-list-event">{eventoJson.course}</h4>}
-									content={
-										<>
-											<p><span className="span-list-event">Empresa:</span> {eventoJson.company}</p>
-											<p><span className="span-list-event">Inicio do Evento:</span> {eventoJson.startDate}</p>
-											<p><span className="span-list-event">Final do Evento:</span> {eventoJson.finishDate}</p>
-											<p><span className="span-list-event">Carga Horária:</span> {eventoJson.workload}</p>
-											
-											<span className="span-list-event">Assinatura Digital</span>
-											{ imageURL ? (
-													<img
-														src={imageURL}
-														alt="Minha assinatura Digital"
-														className="buttons-pad"
-
-													/>
-												) : <h4 style={{ color: 'red'}}>Sem assinatura</h4> }
-										</>
-									} 
-								>
-								    <Button className="button-info" >Informações do Evento</Button>
-								</Popover>
-
-								<Button className="button-edit" 
-									onClick={() => clickEditFormEvent(eventoJson)} > Editar 
-								</Button>
-
-
-								<Button danger className="button-delete" 
-									onClick={ () => deleteEvent(eventoJson.course) } > X 
-								</Button>
-	
-							</div>
+								     	<Popover content={<h5 style={{ color: 'red'}}>Excluir evento</h5>}>
+								    		<Button style={{ borderColor: 'transparent'}} onClick={() =>  deleteEvent(eventoJson.course)}><CloseOutlined key="edit" /></Button>,
+								    	</Popover>
+								    	</>
+								    ]}
+								  >
+								    <Meta
+								      avatar={<Avatar src="https://cdn-images-1.medium.com/max/1200/1*B8rGvo7fJ7qL4uFJ_II_-w.png" />}
+								      title={<h4 style={{ color: '#C6255A'}}>{eventoJson.course}</h4>}
+								      description={
+								      		<>
+								      			<h5 style={{ fontSize: '12px'}}>Inicio: &nbsp;{eventoJson.startDate}</h5>
+								      			
+								      			<h5 style={{ fontSize: '12px'}}>Encerramento: &nbsp;{eventoJson.finishDate}</h5>
+								      		</>
+								      	}
+								    />
+							</Card>
 						)
 					}
 				})
@@ -508,9 +498,22 @@ const { Meta } = Card;
 		}
 
 		{ toList &&
+			<>
+				<ListOfPresents evento={eventChecked}/>
+				<Button onClick={() => setList(false)} className="button-back-from-list" style={{ marginButtom: '-20%'}}>
+	                Voltar para a lista de Eventos
+	            </Button>
+	        </>
+		}
+
+		{
+			toSeeEvents && 
 				<>
-					<ListOfPresents evento={eventChecked}/>
-					<Button onClick={() => setList(false)} className="button-back-from-list" style={{ marginButtom: '-20%'}}>
+					<InfoEvent evento={eventChecked}/>
+					<Button 
+						onClick={() => setSeeEvents(false)}
+						className="button-back-of-profile" 
+						>
 	                	Voltar para a lista de Eventos
 	            	</Button>
 	            </>

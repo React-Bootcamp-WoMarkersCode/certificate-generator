@@ -3,13 +3,13 @@
 		"name": "Diana Regina",
 		"email": "dianaregina22@outlook.com.br",
 		"present": true,
-		"receiveCertificate": false,
+		"receiveCertificate": true,
 		"course": "Bootcamp React"
 	}, 
 	{
 		"name": "Chaiana Hermes",
 		"email": "chaiana_hermes@yahoo.com.br",
-		"present": true,
+		"present": false,
 		"receiveCertificate": false,
 		"course": "Bootcamp React"
 	}, 
