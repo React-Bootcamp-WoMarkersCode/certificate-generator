@@ -4,7 +4,7 @@ import React, { useState, useRef } from 'react';
 import 'antd/dist/antd.css';
 import { Button, Form, Card, 
 		Avatar, message, DatePicker, 
-		Input, Popover, Empty, InputNumber } from 'antd';
+		Input, Popover, Empty, InputNumber, Popconfirm } from 'antd';
 
 import { LeftOutlined, HeartOutlined, 
 		FormOutlined, TeamOutlined, CloseOutlined,
@@ -168,6 +168,8 @@ const { Meta } = Card;
 	/* ------------- Deletando Eventos ---------------*/
 	const deleteEvent = (eventToBeDeleted) => {
 
+		message.success('O evento foi excluido')
+
 		setEventos( eventsOfOrganizer.filter(evento => {
 			if(evento.course !== eventToBeDeleted) {
 				return evento
@@ -289,9 +291,14 @@ const { Meta } = Card;
 								     		<Button style={{ borderColor: 'transparent'}} onClick={() =>  saveEventToList(eventoJson)}><TeamOutlined key="ellipsis" /></Button>,
 								    	</Popover>
 
-								     	<Popover content={<h5 style={{ color: 'red'}}>Excluir evento</h5>}>
-								    		<Button style={{ borderColor: 'transparent'}} onClick={() =>  deleteEvent(eventoJson.course)}><CloseOutlined key="edit" /></Button>,
-								    	</Popover>
+								     	<Popconfirm 
+								     		title="Você tem certeza de que quer excluir este evento?"
+								     		onConfirm={() => deleteEvent(eventoJson.course) }
+								     		okText="Sim"
+								     		cancelText="Não"
+								     	>
+								    		<Button style={{ borderColor: 'transparent'}} ><CloseOutlined key="edit" /></Button>,
+								    	</Popconfirm>
 								    	</>
 								    ]}
 								  >
@@ -323,10 +330,10 @@ const { Meta } = Card;
 				style={{ display: toEditFormEvent ?  'block' : 'none' }} >
 
 				<h2 className="edit-event-title">Edite os dados do seu evento:</h2>
-				<h4>Organização:</h4>
+				<h4>Comunidade:</h4>
 				<Input 
 					className="edit-event-input" 
-					placeholder="Organização" 
+					placeholder="Comunidade" 
 					value={company} 
 					onChange={ newValue => setCompany(newValue.target.value) } />
 				<br/>
@@ -406,9 +413,9 @@ const { Meta } = Card;
 				        {...rangeInputs}
 			          className="input-1-event"
 				        name="company"
-				        label="Empresa" >
+				        label="Comunidade" >
 
-			          <Input placeholder="Digite a empresa responsável pelo evento" />
+			          <Input placeholder="Digite a comunidade responsável pelo evento" />
 			        </Form.Item>
 
 			        <Form.Item

@@ -7,11 +7,6 @@
 	width: 100%;
 }
 
-/*Div de formulário*/
-.input-participantes {
-	text-align: center;
-}
-
 /*Botão para adicionar participante*/
 .button-add-participant {
 	border-color: orange;
@@ -36,8 +31,8 @@
 
 /*Botão para cancelar a presença de todos*/
 .buttom-send-to-all {
-	border-color: #50c878;
-    background-color: #50c878;
+	border-color: #98fb98;
+    background-color: #98fb98;
     color: #ffffff;
     width: 15%;
     margin-left: 0%;
@@ -45,39 +40,61 @@
 }
 
 .buttom-send-to-all:hover {
-	border-color: #50c878;
-    background-color: #50c878;
+	border-color: #98fb98;
+    background-color: #98fb98;
     color: #ffffff;
 	box-shadow: 4px 4px 8px gray;
 }
 
 /*Botão para enviar e-mail a todos*/
 .buttom-cancel {
-	border-color: brown;
-    background-color: brown;
+	border-color: #fa7f72;
+    background-color: #fa7f72;
     color: #ffffff;
     width: 15%;
-    margin-left: 5%;
+    margin-left: 2%;
     margin-bottom: 2%;
 }
 
 .buttom-cancel:hover {
-	border-color: brown;
-    background-color: brown;
+	border-color: #fa7f72;
+    background-color: #fa7f72;
     color: #ffffff;
 	box-shadow: 4px 4px 8px gray;
 }
 
 /*---------------------------------*/
 
-/*Inputs*/
-.input-1, .input-2 {
+/*Div de formulário*/
+.input-participantes {
+	text-align: center;
 	width: 40%;
-	margin-top: 1%;
+	margin-top: -5%;
+	margin-right: auto;
+	margin-left: auto;
 }
-
+/*Buttom para inserir um participante*/
 .button-parcipants {
 	margin-top: 3%;
+	margin-bottom: 8%;
+}
+
+/*Voltar para a lista de participantes a partir do formulário*/
+.buttom-voltar-participants {
+	width: 45%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: -5%;
+	background-color: #00b7d2;
+	border-color: #00b7d2;
+	color: white;
+}
+
+.button-voltar-participants:hover {
+	background-color: white;
+	border-color: #00b7d2;
+	color: #00b7d2;
+	transition: 0.5s;
 }
 
 .buttom-ver-certificado {
@@ -94,39 +111,59 @@
 	font-family: 'Raleway', sans-serif;
 }
 
-/*Todos os articipantes*/
-.participantes {
-	margin-top: 5%;
-	margin-right: auto;
-	margin-left: auto;
-	margin-bottom: -40%;
-	width: 100%;
+
+@media screen and (max-width: 600px) {
+	.input-participantes {
+		width: 100%;
+	}
+
+	.buttom-voltar-participants {
+		margin-bottom: 1%;
+	}
 }
 
-/*Mensagem: sem participantes cadastrados*/
-.no-data-presents {
-	color: red;
-	text-align: center;
-	font-size: 15px;
-}
-/*Para cada nome dos participantes*/
-.name-participant {
-	display: inline-flex;
-	font-size: 15px;
-	width: 100%;
-	padding: 1%;
-}
 
 @media screen and (max-width: 800px) {
 	.list-participants { 
 		grid-template-columns: repeat(1, 1fr);
 	}
+
 	.title-2 {
 		margin-top: 5%;
 	}
 
-	.name-participant {
-		display: block;
+	.input-participantes {
+		width: 70%;
+	}
+
+	.buttom-voltar-participants {
+		margin-bottom: 1%;
+	}
+
+	.button-add-participant {
+		width: 30%;
+	}
+
+	.buttom-send-to-all, .buttom-cancel { 
+		width: 20%;
+	}
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px){
+	.input-participantes {
+		width: 70%;
+	}
+
+	.buttom-voltar-participants {
+		margin-bottom: -2%;
+	}
+
+	.button-add-participant {
+		width: 30%;
+	}
+
+	.buttom-send-to-all, .buttom-cancel { 
+		width: 25%;
 	}
 }
 
