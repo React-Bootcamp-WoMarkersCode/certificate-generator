@@ -137,8 +137,8 @@ const { Meta } = Card;
 				user: organizador,
 				company: fieldsValue.company, 
 				course: fieldsValue.course,
-				startDate: rangeValue[0].format('YYYY-MM-DD'), 
-				finishDate: rangeValue[1].format('YYYY-MM-DD'), 
+				startDate: rangeValue[0].format('DD-MM-YYYY'), 
+				finishDate: rangeValue[1].format('DD-MM-YYYY'), 
 				workload: fieldsValue.workload, 
 				logo: "https://miro.medium.com/max/478/1*jriufqYKgJTW4DKrBizU5w.png", 
 				digitalSignature: imageURL
