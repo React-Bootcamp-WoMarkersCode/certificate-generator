@@ -8,7 +8,7 @@ function Header() {
       <Menu1Header />
 
       <h2 className="h2-header">
-        Certificate for Everyone
+        Certificates for Everyone
       </h2>
     </div>
   );

@@ -44,7 +44,7 @@ function Footer(props) {
 		</div>
 
 		<div className="footer-2">
-			<h4>Licença MIT - Copyright - 2020 - Certificate for Everyone</h4>	
+			<h4>Licença MIT - Copyright - 2020 - Certificates for Everyone</h4>	
 		</div>	
 	</footer>
 	);
