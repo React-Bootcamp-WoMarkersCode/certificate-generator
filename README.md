@@ -17,7 +17,7 @@ Desenvolver uma plataforma capaz de gerar certificados em PDF de eventos e curso
 </p>
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/46378210/79620508-7f03a480-80e6-11ea-8d38-a25f23336690.png"/>
+<img src="https://user-images.githubusercontent.com/46378210/80162939-0fd8f500-85ab-11ea-85fe-b2cb523fe1f3.PNG"/>
 </p>
 
 ## O que a plataforma é capaz de fazer :checkered_flag:
