@@ -143,7 +143,7 @@ function ListOfPresents(props) {
 		const sendEmail = (to) =>{	
 
 			/*Este e-mail enviará os certificados*/
-			let from = "gelbundschwarz@gmail.com"
+			let from = "certificadowomakerscode@gmail.com"
 
 			setLoadingEmail(true)
 			const input = document.getElementsByClassName('certificate-background')[0];
