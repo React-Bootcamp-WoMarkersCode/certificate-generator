@@ -17,7 +17,7 @@ Desenvolver uma plataforma capaz de gerar certificados em PDF de eventos e curso
 </p>
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/46378210/80162939-0fd8f500-85ab-11ea-85fe-b2cb523fe1f3.PNG"/>
+<img src="https://user-images.githubusercontent.com/46378210/80231326-9a603980-8629-11ea-8798-eabacda99982.png"/>
 </p>
 
 ## O que a plataforma é capaz de fazer :checkered_flag:
@@ -38,7 +38,7 @@ Desenvolver uma plataforma capaz de gerar certificados em PDF de eventos e curso
 
 ## Deploy da Aplicação com Netlify: :dash:
 
-> https://certificate-for-everyone-womakerscode.netlify.app/
+> https://certificates-for-everyone-womakerscode.netlify.app/
 
 ## Como rodar a aplicação :arrow_forward:
 
