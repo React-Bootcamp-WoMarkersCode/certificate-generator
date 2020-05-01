@@ -2,7 +2,7 @@
   <img src="https://user-images.githubusercontent.com/46378210/79054531-f2f00980-7c1b-11ea-81ca-fa7ef7196566.png">
 </p>
 
-# Certificates for Everyone 
+<h1 align="center"> Certificates for Everyone </h1>
 
 ## Desenvolvedoras :octocat:
 
