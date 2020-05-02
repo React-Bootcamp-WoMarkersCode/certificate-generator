@@ -16,12 +16,6 @@ Desenvolver uma plataforma capaz de gerar certificados em PDF de eventos e curso
 
 ## O que a plataforma é capaz de fazer :checkered_flag:
 
-:trophy: Cadastrar organizadores 
-
-:trophy: Cadastrar eventos 
-
-:trophy: Cadastrar participantes para cada evento
-
 :trophy: Gerar PDF do certificado com as informações preenchidas no formulário para cada participantes para envio de e-mail 
 
 :trophy: Check-list de participantes, permitindo selecionar quem irá receber os certificados 
@@ -29,6 +23,12 @@ Desenvolver uma plataforma capaz de gerar certificados em PDF de eventos e curso
 :trophy: Permite que o organizador do evento escreva sua assinatura digital dentro da plataforma
 
 :trophy: Oferece layout responsivo 
+
+:trophy: Cadastrar organizadores 
+
+:trophy: Cadastrar eventos 
+
+:trophy: Cadastrar participantes para cada evento
 
 ## Deploy da Aplicação com Netlify: :dash:
 
