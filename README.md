@@ -128,7 +128,7 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 ## Linguagens e libs utilizadas :books:
 
 - React
-- React PDF
+- [React PDF](https://react-pdf.org/)
 - React Router
 - AntDesign 
 - Login com Google
@@ -154,11 +154,6 @@ AntDesgin
 
 ```
 $ yarn add antd
-```
-
-React PDF
-```
-$ yarn add @react-pdf/renderer
 ```
 Autenticação com Google
 ```
