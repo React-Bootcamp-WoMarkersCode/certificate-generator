@@ -73,43 +73,21 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 
 ### Usuário: 
 
-```
-	{
-		"name": "Lais Lima",
-		"email": "laislima98@hotmail.com",
-		"password": "lais123",
-		"token": true,
-		"avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9-U_HbQAipum9lWln3APcBIwng7T46hdBA42EJv8Hf6Z4fDT3&usqp=CAU"
-	},
-
-```
+|name|email|password|token|avatar|
+| -------- |-------- |-------- |-------- |-------- |
+|Lais Lima|laislima98@hotmail.com|lais123|true|https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9-U_HbQAipum9lWln3APcBIwng7T46hdBA42EJv8Hf6Z4fDT3&usqp=CAU|
 
 ### Evento: 
 
-```
-	{	
-		"user": "Lais Lima",
-		"company": "WomakersCode", 
-		"course": "Bootcamp React",
-		"startDate": "01/02/2020", 
-		"finishDate": "28/03/2020",
-		"workload": "56", 
-		"logo": "https://miro.medium.com/max/478/1*jriufqYKgJTW4DKrBizU5w.png", 
-		"digitalSignature": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Assinatura_Jos%C3%A9_Saramago.png"
-	},
-```
+|user|company|course|startDate|finishDate|workload|logo|
+| -------- |-------- |-------- |-------- |-------- |-------- |-------- |
+|Lais Lima|WomakersCode|Bootcamp React|01/02/2020|28/03/2020|56|https://miro.medium.com/max/478/1*jriufqYKgJTW4DKrBizU5w.png|https://upload.wikimedia.org/wikipedia/commons/7/7f/Assinatura_Jos%C3%A9_Saramago.png|
 
 ### Participante: 
 
-```
-	{
-		"name": "Chaiana Hermes",
-		"email": "chaiana_hermes@yahoo.com.br",
-		"present": true,
-		"receiveCertificate": false,
-		"course": "Bootcamp React"
-	}
-```
+|name|email|present|receiveCertificate|course|
+| -------- |-------- |-------- |-------- |-------- |
+|Chaiana Hermes|chaiana_hermes@yahoo.com.br|true|false|Bootcamp React|
 
 ## Páginas: 
 
