@@ -124,63 +124,31 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 
 :heavy_check_mark: Podem ser **deletados** na lista de participantes.
 
-## Linguagens e libs utilizadas :books:
+## Linguagens, dependencias e libs utilizadas :books:
 
-- React
+- [React](https://pt-br.reactjs.org/docs/create-a-new-react-app.html)
 - [React PDF](https://react-pdf.org/)
-- React Router
-- AntDesign 
-- Login com Google
-- jspdf e html2canvas
-- Reactjs-Popup
-- react-signature-canvas
-- React-Spinkit
+- [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
 
-## Dependencias instaladas no projeto :package:
+Framework para layouts prontos:
+- [AntDesign](https://ant.design/docs/react/introduce) 
 
-Criação da base do projeto
-
-```
-$ yarn create react-app certificate
-```
-
-React Router
-
-```
-$ npm install react-router-dom
-```
-AntDesgin 
-
-```
-$ yarn add antd
-```
 Autenticação com Google
-```
-$ npm install react-google-login
-```
+- [Login com Google](https://www.npmjs.com/package/react-google-login)
 
 Para mandar PDF por email
-```
-$ yarn add jspdf
-```
+- [jspdf](https://www.npmjs.com/package/jspdf) 
+
 Para inserir HTML no corpo do email
+- [html2canvas](https://www.npmjs.com/package/html2canvas)
 
-```
-$ yarn add html2canvas
-```
+Para desenvolver a assinatura digital:
 
-Para desenvolver a assinatura digital
+- [Reactjs-Popup](https://react-popup.elazizi.com/getting-started/)
+- [react-signature-canvas](https://www.npmjs.com/package/react-signature-canvas)
 
-```
-$ yarn add reactjs-popup
-$ yarn add react-signature-canvas
-```
-
-Permite mostrar uma animação enquanto o usuário espera o e-mail ser enviado:
-
-```
-$ yarn add react-spinkit
-```
+Permite visualizar uma animação enquanto o usuário espera o e-mail ser enviado:
+- [React-Spinkit](https://github.com/KyleAMathews/react-spinkit)
 
 ## Dependência externa :incoming_envelope:
 [Server Mailjet](https://github.com/beebones/server-mailjet) - Back-end feito em **Golang** utiizado para consumir api **mailjet** e enviar os emails com o certificado.
