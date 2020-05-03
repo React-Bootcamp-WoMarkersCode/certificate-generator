@@ -1,14 +1,35 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/46378210/79054531-f2f00980-7c1b-11ea-81ca-fa7ef7196566.png">
+  <img src="https://user-images.githubusercontent.com/46378210/80918424-34fffd00-8d3b-11ea-99ee-477a3ebf4d89.png">
 </p>
 
 ## Desenvolvedoras :octocat:
 
-[<img src="https://avatars2.githubusercontent.com/u/40778029?s=400&u=0ff80f01d3cb66b2af110aea5d30701d8ac6b6ec&v=4" width=115><br><sub>Bee Bones</sub>](https://github.com/beebones) |[<img src="https://media-exp1.licdn.com/dms/image/C4E03AQGE1Yb8mAu4_A/profile-displayphoto-shrink_200_200/0?e=1592438400&v=beta&t=-ANjM-l29GR6AVf_OxXkfk7NH424lVgJmjQIgIos2Ck" width=115><br><sub>Chaiana Hermes</sub>](https://github.com/chaihermes) | 
-| :---: | :---:
+[<img src="https://avatars2.githubusercontent.com/u/40778029?s=400&u=0ff80f01d3cb66b2af110aea5d30701d8ac6b6ec&v=4" width=115><br><sub>Bee Bones</sub>](https://github.com/beebones) |[<img src="https://media-exp1.licdn.com/dms/image/C4E03AQGE1Yb8mAu4_A/profile-displayphoto-shrink_200_200/0?e=1592438400&v=beta&t=-ANjM-l29GR6AVf_OxXkfk7NH424lVgJmjQIgIos2Ck" width=115><br><sub>Chaiana Hermes</sub>](https://github.com/chaihermes) | [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Diana Regina</sub>](https://github.com/Diana-ops) | [<img src="https://avatars0.githubusercontent.com/u/56303576?s=400&u=b3afc995a8a4a0a5b0af9ff64e4953c907927f23&v=4" width=115><br><sub>Rose Ahakawa</sub>](https://github.com/ahakawa) |
+| :---: | :---: | :---: | :---:
 
-| [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Diana Regina</sub>](https://github.com/Diana-ops) | [<img src="https://avatars0.githubusercontent.com/u/56303576?s=400&u=b3afc995a8a4a0a5b0af9ff64e4953c907927f23&v=4" width=115><br><sub>Rose Ahakawa</sub>](https://github.com/ahakawa) |
-| :---: | :---:
+> Status do Projeto: Concluido :heavy_check_mark:
+
+### Tópicos 
+
+:small_blue_diamond: [Descrição do projeto](#descrição-do-projeto-star)
+
+:small_blue_diamond: [O que a plataforma é capaz de fazer](#o-que-a-plataforma-é-capaz-de-fazer-checkered_flag)
+
+:small_blue_diamond: [Deploy da Aplicação com Netlify](#deploy-da-aplicação-com-netlify-dash)
+
+:small_blue_diamond: [Pré-requesitos](#pré-requesitos)
+
+:small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
+
+:small_blue_diamond: [JSON](#json-floppy_disk)
+
+:small_blue_diamond: [Páginas](#páginas)
+
+:small_blue_diamond: [CRUD](#crud)
+
+:small_blue_diamond: [Linguagens, dependencias e libs utilizadas ](#linguagens-dependencias-e-libs-utilizadas-books)
+
+:small_blue_diamond: [Dependência externa](#dependência-externa-incoming_envelope)
 
 ## Descrição do projeto :star:
 
@@ -22,12 +43,6 @@ Desenvolver uma plataforma capaz de gerar certificados em PDF de eventos e curso
 
 ## O que a plataforma é capaz de fazer :checkered_flag:
 
-:trophy: Cadastrar organizadores 
-
-:trophy: Cadastrar eventos 
-
-:trophy: Cadastrar participantes para cada evento
-
 :trophy: Gerar PDF do certificado com as informações preenchidas no formulário para cada participantes para envio de e-mail 
 
 :trophy: Check-list de participantes, permitindo selecionar quem irá receber os certificados 
@@ -36,9 +51,21 @@ Desenvolver uma plataforma capaz de gerar certificados em PDF de eventos e curso
 
 :trophy: Oferece layout responsivo 
 
-## Deploy da Aplicação com Netlify: :dash:
+:trophy: Cadastrar organizadores 
+
+:trophy: Cadastrar eventos 
+
+:trophy: Cadastrar participantes para cada evento
+
+## Deploy da Aplicação com Netlify :dash:
 
 > https://certificates-for-everyone-womakerscode.netlify.app/
+
+## Pré-requesitos
+
+:warning: [Node](https://nodejs.org/en/download/)
+
+:warning: [Yarn](https://classic.yarnpkg.com/pt-BR/docs/install/#windows-stable) 
 
 ## Como rodar a aplicação :arrow_forward:
 
@@ -74,49 +101,27 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 
 ### Usuário: 
 
-```
-	{
-		"name": "Lais Lima",
-		"email": "laislima98@hotmail.com",
-		"password": "lais123",
-		"token": true,
-		"avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9-U_HbQAipum9lWln3APcBIwng7T46hdBA42EJv8Hf6Z4fDT3&usqp=CAU"
-	},
-
-```
+|name|email|password|token|avatar|
+| -------- |-------- |-------- |-------- |-------- |
+|Lais Lima|laislima98@hotmail.com|lais123|true|https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9-U_HbQAipum9lWln3APcBIwng7T46hdBA42EJv8Hf6Z4fDT3&usqp=CAU|
 
 ### Evento: 
 
-```
-	{	
-		"user": "Lais Lima",
-		"company": "WomakersCode", 
-		"course": "Bootcamp React",
-		"startDate": "01/02/2020", 
-		"finishDate": "28/03/2020",
-		"workload": "56", 
-		"logo": "https://miro.medium.com/max/478/1*jriufqYKgJTW4DKrBizU5w.png", 
-		"digitalSignature": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Assinatura_Jos%C3%A9_Saramago.png"
-	},
-```
+|user|company|course|startDate|finishDate|workload|logo|
+| -------- |-------- |-------- |-------- |-------- |-------- |-------- |
+|Lais Lima|WomakersCode|Bootcamp React|01/02/2020|28/03/2020|56|https://miro.medium.com/max/478/1*jriufqYKgJTW4DKrBizU5w.png|https://upload.wikimedia.org/wikipedia/commons/7/7f/Assinatura_Jos%C3%A9_Saramago.png|
 
 ### Participante: 
 
-```
-	{
-		"name": "Chaiana Hermes",
-		"email": "chaiana_hermes@yahoo.com.br",
-		"present": true,
-		"receiveCertificate": false,
-		"course": "Bootcamp React"
-	}
-```
+|name|email|present|receiveCertificate|course|
+| -------- |-------- |-------- |-------- |-------- |
+|Chaiana Hermes|chaiana_hermes@yahoo.com.br|true|false|Bootcamp React|
 
-## Páginas: 
+## Páginas
 
 [Aqui](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/README_PAGES.md) é possível visualizar a **proposta** de layout do projeto.  
 
-## CRUD: 
+## CRUD
 
 ### Usuários
 
@@ -148,76 +153,32 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 
 :heavy_check_mark: Podem ser **deletados** na lista de participantes.
 
-## Linguagens e libs utilizadas :books:
+## Linguagens, dependencias e libs utilizadas :books:
 
-- React
-- React PDF
-- React Router
-- AntDesign 
-- Login com Google
-- jspdf e html2canvas
-- Reactjs-Popup
-- react-signature-canvas
-- React-Spinkit
+- [React](https://pt-br.reactjs.org/docs/create-a-new-react-app.html)
+- [React PDF](https://react-pdf.org/)
+- [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
 
-## Dependencias instaladas no projeto :package:
+Framework para layouts prontos:
+- [AntDesign](https://ant.design/docs/react/introduce) 
 
-Criação da base do projeto
-
-```
-$ yarn create react-app certificate
-```
-
-React Router
-
-```
-$ npm install react-router-dom
-```
-AntDesgin 
-
-```
-$ yarn add antd
-```
-
-React PDF
-```
-$ yarn add @react-pdf/renderer
-```
 Autenticação com Google
-```
-$ npm install react-google-login
-```
+- [Login com Google](https://www.npmjs.com/package/react-google-login)
 
 Para mandar PDF por email
-```
-$ yarn add jspdf
-```
+- [jspdf](https://www.npmjs.com/package/jspdf) 
+
 Para inserir HTML no corpo do email
+- [html2canvas](https://www.npmjs.com/package/html2canvas)
 
-```
-$ yarn add html2canvas
-```
+Para desenvolver a assinatura digital:
 
-Para desenvolver a assinatura digital
+- [Reactjs-Popup](https://react-popup.elazizi.com/getting-started/)
+- [react-signature-canvas](https://www.npmjs.com/package/react-signature-canvas)
 
-```
-$ yarn add reactjs-popup
-$ yarn add react-signature-canvas
-```
-
-Permite mostrar uma animação enquanto o usuário espera o e-mail ser enviado:
-
-```
-$ yarn add react-spinkit
-```
+Permite visualizar uma animação enquanto o usuário espera o e-mail ser enviado:
+- [React-Spinkit](https://github.com/KyleAMathews/react-spinkit)
 
 ## Dependência externa :incoming_envelope:
 [Server Mailjet](https://github.com/beebones/server-mailjet) - Back-end feito em **Golang** utiizado para consumir api **mailjet** e enviar os emails com o certificado.
-
 <hr/>
-
-## Licença :trident:
-
-The MIT License (MIT)
-
-Copyright :copyright: 2020 Certificates for Everyone
