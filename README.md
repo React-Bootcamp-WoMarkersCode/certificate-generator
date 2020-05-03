@@ -1,8 +1,6 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/46378210/79054531-f2f00980-7c1b-11ea-81ca-fa7ef7196566.png">
+  <img src="https://user-images.githubusercontent.com/46378210/80918424-34fffd00-8d3b-11ea-99ee-477a3ebf4d89.png">
 </p>
-
-<h1 align="center"> Certificates for Everyone </h1>
 
 > Status do Projeto: Concluido :heavy_check_mark:
 
