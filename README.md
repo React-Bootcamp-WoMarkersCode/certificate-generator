@@ -2,6 +2,11 @@
   <img src="https://user-images.githubusercontent.com/46378210/80918424-34fffd00-8d3b-11ea-99ee-477a3ebf4d89.png">
 </p>
 
+## Desenvolvedoras :octocat:
+
+[<img src="https://avatars2.githubusercontent.com/u/40778029?s=400&u=0ff80f01d3cb66b2af110aea5d30701d8ac6b6ec&v=4" width=115><br><sub>Bee Bones</sub>](https://github.com/beebones) |[<img src="https://media-exp1.licdn.com/dms/image/C4E03AQGE1Yb8mAu4_A/profile-displayphoto-shrink_200_200/0?e=1592438400&v=beta&t=-ANjM-l29GR6AVf_OxXkfk7NH424lVgJmjQIgIos2Ck" width=115><br><sub>Chaiana Hermes</sub>](https://github.com/chaihermes) | [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Diana Regina</sub>](https://github.com/Diana-ops) | [<img src="https://avatars0.githubusercontent.com/u/56303576?s=400&u=b3afc995a8a4a0a5b0af9ff64e4953c907927f23&v=4" width=115><br><sub>Rose Ahakawa</sub>](https://github.com/ahakawa) |
+| :---: | :---: | :---: | :---:
+
 > Status do Projeto: Concluido :heavy_check_mark:
 
 ### Tópicos deste artigo
@@ -25,8 +30,6 @@
 :small_blue_diamond: [Linguagens, dependencias e libs utilizadas ](#linguagens-dependencias-e-libs-utilizadas-books)
 
 :small_blue_diamond: [Dependência externa](#dependência-externa-incoming_envelope)
-
-:small_blue_diamond: [Desenvolvedoras](#desenvolvedoras-octocat)
 
 ## Descrição do projeto :star:
 
@@ -179,8 +182,3 @@ Permite visualizar uma animação enquanto o usuário espera o e-mail ser enviad
 ## Dependência externa :incoming_envelope:
 [Server Mailjet](https://github.com/beebones/server-mailjet) - Back-end feito em **Golang** utiizado para consumir api **mailjet** e enviar os emails com o certificado.
 <hr/>
-
-## Desenvolvedoras :octocat:
-
-[<img src="https://avatars2.githubusercontent.com/u/40778029?s=400&u=0ff80f01d3cb66b2af110aea5d30701d8ac6b6ec&v=4" width=115><br><sub>Bee Bones</sub>](https://github.com/beebones) |[<img src="https://media-exp1.licdn.com/dms/image/C4E03AQGE1Yb8mAu4_A/profile-displayphoto-shrink_200_200/0?e=1592438400&v=beta&t=-ANjM-l29GR6AVf_OxXkfk7NH424lVgJmjQIgIos2Ck" width=115><br><sub>Chaiana Hermes</sub>](https://github.com/chaihermes) | [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Diana Regina</sub>](https://github.com/Diana-ops) | [<img src="https://avatars0.githubusercontent.com/u/56303576?s=400&u=b3afc995a8a4a0a5b0af9ff64e4953c907927f23&v=4" width=115><br><sub>Rose Ahakawa</sub>](https://github.com/ahakawa) |
-| :---: | :---: | :---: | :---:
