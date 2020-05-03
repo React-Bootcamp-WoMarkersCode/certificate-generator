@@ -6,8 +6,6 @@
 
 > Status do Projeto: Concluido :heavy_check_mark:
 
-> Status do Projeto: Em desenvolvimento :warning:
-
 ## Descrição do projeto :star:
 
 <p align="justify">
