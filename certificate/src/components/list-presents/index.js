@@ -162,7 +162,7 @@ function ListOfPresents(props) {
 					formData.append('from', from);
 					formData.append('to', to);
 
-					fetch('https://server-mailjet-go.uc.r.appspot.com/send-mail', {
+					fetch('http://localhost:8080/send-mail', {
 						method: 'POST',
 						body: formData,
 					})
