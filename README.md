@@ -9,7 +9,7 @@
 
 > Status do Projeto: Concluido :heavy_check_mark:
 
-### Tópicos deste artigo
+### Tópicos 
 
 :small_blue_diamond: [Descrição do projeto](#descrição-do-projeto-star)
 
